@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import { Bot, Camera, Check, CheckCircle2, Footprints, Car, ImagePlus, Loader2, MapPin, RotateCcw, Sparkles, Trash2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Marker } from "react-leaflet";
 import { Link } from "react-router-dom";
 import { NavigationMap } from "@/components/map/MapBase";
 import { pinIcon } from "@/components/map/layers";
+import { MapMarker } from "@/components/map/primitives";
 import { AIInsightCard, ErrorNote, PageHeader, Segmented } from "@/components/ui";
 import { api, ApiError } from "@/lib/api";
 import { useDebounced } from "@/lib/hooks";
@@ -209,7 +209,7 @@ export default function ReportHazard() {
           <section className="card card-pad lg:sticky lg:top-20">
             <Step n={3} title="Where is it?" hint="Tap the map to place or move the pin" />
             <NavigationMap className="h-[340px] sm:h-[400px]" onMapClick={(lat, lon) => setPin([lat, lon])}>
-              {pin && <Marker position={pin} icon={pinIcon} draggable eventHandlers={{ dragend: (e) => { const ll = e.target.getLatLng(); setPin([ll.lat, ll.lng]); } }} />}
+              {pin && <MapMarker position={pin} icon={pinIcon} draggable onDragEnd={(lat, lon) => setPin([lat, lon])} />}
             </NavigationMap>
             <div className="mt-3 flex flex-wrap items-center gap-2">
               <button className="btn-soft !py-2" onClick={useMyLocation}><MapPin size={15} />Use my location</button>

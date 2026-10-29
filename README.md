@@ -24,12 +24,14 @@ into a single routing engine for walking and driving in a Cyberjaya pilot area.
 | Hazard-aware routing | Reports linked to real path segments (≤ 12 m reliable, ≤ 25 m approximate). Unverified → warning; verified → caution; operator-confirmed closure → excluded. Closures are never auto-reopened |
 | Traffic AI | Synthetic 35-day history for 27 named corridors, historical-average baseline vs RandomForest, 15/30/60-min horizons (and extended), uncertainty from tree spread, time-dependent routing (speed at the time you enter each road), congestion heatmap, best time to leave, evaluation table |
 | Operations | Verification queue, location correction, verify/reject/merge, severity & restriction, maintenance assignment, completion evidence, resolve, reopen path, full incident history, analytics, reset demo data |
+| Maps | Google Maps base map + Google Places search when a browser key is configured; otherwise a clearly labelled Leaflet / OpenStreetMap demo map. Routes are drawn from the SafeRoute engine in both cases |
 | Roles | Student, driver, safety operator, maintenance — enforced server-side on every endpoint |
 
 ## Architecture
 
 ```
-frontend/  React 18 + TypeScript + Vite + Tailwind, Leaflet (react-leaflet), Recharts
+frontend/  React 18 + TypeScript + Vite + Tailwind, Google Maps JS API or Leaflet, Recharts
+  src/components/map/primitives.tsx  markers / lines that render on either base map
 backend/   FastAPI, SQLAlchemy 2, scikit-learn, Anthropic SDK
   app/services/graph.py          OSM walk & drive networks, spatial grid index
   app/services/routing.py        time-dependent A* with risk-weighted costs
@@ -47,6 +49,25 @@ Walking and driving networks are separate graphs (walk: 3,163 nodes / 8,772 edge
 5,047 directed edges, honouring one-ways), each restricted to its largest strongly connected component.
 Routes are only ever drawn from engine edges; the short dashed connector from your exact pin to the nearest
 network node is shown dashed because it is not a mapped road.
+
+### Google Maps
+
+Set `GOOGLE_MAPS_BROWSER_KEY` (and ideally `GOOGLE_MAPS_MAP_ID`) in `backend/.env` and restart the API.
+The key is delivered to signed-in users at runtime through `/api/map/config`, so the frontend needs no
+rebuild. It is a **browser key and is public by design**, so in Google Cloud Console:
+
+- enable **Maps JavaScript API** and **Places API (New)**;
+- restrict the key to those two APIs and to your site's HTTP referrers (e.g. `http://localhost:5173/*`
+  and your production domain);
+- create a Map ID (JavaScript, vector or raster) for Advanced Markers; without one the app uses
+  `DEMO_MAP_ID`, which is for development only. Cloud-based map styling attached to the Map ID can
+  give the base map the pastel look.
+
+What Google provides: the base map and place search (Places autocomplete restricted to the pilot area,
+results outside it are refused). What it does **not** provide: routes, travel times or traffic — those
+still come from the SafeRoute engine on the OpenStreetMap network and the synthetic traffic model, so
+route lines can sit a few metres off Google's road drawing where the two maps differ. If the key is
+missing, rejected or Google can't be reached, the app falls back to the OSM demo map and says why.
 
 ### Safety score
 
@@ -78,7 +99,7 @@ cd backend
 python -m venv .venv
 .venv\Scripts\activate            # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env              # optional: add ANTHROPIC_API_KEY for AI photo analysis
+cp .env.example .env              # optional: ANTHROPIC_API_KEY (AI photos), GOOGLE_MAPS_BROWSER_KEY (Google Maps)
 python -m app.seed                # creates saferoute.db, seeds demo data, trains the model (~30 s first time)
 uvicorn app.main:app --port 8000  # API docs at http://localhost:8000/docs
 
@@ -128,13 +149,16 @@ arrive-by time, then **Use … departure** and **Open route in navigation**.
 `docker compose up --build` runs PostgreSQL/PostGIS, the API and an nginx-served frontend
 (http://localhost:5173). The API container reseeds demo data on start. After the first start you can apply
 `backend/migrations/001_postgis.sql` for spatial columns and indexes. For production: set a long
-`JWT_SECRET`, `DEMO_MODE=false`, your own tile server via `VITE_MAP_TILE_URL` (OpenStreetMap's public tiles
-are for light use only), and keep `ANTHROPIC_API_KEY` server-side.
+`JWT_SECRET`, `DEMO_MODE=false`, a referrer-restricted `GOOGLE_MAPS_BROWSER_KEY` + `GOOGLE_MAPS_MAP_ID`
+(or your own tile server via `VITE_MAP_TILE_URL` for the OSM map — OpenStreetMap's public tiles are for
+light use only), and keep `ANTHROPIC_API_KEY` server-side.
 
 ## Known limitations
 
-- Maps use Leaflet with OpenStreetMap tiles; Google Maps / Places integration is not implemented. Place search
-  uses 265 named OSM places inside the pilot area.
+- Google Maps is used only as the base map and place search. Routing, ETAs and traffic do not use Google
+  Directions/Routes or Google live traffic. The Google path was checked in Google's keyless development
+  mode only (no production key was available); Places search needs a real key.
+- Without a Google key, place search uses 265 named OSM places inside the pilot area.
 - Cycling and motorcycle modes are not routed yet (the graph builder can add them).
 - The PostgreSQL/Docker path is provided but was not exercised in development (SQLite was used).
   The schema is created from SQLAlchemy models rather than versioned Alembic migrations.

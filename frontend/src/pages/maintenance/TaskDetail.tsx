@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import { ArrowLeft, Camera, CheckCircle2, Loader2, Navigation2, Play } from "lucide-react";
 import { useRef, useState } from "react";
-import { Marker, Polyline } from "react-leaflet";
 import { Link, useParams } from "react-router-dom";
 import { LifecycleStepper } from "@/components/HazardDetailPanel";
 import { HazardThumb } from "@/components/HazardReportCard";
 import { NavigationMap } from "@/components/map/MapBase";
 import { hazardIcon } from "@/components/map/layers";
+import { MapMarker, MapPolyline } from "@/components/map/primitives";
 import { CertaintyBadge, ErrorNote, LoadingSkeleton, SeverityBadge } from "@/components/ui";
 import { useRealtimeEvent } from "@/context/RealtimeContext";
 import { api, ApiError, assetUrl } from "@/lib/api";
@@ -66,8 +66,8 @@ export default function TaskDetail() {
             </div>
           </section>
           <NavigationMap className="h-72" fitTo={[[inc.lat, inc.lon], ...inc.affected_paths.flatMap((a) => a.geometry)]} fitKey={String(inc.id)}>
-            {inc.affected_paths.map((a, i) => <Polyline key={i} positions={a.geometry} pathOptions={{ color: a.impact_type === "closure" ? "#E2545E" : "#F4B860", weight: 7 }} />)}
-            <Marker position={[inc.lat, inc.lon]} icon={hazardIcon(inc, true)} />
+            {inc.affected_paths.map((a, i) => <MapPolyline key={i} positions={a.geometry} color={a.impact_type === "closure" ? "#E2545E" : "#F4B860"} weight={7} />)}
+            <MapMarker position={[inc.lat, inc.lon]} icon={hazardIcon(inc, true)} />
           </NavigationMap>
           <a className="btn-outline w-full" target="_blank" rel="noreferrer" href={`https://www.openstreetmap.org/directions?to=${inc.lat}%2C${inc.lon}`}><Navigation2 size={16} />Directions to site</a>
         </div>

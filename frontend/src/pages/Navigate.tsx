@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import { AlertTriangle, ArrowUpDown, Bike, Car, CloudRain, Footprints, Info, Loader2, Navigation, ShieldCheck, Sparkles, Square } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { Marker } from "react-leaflet";
 import { useSearchParams } from "react-router-dom";
 import { HazardDetailPanel } from "@/components/HazardDetailPanel";
 import { LocationSelector } from "@/components/LocationSelector";
 import { NavigationMap } from "@/components/map/MapBase";
 import { destIcon, HazardMarkers, RouteLines } from "@/components/map/layers";
+import { MapMarker } from "@/components/map/primitives";
 import { RouteComparisonCard } from "@/components/RouteComparisonCard";
 import { Drawer, EmptyState, ErrorNote, Modal, SafetyScoreBadge, Segmented, Skeleton } from "@/components/ui";
 import { useNav } from "@/context/NavigationContext";
@@ -146,7 +146,7 @@ export default function NavigatePage() {
           )}>
           {hazards.data && <HazardMarkers items={hazards.data} onSelect={(i) => setHazardId(i.id)} />}
           {nav.plan && <RouteLines plan={nav.plan} selected={nav.selected} onSelect={nav.setSelected} />}
-          {!nav.plan && destination && <Marker position={[destination.lat, destination.lon]} icon={destIcon} />}
+          {!nav.plan && destination && <MapMarker position={[destination.lat, destination.lon]} icon={destIcon} />}
         </NavigationMap>
         {nav.loading && <div className="pointer-events-none absolute right-8 top-8 z-[600] hidden rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-soft lg:flex"><Loader2 size={14} className="mr-1 animate-spin" />Computing routes</div>}
         {selected && routeHazards.size > 0 && (

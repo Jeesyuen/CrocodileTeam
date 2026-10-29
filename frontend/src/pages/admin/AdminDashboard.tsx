@@ -1,11 +1,11 @@
 import { AlertOctagon, ArrowRight, CheckCircle2, Clock3, Layers, RotateCcw, ShieldAlert, Wrench } from "lucide-react";
 import { useState } from "react";
-import { Polyline } from "react-leaflet";
 import { Link, useNavigate } from "react-router-dom";
 import { HazardDetailPanel } from "@/components/HazardDetailPanel";
 import { HazardReportCard } from "@/components/HazardReportCard";
 import { NavigationMap } from "@/components/map/MapBase";
 import { HazardMarkers } from "@/components/map/layers";
+import { MapPolyline } from "@/components/map/primitives";
 import { OperatorActions } from "@/components/OperatorActions";
 import { ConfirmationDialog, Drawer, EmptyState, LoadingSkeleton, PageHeader, SectionHeader, StatCard, SyntheticBadge } from "@/components/ui";
 import { useRealtime, useRealtimeEvent } from "@/context/RealtimeContext";
@@ -57,7 +57,7 @@ export default function AdminDashboard() {
         <section className="card card-pad">
           <SectionHeader title="Incident map" subtitle={`${active.data?.length ?? 0} active incidents · ${sessions.data?.length ?? 0} active navigation sessions (anonymised)`} right={<SyntheticBadge label="Includes synthetic records" />} />
           <NavigationMap className="h-[460px]">
-            {sessions.data?.map((x) => <Polyline key={x.id} positions={x.geometry} pathOptions={{ color: "#7968C9", weight: 3, opacity: 0.45, dashArray: "2 6" }} />)}
+            {sessions.data?.map((x) => <MapPolyline key={x.id} positions={x.geometry} color="#7968C9" weight={3} opacity={0.45} dash="2 6" />)}
             {active.data && <HazardMarkers items={active.data} onSelect={(i) => setOpen(i.id)} />}
           </NavigationMap>
         </section>

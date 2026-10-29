@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, Query
 
+from ..config import get_settings
 from ..schemas import LAT_MAX, LAT_MIN, LON_MAX, LON_MIN
 from ..security import get_current_user
 from ..services.graph import get_network, get_places, get_traffic_segments
@@ -23,7 +24,15 @@ def search_places(q: str = Query("", max_length=80), limit: int = Query(8, le=30
 
 @router.get("/map/config")
 def map_config():
+    settings = get_settings()
+    google = None
+    if settings.google_maps_browser_key:
+        google = {"browser_key": settings.google_maps_browser_key,
+                  "map_id": settings.google_maps_map_id or "DEMO_MAP_ID"}
     return {
+        # Base map only: routes are always computed by the SafeRoute engine on the OSM network.
+        "provider": "google" if google else "leaflet",
+        "google": google,
         "pilot_bounds": [[LAT_MIN, LON_MIN], [LAT_MAX, LON_MAX]],
         "center": [2.9230, 101.6440],
         "networks": {m: {"nodes": len(get_network(m).nodes), "edges": len(get_network(m).edges)}

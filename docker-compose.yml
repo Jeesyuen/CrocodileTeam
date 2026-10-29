@@ -21,6 +21,8 @@ services:
       DATABASE_URL: postgresql+psycopg://saferoute:saferoute@db:5432/saferoute
       JWT_SECRET: ${JWT_SECRET:-change-me-to-a-long-random-string-in-production}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      GOOGLE_MAPS_BROWSER_KEY: ${GOOGLE_MAPS_BROWSER_KEY:-}
+      GOOGLE_MAPS_MAP_ID: ${GOOGLE_MAPS_MAP_ID:-}
       CORS_ORIGINS: http://localhost:5173
       DEMO_MODE: "true"
     depends_on:

@@ -6,6 +6,7 @@ _tmp = Path(tempfile.mkdtemp(prefix="saferoute-test-"))
 os.environ["DATABASE_URL"] = f"sqlite:///{(_tmp / 'test.db').as_posix()}"
 os.environ["UPLOAD_DIR"] = str(_tmp / "uploads")
 os.environ["ANTHROPIC_API_KEY"] = ""
+os.environ["GOOGLE_MAPS_BROWSER_KEY"] = ""
 os.environ["RATE_LIMIT_REPORTS_PER_10MIN"] = "1000"
 
 import pytest  # noqa: E402

@@ -254,3 +254,14 @@ def test_dashboard_updates_after_report(client, users):
                                                           "lat": p[0], "lon": p[1]})
     after = client.get("/api/dashboard/summary", headers=users["a"]).json()
     assert after["total"] == before["total"] + 1 and after["pending"] == before["pending"] + 1
+
+
+def test_map_config_provider(client, users, monkeypatch):
+    from app.config import get_settings
+    cfg = client.get("/api/map/config", headers=users["b"]).json()
+    assert cfg["provider"] == "leaflet" and cfg["google"] is None
+    assert client.get("/api/map/config").status_code == 401
+    monkeypatch.setattr(get_settings(), "google_maps_browser_key", "test-browser-key")
+    cfg = client.get("/api/map/config", headers=users["b"]).json()
+    assert cfg["provider"] == "google"
+    assert cfg["google"] == {"browser_key": "test-browser-key", "map_id": "DEMO_MAP_ID"}

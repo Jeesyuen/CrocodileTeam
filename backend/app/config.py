@@ -21,6 +21,13 @@ class Settings(BaseSettings):
     vision_model: str = "claude-opus-5-5"
     vision_timeout_seconds: float = 45.0
 
+    # Google Maps JavaScript API + Places API (New). This is a *browser* key: it is sent to
+    # signed-in clients, so restrict it to your site's HTTP referrers and to those two APIs.
+    # Leave blank to use the Leaflet/OpenStreetMap demo map.
+    google_maps_browser_key: str = ""
+    # Map ID (required for Advanced Markers). "DEMO_MAP_ID" works for development only.
+    google_maps_map_id: str = ""
+
     upload_dir: Path = BASE_DIR / "uploads"
     max_upload_mb: int = 8
     data_dir: Path = BASE_DIR / "data"

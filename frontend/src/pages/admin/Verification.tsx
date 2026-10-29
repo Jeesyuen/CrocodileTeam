@@ -1,11 +1,11 @@
 import { MapPinned, Save } from "lucide-react";
 import { useState } from "react";
-import { Marker } from "react-leaflet";
 import { useSearchParams } from "react-router-dom";
 import { HazardDetailPanel } from "@/components/HazardDetailPanel";
 import { HazardReportCard } from "@/components/HazardReportCard";
 import { NavigationMap } from "@/components/map/MapBase";
 import { hazardIcon, pinIcon } from "@/components/map/layers";
+import { MapMarker } from "@/components/map/primitives";
 import { OperatorActions } from "@/components/OperatorActions";
 import { EmptyState, ErrorNote, LoadingSkeleton, PageHeader } from "@/components/ui";
 import { useRealtimeEvent } from "@/context/RealtimeContext";
@@ -71,8 +71,8 @@ function LocationCorrection({ inc, onSaved }: { inc: Incident; onSaved: () => vo
       {err && <div className="mt-3"><ErrorNote message={err} /></div>}
       {editing && (
         <NavigationMap className="mt-4 h-72" fitTo={[[inc.lat - 0.0015, inc.lon - 0.0015], [inc.lat + 0.0015, inc.lon + 0.0015]]} fitKey={String(inc.id)} onMapClick={(a, b) => setPin([a, b])} showLocate={false}>
-          <Marker position={[inc.lat, inc.lon]} icon={hazardIcon(inc)} opacity={0.6} />
-          {pin && <Marker position={pin} icon={pinIcon} />}
+          <MapMarker position={[inc.lat, inc.lon]} icon={hazardIcon(inc)} opacity={0.6} />
+          {pin && <MapMarker position={pin} icon={pinIcon} />}
         </NavigationMap>
       )}
     </section>

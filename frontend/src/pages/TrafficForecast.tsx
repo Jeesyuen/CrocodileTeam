@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { Activity, AlarmClock, CalendarClock, Clock, Gauge, Navigation, Timer, TrafficCone } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Polyline, Tooltip as LTooltip } from "react-leaflet";
 import { useNavigate } from "react-router-dom";
 import {
   Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis,
@@ -9,6 +8,7 @@ import {
 import { LocationSelector } from "@/components/LocationSelector";
 import { NavigationMap } from "@/components/map/MapBase";
 import { RouteLine, RouteLines } from "@/components/map/layers";
+import { MapPolyline } from "@/components/map/primitives";
 import { RouteComparisonCard } from "@/components/RouteComparisonCard";
 import { AIInsightCard, ErrorNote, PageHeader, Segmented, Skeleton, StatCard, SyntheticBadge } from "@/components/ui";
 import { useNav } from "@/context/NavigationContext";
@@ -144,9 +144,8 @@ export default function TrafficForecastPage() {
               const fc = levelBySeg[s.id];
               if (!fc) return null;
               return s.geometry.map((g, i) => (
-                <Polyline key={`${s.id}${i}`} positions={g} pathOptions={{ color: CONGESTION[fc.level].color, weight: 5, opacity: 0.85 }}>
-                  <LTooltip sticky>{s.name}: {CONGESTION[fc.level].label} · {fc.speed_kmh} km/h ({fc.method === "observed" ? "synthetic observation" : "forecast"})</LTooltip>
-                </Polyline>
+                <MapPolyline key={`${s.id}${i}`} positions={g} color={CONGESTION[fc.level].color} weight={5} opacity={0.85}
+                  tooltip={`${s.name}: ${CONGESTION[fc.level].label} · ${fc.speed_kmh} km/h (${fc.method === "observed" ? "synthetic observation" : "forecast"})`} />
               ));
             })}
             {pred?.usual && <RouteLine route={pred.usual} active={false} />}

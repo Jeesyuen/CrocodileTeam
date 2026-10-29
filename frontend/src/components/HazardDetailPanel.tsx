@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { Bot, Check, Footprints, Car, MapPin, X } from "lucide-react";
 import { ReactNode } from "react";
-import { Marker, Polyline } from "react-leaflet";
 import { useRealtimeEvent } from "@/context/RealtimeContext";
 import { assetUrl } from "@/lib/api";
 import { fmtDateTime, timeAgo, titleCase } from "@/lib/format";
@@ -10,6 +9,7 @@ import { CERTAINTY, LIFECYCLE, RESTRICTION, STATUS } from "@/lib/meta";
 import type { AIResult, IncidentDetail } from "@/lib/types";
 import { HazardThumb } from "./HazardReportCard";
 import { NavigationMap } from "./map/MapBase";
+import { MapMarker, MapPolyline } from "./map/primitives";
 import { hazardIcon } from "./map/layers";
 import { CertaintyBadge, ErrorNote, IncidentStatusBadge, LoadingSkeleton, Pill, SeverityBadge } from "./ui";
 
@@ -55,9 +55,9 @@ export function HazardDetailPanel({ id, onClose, actions }: {
 
           <NavigationMap className="h-56" fitTo={[[d.lat, d.lon], ...d.affected_paths.flatMap((a) => a.geometry)]} fitKey={`${d.id}-${d.lat}`} showLocate={false}>
             {d.affected_paths.map((a, i) => (
-              <Polyline key={i} positions={a.geometry} pathOptions={{ color: a.impact_type === "closure" ? "#E2545E" : "#F4B860", weight: 7, opacity: a.active ? 0.9 : 0.35, dashArray: a.active ? undefined : "6 8" }} />
+              <MapPolyline key={i} positions={a.geometry} color={a.impact_type === "closure" ? "#E2545E" : "#F4B860"} weight={7} opacity={a.active ? 0.9 : 0.35} dash={a.active ? undefined : "6 8"} />
             ))}
-            <Marker position={[d.lat, d.lon]} icon={hazardIcon(d, true)} />
+            <MapMarker position={[d.lat, d.lon]} icon={hazardIcon(d, true)} />
           </NavigationMap>
 
           <section className="rounded-3xl bg-white p-5 shadow-soft">
