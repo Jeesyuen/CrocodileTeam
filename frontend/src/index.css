@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1, h2, h3 { @apply tracking-tight; }
+  ::selection { background: #E9E3FF; }
+  :focus-visible { outline: 2px solid #7968C9; outline-offset: 2px; }
+}
+
+@layer components {
+  .card { @apply bg-white rounded-3xl shadow-soft; }
+  .card-pad { @apply p-5 sm:p-6; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold
+      transition active:scale-[.98] disabled:opacity-50 disabled:pointer-events-none whitespace-nowrap;
+  }
+  .btn-primary { @apply btn bg-lavender-deep text-white hover:bg-[#6a59bd] shadow-[0_10px_24px_-12px_rgba(121,104,201,.8)]; }
+  .btn-soft { @apply btn bg-lavender text-lavender-deep hover:bg-[#ddd4ff]; }
+  .btn-mint { @apply btn bg-mint text-mint-deep hover:bg-[#cdebe9]; }
+  .btn-ghost { @apply btn bg-transparent text-ink hover:bg-line; }
+  .btn-outline { @apply btn bg-white text-ink ring-1 ring-line hover:bg-canvas; }
+  .btn-danger { @apply btn bg-danger/15 text-[#c4444e] hover:bg-danger/25; }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+  .input {
+    @apply w-full rounded-2xl bg-canvas px-4 py-3 text-sm ring-1 ring-line placeholder:text-muted
+      focus:bg-white focus:outline-none focus:ring-2 focus:ring-lavender-deep/40 transition;
+  }
+  .label { @apply text-xs font-semibold uppercase tracking-wide text-muted; }
+  .seg { @apply inline-flex rounded-2xl bg-canvas p-1 ring-1 ring-line; }
+  .seg > button { @apply rounded-xl px-3 py-1.5 text-sm font-semibold text-muted transition; }
+  .seg > button[data-on="true"] { @apply bg-white text-ink shadow-soft; }
+  .page { @apply mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8 py-5 sm:py-7 pb-28 lg:pb-10; }
+  .scroll-thin { scrollbar-width: thin; scrollbar-color: #E2E4EA transparent; }
+}
+
+/* Leaflet polish */
+.leaflet-container { font-family: inherit; background: #EEF1F5; }
+/* soften raster tiles toward the pastel palette */
+.leaflet-tile-pane { filter: saturate(.45) contrast(.9) brightness(1.06); }
+.leaflet-control-zoom { border: none !important; box-shadow: 0 12px 32px -16px rgba(32,33,36,.25) !important; border-radius: 16px !important; overflow: hidden; }
+.leaflet-control-zoom a { width: 38px !important; height: 38px !important; line-height: 38px !important; color: #202124 !important; border: none !important; }
+.leaflet-control-zoom a:first-child { border-bottom: 1px solid #EEF0F4 !important; }
+.leaflet-popup-content-wrapper { border-radius: 20px; box-shadow: 0 20px 48px -20px rgba(55,48,107,.35); }
+.leaflet-popup-content { margin: 14px 16px; font-size: 13px; }
+.leaflet-control-attribution { border-radius: 10px 0 0 0; font-size: 10px; background: rgba(255,255,255,.8) !important; }
+.sr-marker { background: transparent; border: none; }

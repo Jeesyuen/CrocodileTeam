@@ -1,0 +1,7 @@
+.venv
+__pycache__
+saferoute.db*
+uploads
+models
+.pytest_cache
+.env

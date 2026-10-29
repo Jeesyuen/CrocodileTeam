@@ -1,0 +1,4493 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-29T02:59:05Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1469118586,
+  "lat": 2.9169971,
+  "lon": 101.6497740,
+  "tags": {
+    "addr:housenumber": "16",
+    "amenity": "fast_food",
+    "brand": "Domino's",
+    "brand:wikidata": "Q839466",
+    "brand:wikipedia": "en:Domino's Pizza",
+    "cuisine": "pizza",
+    "name": "Domino's",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1469118588,
+  "lat": 2.9265467,
+  "lon": 101.6430717,
+  "tags": {
+    "amenity": "parking",
+    "name": "Faculty Parking",
+    "parking": "surface",
+    "source": "Bing"
+  }
+},
+{
+  "type": "node",
+  "id": 1472136337,
+  "lat": 2.9152403,
+  "lon": 101.6508942,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Al-Naz Maju",
+    "name:ms": "Al-Naz Maju"
+  }
+},
+{
+  "type": "node",
+  "id": 4467589994,
+  "lat": 2.9255941,
+  "lon": 101.6510365,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Yasmin Cyberjaya",
+    "name:en": "Yasmin Cyberjaya"
+  }
+},
+{
+  "type": "node",
+  "id": 4488395404,
+  "lat": 2.9188493,
+  "lon": 101.6315777,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Restaurant Erra",
+    "name:en": "Restaurant Erra"
+  }
+},
+{
+  "type": "node",
+  "id": 4734012904,
+  "lat": 2.9243220,
+  "lon": 101.6393065,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Poolside Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 5027680921,
+  "lat": 2.9249185,
+  "lon": 101.6510787,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "pakistani",
+    "name": "Traskun Pakistani Restaurant",
+    "name:en": "Traskun Pakistani Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5565580696,
+  "lat": 2.9180336,
+  "lon": 101.6392890,
+  "tags": {
+    "amenity": "school",
+    "name": "Hall"
+  }
+},
+{
+  "type": "node",
+  "id": 5565580697,
+  "lat": 2.9185583,
+  "lon": 101.6392306,
+  "tags": {
+    "amenity": "fast_food",
+    "fast_food": "cafeteria",
+    "name": "Canteen",
+    "name:en": "Canteen"
+  }
+},
+{
+  "type": "node",
+  "id": 5565588400,
+  "lat": 2.9189070,
+  "lon": 101.6389375,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Surau Smk Cyberjaya",
+    "name:ms": "Surau Smk Cyberjaya",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 5565588401,
+  "lat": 2.9186515,
+  "lon": 101.6386131,
+  "tags": {
+    "amenity": "fast_food",
+    "fast_food": "cafeteria",
+    "name": "Canteen SK Cyberjaya",
+    "name:en": "Canteen Sk Cyberjaya"
+  }
+},
+{
+  "type": "node",
+  "id": 5565592554,
+  "lat": 2.9193234,
+  "lon": 101.6385372,
+  "tags": {
+    "name": "Office SK Cyberjaya",
+    "name:en": "Office SK Cyberjaya",
+    "office": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5565592557,
+  "lat": 2.9189019,
+  "lon": 101.6394109,
+  "tags": {
+    "amenity": "parking",
+    "name": "Parking area"
+  }
+},
+{
+  "type": "node",
+  "id": 5565626150,
+  "lat": 2.9260430,
+  "lon": 101.6514399,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Suit 4810-0-42",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Flora",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "bar": "no",
+    "check_date": "2025-12-26",
+    "cuisine": "asian;chinese;oriental",
+    "delivery": "yes",
+    "diet:halal": "yes",
+    "highchair": "no",
+    "level": "0",
+    "name": "Salam Noodles",
+    "name:en": "Salam Noodles",
+    "operator": "My Iman Foods (M) Sdn Bhd",
+    "outdoor_seating": "yes",
+    "phone": "+60 16-220 6707",
+    "takeaway": "yes",
+    "toilets": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5565626151,
+  "lat": 2.9263693,
+  "lon": 101.6510533,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Sultan Cuisine Restaurant",
+    "name:en": "Sultan Cuisine Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5565638651,
+  "lat": 2.9229127,
+  "lon": 101.6513286,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:full": "Suite 0-2, Block A1, Jln Perdana, CBD Perdana, Cyberjaya",
+    "addr:housenumber": "Suite 0-2, Block A1",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Perdana",
+    "amenity": "restaurant",
+    "branch": "Cyberjaya",
+    "cuisine": "middle_eastern",
+    "name": "Saba Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 5565638654,
+  "lat": 2.9170585,
+  "lon": 101.6497669,
+  "tags": {
+    "addr:housenumber": "15",
+    "amenity": "fast_food",
+    "brand": "Marrybrown",
+    "brand:wikidata": "Q3380773",
+    "cuisine": "malaysian;chicken;burger",
+    "diet:halal": "yes",
+    "name": "Marrybrown",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5565643967,
+  "lat": 2.9153194,
+  "lon": 101.6505756,
+  "tags": {
+    "addr:housenumber": "62",
+    "amenity": "cafe",
+    "brand": "Tealive",
+    "brand:wikidata": "Q95722097",
+    "cuisine": "tea;coffee_shop",
+    "name": "Tealive",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6186357447,
+  "lat": 2.9248150,
+  "lon": 101.6362535,
+  "tags": {
+    "description": "Opening Hours: 8:30am–3am",
+    "name": "A&C Grocery",
+    "name:en": "A&C Grocery",
+    "phone": "+6 017-280 9911",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 6186357455,
+  "lat": 2.9246349,
+  "lon": 101.6366759,
+  "tags": {
+    "addr:city": "CYBERJAYA",
+    "addr:housenumber": "Menara Solstice",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Bestari, Cyber 11",
+    "description": "Solstice Management Office",
+    "name": "Solstice Management Office",
+    "name:en": "Solstice Management Office",
+    "office": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6186594846,
+  "lat": 2.9231613,
+  "lon": 101.6615221,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Monjo Coffee",
+    "name:en": "Monjo Coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 6186594849,
+  "lat": 2.9229347,
+  "lon": 101.6629041,
+  "tags": {
+    "name": "Star Grocer",
+    "name:en": "Star Grocer",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 6186635207,
+  "lat": 2.9235377,
+  "lon": 101.6372622,
+  "tags": {
+    "addr:city": "CYBERJAYA",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Bestari",
+    "name": "Paragon Management Office",
+    "name:en": "Paragon Management Office",
+    "office": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6557042814,
+  "lat": 2.9206692,
+  "lon": 101.6381612,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Padi House Cafeteria and Deli Cafe",
+    "name:en": "Padi House Cafeteria and Deli Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 7599761885,
+  "lat": 2.9208574,
+  "lon": 101.6559710,
+  "tags": {
+    "amenity": "cafe",
+    "branch": "Cyberjaya",
+    "brand": "Starbucks",
+    "brand:wikidata": "Q37158",
+    "brand:wikipedia": "en:Starbucks",
+    "cuisine": "coffee_shop",
+    "name": "Starbucks",
+    "official_name": "Starbucks Coffee",
+    "source": "https://openstreetcam.org/details/3572913/28",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7600015085,
+  "lat": 2.9188269,
+  "lon": 101.6568542,
+  "tags": {
+    "name": "Star Grocer",
+    "name:en": "Star Grocer",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 7602728987,
+  "lat": 2.9171910,
+  "lon": 101.6523372,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "The Coffee Bean & Tea Leaf",
+    "brand:wikidata": "Q1141384",
+    "cuisine": "coffee_shop",
+    "name": "The Coffee Bean & Tea Leaf",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7652818086,
+  "lat": 2.9212475,
+  "lon": 101.6560363,
+  "tags": {
+    "amenity": "bank",
+    "branch": "Cyberjaya",
+    "brand": "CIMB Bank",
+    "brand:wikidata": "Q3045976",
+    "brand:wikipedia": "en:CIMB",
+    "name": "CIMB Bank",
+    "opening_hours": "Mo-Th 09:15-16:30; Fr 09:15-16:00"
+  }
+},
+{
+  "type": "node",
+  "id": 7656504119,
+  "lat": 2.9232797,
+  "lon": 101.6604927,
+  "tags": {
+    "addr:country": "MY",
+    "branch": "Shaftsbury Square",
+    "brand": "99 Speedmart",
+    "brand:wikidata": "Q62075061",
+    "currency:MYR": "yes",
+    "internet_access": "wlan",
+    "name": "99 Speedmart",
+    "operator": "99 Speed Mart Sdn Berhad",
+    "payment:coins": "yes",
+    "payment:mastercard": "yes",
+    "payment:notes": "yes",
+    "payment:touchngo_ewallet": "yes",
+    "payment:visa": "yes",
+    "phone": "+603-3362 6863",
+    "shop": "supermarket",
+    "smoking": "no",
+    "source": "https://openstreetcam.org/details/2037602/1552",
+    "website": "https://www.99speedmart.com.my/Store"
+  }
+},
+{
+  "type": "node",
+  "id": 7656505728,
+  "lat": 2.9232560,
+  "lon": 101.6603465,
+  "tags": {
+    "amenity": "bank",
+    "brand": "Maybank",
+    "brand:wikidata": "Q1364018",
+    "brand:wikipedia": "en:Maybank",
+    "name": "Maybank",
+    "source": "https://openstreetcam.org/details/2037602/1547"
+  }
+},
+{
+  "type": "node",
+  "id": 7656505729,
+  "lat": 2.9232708,
+  "lon": 101.6604129,
+  "tags": {
+    "amenity": "bank",
+    "branch": "Amanah",
+    "brand": "HSBC",
+    "brand:wikidata": "Q190464",
+    "brand:wikipedia": "en:HSBC",
+    "name": "HSBC",
+    "source": "https://openstreetcam.org/details/2037602/1549"
+  }
+},
+{
+  "type": "node",
+  "id": 7656505732,
+  "lat": 2.9234087,
+  "lon": 101.6616554,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "Chatime",
+    "brand:en": "Chatime",
+    "brand:wikidata": "Q16829306",
+    "brand:wikipedia": "en:Chatime",
+    "brand:zh": "日出茶太",
+    "cuisine": "bubble_tea",
+    "name": "Chatime",
+    "name:en": "Chatime",
+    "name:zh": "日出茶太",
+    "source": "https://openstreetcam.org/details/2037602/1561",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7656590694,
+  "lat": 2.9244391,
+  "lon": 101.6372091,
+  "tags": {
+    "addr:country": "MY",
+    "branch": "Cyberjaya Paragon",
+    "brand": "99 Speedmart",
+    "brand:wikidata": "Q62075061",
+    "currency:MYR": "yes",
+    "internet_access": "wlan",
+    "name": "99 Speedmart",
+    "operator": "99 Speed Mart Sdn Berhad",
+    "payment:coins": "yes",
+    "payment:mastercard": "yes",
+    "payment:notes": "yes",
+    "payment:touchngo_ewallet": "yes",
+    "payment:visa": "yes",
+    "phone": "+603-3362 6863",
+    "shop": "supermarket",
+    "smoking": "no",
+    "source": "https://openstreetcam.org/details/2252470/1964",
+    "website": "https://www.99speedmart.com.my/Store"
+  }
+},
+{
+  "type": "node",
+  "id": 7685350527,
+  "lat": 2.9228962,
+  "lon": 101.6617224,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "C-16, Level 16 iTech Tower",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Impact",
+    "consulting": "engineering",
+    "email": "info.my@dreamedge.jp",
+    "fax": "+60383203900",
+    "level": "16",
+    "name": "DreamEDGE Sdn Bhd",
+    "name:en": "DreamEDGE Sdn Bhd",
+    "office": "consulting",
+    "opening_hours": "Mo-Fr 08:30-17:30",
+    "phone": "+60383203800"
+  }
+},
+{
+  "type": "node",
+  "id": 8742907673,
+  "lat": 2.9331743,
+  "lon": 101.6385253,
+  "tags": {
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "brand:wikipedia": "en:KFC",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8742910464,
+  "lat": 2.9211841,
+  "lon": 101.6558274,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "McCafé",
+    "brand:wikidata": "Q3114287",
+    "brand:wikipedia": "en:McCafé",
+    "cuisine": "coffee_shop",
+    "name": "McCafé",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9264874900,
+  "lat": 2.9234822,
+  "lon": 101.6516288,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Suite 1-5, Blok 4803",
+    "air_conditioning": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Beryll Inn Cyberjaya",
+    "name:en": "Beryll Inn Cyberjaya",
+    "smoking": "no",
+    "stars": "2",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 9591578068,
+  "lat": 2.9286270,
+  "lon": 101.6539110,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:state": "Selangor",
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "Nam Heong Ipoh",
+    "name:en": "Nam Heong Ipoh"
+  }
+},
+{
+  "type": "node",
+  "id": 9591993029,
+  "lat": 2.9153546,
+  "lon": 101.6498204,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "pakistani;arab",
+    "name": "Mr. Kabab & Biryani",
+    "name:ms": "Mr. Kabab & Biryani"
+  }
+},
+{
+  "type": "node",
+  "id": 9592334717,
+  "lat": 2.9248576,
+  "lon": 101.6545863,
+  "tags": {
+    "addr:housenumber": "Block B, Quill 18",
+    "addr:postcode": "63000",
+    "name": "Experian Global Delivery Center Malaysia",
+    "name:en": "Experian Global Delivery Center Malaysia",
+    "office": "company"
+  }
+},
+{
+  "type": "node",
+  "id": 9592334718,
+  "lat": 2.9246851,
+  "lon": 101.6546728,
+  "tags": {
+    "addr:housenumber": "Ground Floor, Block B, Quill 18",
+    "addr:postcode": "63000",
+    "amenity": "cafe",
+    "name": "San Francisco Coffee",
+    "name:en": "San Francisco Coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 9592334817,
+  "lat": 2.9245828,
+  "lon": 101.6561105,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Nasi Kandar Pelita",
+    "name:ms": "Nasi Kandar Pelita"
+  }
+},
+{
+  "type": "node",
+  "id": 9592334818,
+  "lat": 2.9260832,
+  "lon": 101.6556430,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Chennai Spice",
+    "name:en": "Chennai Spice"
+  }
+},
+{
+  "type": "node",
+  "id": 9593522217,
+  "lat": 2.9263007,
+  "lon": 101.6561552,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Restaurant All in All",
+    "name:en": "Restaurant All in All"
+  }
+},
+{
+  "type": "node",
+  "id": 9598482217,
+  "lat": 2.9282757,
+  "lon": 101.6546487,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Harleyz",
+    "name:en": "Harleyz"
+  }
+},
+{
+  "type": "node",
+  "id": 9598482317,
+  "lat": 2.9284098,
+  "lon": 101.6542626,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "Heli Chicken",
+    "name:en": "Heli Chicken"
+  }
+},
+{
+  "type": "node",
+  "id": 9613050435,
+  "lat": 2.9229440,
+  "lon": 101.6516362,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "arab;pakistani",
+    "level": "0",
+    "name": "Safaa Restaurant",
+    "name:en": "Safaa Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 9634240953,
+  "lat": 2.9180027,
+  "lon": 101.6604784,
+  "tags": {
+    "name": "CyberSecurity Malaysia",
+    "name:en": "CyberSecurity Malaysia",
+    "office": "government"
+  }
+},
+{
+  "type": "node",
+  "id": 9887721717,
+  "lat": 2.9117351,
+  "lon": 101.6526322,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Block 10",
+    "addr:postcode": "63000",
+    "addr:street": "Lingkaran Cyber Point Timur",
+    "air_conditioning": "yes",
+    "amenity": "cafe",
+    "internet_access": "no",
+    "name": "GoHalal Cafe",
+    "name:en": "GoHalal Cafe",
+    "outdoor_seating": "no",
+    "payment:cash": "yes",
+    "payment:coins": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10544068367,
+  "lat": 2.9244545,
+  "lon": 101.6618370,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "2340 Century Square",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Usahawan",
+    "air_conditioning": "yes",
+    "name": "T-Systems Malaysia Sdn. Bhd.",
+    "name:en": "T-Systems Malaysia Sdn. Bhd.",
+    "name:ms": "T-Systems Malaysia Sdn. Bhd.",
+    "office": "company",
+    "opening_hours": "Mo-Fr 09:00-18:00",
+    "smoking": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 10544068368,
+  "lat": 2.9256064,
+  "lon": 101.6606282,
+  "tags": {
+    "name": "Block 2320 Century Square",
+    "name:en": "Block 2320 Century Square",
+    "office": "company"
+  }
+},
+{
+  "type": "node",
+  "id": 10544068454,
+  "lat": 2.9197051,
+  "lon": 101.6364634,
+  "tags": {
+    "name": "Village Grocer",
+    "name:en": "Village Grocer",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 10844093203,
+  "lat": 2.9201128,
+  "lon": 101.6360702,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Burger King",
+    "brand:wikidata": "Q177054",
+    "cuisine": "burger",
+    "name": "Burger King",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11209393563,
+  "lat": 2.9188854,
+  "lon": 101.6371953,
+  "tags": {
+    "amenity": "place_of_worship",
+    "level": "3",
+    "name": "Surau",
+    "name:ms": "Surau",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 11209393564,
+  "lat": 2.9198785,
+  "lon": 101.6369152,
+  "tags": {
+    "amenity": "place_of_worship",
+    "level": "3",
+    "name": "Surau",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 11273571752,
+  "lat": 2.9213220,
+  "lon": 101.6570110,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Corner 23",
+    "name:en": "Corner 23"
+  }
+},
+{
+  "type": "node",
+  "id": 11273571753,
+  "lat": 2.9213732,
+  "lon": 101.6569905,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Power Stall",
+    "name:en": "Power Stall"
+  }
+},
+{
+  "type": "node",
+  "id": 11276589241,
+  "lat": 2.9087136,
+  "lon": 101.6482484,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Rimba Permai",
+    "name": "Multi Purpose Hall, JPS Malaysia",
+    "name:ms": "JPS Malaysia",
+    "office": "government",
+    "website": "https://www.water.gov.my/"
+  }
+},
+{
+  "type": "node",
+  "id": 11338185208,
+  "lat": 2.9258199,
+  "lon": 101.6514342,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "regional",
+    "diet:halal": "yes",
+    "name": "Sifu Salai"
+  }
+},
+{
+  "type": "node",
+  "id": 11338185215,
+  "lat": 2.9254896,
+  "lon": 101.6514429,
+  "tags": {
+    "amenity": "cafe",
+    "level": "0",
+    "name": "Santapan Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 11338230394,
+  "lat": 2.9262326,
+  "lon": 101.6514275,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "diet:halal": "yes",
+    "level": "0",
+    "name": "Mr Mee Authentic Xinjiang Cuisine Chinese Muslim Restaurant"
+  }
+},
+{
+  "type": "node",
+  "id": 11338230395,
+  "lat": 2.9263155,
+  "lon": 101.6514201,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "amenity": "restaurant",
+    "level": "0",
+    "name": "Ayam Getok Mantul"
+  }
+},
+{
+  "type": "node",
+  "id": 11349374623,
+  "lat": 2.9236335,
+  "lon": 101.6516172,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Afly Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 11349374625,
+  "lat": 2.9235783,
+  "lon": 101.6516210,
+  "tags": {
+    "amenity": "school",
+    "name": "Sekolah Rendah Islam Al-Imtiyaz"
+  }
+},
+{
+  "type": "node",
+  "id": 11640545613,
+  "lat": 2.9244387,
+  "lon": 101.6566583,
+  "tags": {
+    "addr:housenumber": "D-G-6",
+    "addr:street": "Jalan GC 7",
+    "amenity": "restaurant",
+    "name": "Restoran Fu Jee Ulu Yam Loh Mee - Cyberjaya 富记正宗福建乌鲁音卤面"
+  }
+},
+{
+  "type": "node",
+  "id": 11648656969,
+  "lat": 2.9202443,
+  "lon": 101.6361627,
+  "tags": {
+    "amenity": "fast_food",
+    "cuisine": "burger",
+    "name": "KGB Courtyard Cyberjaya"
+  }
+},
+{
+  "type": "node",
+  "id": 11813703635,
+  "lat": 2.9260571,
+  "lon": 101.6504230,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "F-2-2",
+    "addr:postcode": "63000",
+    "addr:street": "Block F, CBD Perdana, 3, Jln Perdana, Cyber 12",
+    "email": "sales@gbnetwork.my",
+    "name": "GB Network Solutions Sdn. Bhd.",
+    "office": "it",
+    "opening_hours": "Mo-Fr 09:00-18:00",
+    "phone": "+603 8686 5540",
+    "website": "https://www.gbnetwork.my"
+  }
+},
+{
+  "type": "node",
+  "id": 11934911246,
+  "lat": 2.9146238,
+  "lon": 101.6586345,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran APEC",
+    "amenity": "cafe",
+    "brand": "ZUS Coffee",
+    "brand:wikidata": "Q110811473",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "ZUS Coffee",
+    "opening_hours": "Mo-Su 09:00-19:00",
+    "takeaway": "yes",
+    "website": "https://zuscoffee.com"
+  }
+},
+{
+  "type": "node",
+  "id": 11934911248,
+  "lat": 2.9150951,
+  "lon": 101.6586750,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran APEC",
+    "name": "UST Global (Malaysia) Sdn Bhd",
+    "office": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12194025766,
+  "lat": 2.9253933,
+  "lon": 101.6510565,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "air_conditioning": "yes",
+    "amenity": "restaurant",
+    "cuisine": "seafood",
+    "diet:halal": "yes",
+    "indoor_seating": "yes",
+    "name": "Zam Ikan Bakar",
+    "outdoor_seating": "yes",
+    "payment:cash": "yes",
+    "payment:contactless": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12194025767,
+  "lat": 2.9252221,
+  "lon": 101.6510515,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "amenity": "restaurant",
+    "name": "Nasi Kukus Papa"
+  }
+},
+{
+  "type": "node",
+  "id": 12194025768,
+  "lat": 2.9248394,
+  "lon": 101.6510817,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "amenity": "restaurant",
+    "cuisine": "malaysian",
+    "diet:halal": "yes",
+    "name": "Makang"
+  }
+},
+{
+  "type": "node",
+  "id": 12194025770,
+  "lat": 2.9247413,
+  "lon": 101.6510817,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "general",
+    "name": "Ohana Mediclinic"
+  }
+},
+{
+  "type": "node",
+  "id": 12194025771,
+  "lat": 2.9247337,
+  "lon": 101.6511246,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "name": "Hasbul Brothers",
+    "office": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12265757355,
+  "lat": 2.9211935,
+  "lon": 101.6365771,
+  "tags": {
+    "name": "Vortex",
+    "office": "engineer"
+  }
+},
+{
+  "type": "node",
+  "id": 12265757356,
+  "lat": 2.9212041,
+  "lon": 101.6369232,
+  "tags": {
+    "amenity": "cafe",
+    "name": "Shisha Town"
+  }
+},
+{
+  "type": "node",
+  "id": 12265757359,
+  "lat": 2.9211991,
+  "lon": 101.6367794,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Murni Discovery"
+  }
+},
+{
+  "type": "node",
+  "id": 12408452354,
+  "lat": 2.9157199,
+  "lon": 101.6493126,
+  "tags": {
+    "addr:city": "cyberjaya",
+    "addr:housenumber": "98-1",
+    "addr:postcode": "63000",
+    "addr:street": "Lingkaran Cyber Point Barat",
+    "name": "Mapskart Technology Sdn Bhd",
+    "office": "company",
+    "phone": "+603-8319 3787",
+    "website": "https://mapskart.com.my/"
+  }
+},
+{
+  "type": "node",
+  "id": 12458026464,
+  "lat": 2.9242986,
+  "lon": 101.6581814,
+  "tags": {
+    "amenity": "university",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "UniMAP@KL",
+    "name:en": "UniMAP@KL",
+    "name:ms": "UniMAP@KL",
+    "operator": "UniMAP",
+    "operator:type": "government",
+    "website": "https://admission.unimap.edu.my/index.php/features/unimap-international-cyberjaya"
+  }
+},
+{
+  "type": "node",
+  "id": 12672981807,
+  "lat": 2.9217431,
+  "lon": 101.6506291,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "ZUS Coffee",
+    "brand:wikidata": "Q110811473",
+    "cuisine": "coffee_shop",
+    "name": "ZUS Coffee",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12672981808,
+  "lat": 2.9239493,
+  "lon": 101.6558960,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "12",
+    "addr:postcode": "63200",
+    "addr:street": "Jalan GC 1",
+    "amenity": "fast_food",
+    "branch": "Cyberjaya",
+    "cuisine": "chicken",
+    "name": "Ahmad's",
+    "phone": "+601169758264",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12676256806,
+  "lat": 2.9221437,
+  "lon": 101.6506471,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "LG-16",
+    "addr:postcode": "63000",
+    "addr:street": "Lingkaran Cyber Point Timur",
+    "brand": "Jaya Grocer",
+    "brand:wikidata": "Q116275052",
+    "name": "Jaya Grocer",
+    "phone": "+60383225259",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 12697954036,
+  "lat": 2.9157108,
+  "lon": 101.6492497,
+  "tags": {
+    "addr:housenumber": "101",
+    "branch": "Neo Cyber",
+    "brand": "99 Speedmart",
+    "brand:wikidata": "Q62075061",
+    "check_date": "2025-03-25",
+    "name": "99 Speedmart",
+    "ref": "1519",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 12697954037,
+  "lat": 2.9157020,
+  "lon": 101.6494371,
+  "tags": {
+    "addr:block": "Neo Cyber Block M",
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "M-G-95 & 96",
+    "addr:place": "Biz Avenue 2",
+    "addr:postcode": "63000",
+    "addr:street": "Lingkaran Cyber Point Barat",
+    "amenity": "restaurant",
+    "check_date": "2025-03-25",
+    "name": "Famous Bistro Cafe 2",
+    "phone": "+60 3-8320 5357; +60 12-898 6634"
+  }
+},
+{
+  "type": "node",
+  "id": 12714049173,
+  "lat": 2.9229169,
+  "lon": 101.6512434,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Unit 4800-0-1",
+    "addr:postcode": "63000",
+    "addr:section": "Cyber 12",
+    "addr:street": "Off Persiaran Multimedia",
+    "amenity": "restaurant",
+    "cuisine": "mamak",
+    "name": "Cube Bistro"
+  }
+},
+{
+  "type": "node",
+  "id": 12720749957,
+  "lat": 2.9233813,
+  "lon": 101.6609432,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "Tealive",
+    "brand:wikidata": "Q95722097",
+    "cuisine": "tea;coffee_shop",
+    "name": "Tealive",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12720749960,
+  "lat": 2.9234378,
+  "lon": 101.6612651,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "ZUS Coffee",
+    "brand:wikidata": "Q110811473",
+    "cuisine": "coffee_shop",
+    "name": "ZUS Coffee",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12720749961,
+  "lat": 2.9234019,
+  "lon": 101.6624359,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Subway",
+    "brand:wikidata": "Q244457",
+    "cuisine": "sandwich",
+    "name": "Subway",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12720749963,
+  "lat": 2.9232551,
+  "lon": 101.6630907,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Secret Recipe",
+    "brand:wikidata": "Q7444079",
+    "cuisine": "cake;malaysian",
+    "name": "Secret Recipe",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12797531348,
+  "lat": 2.9326849,
+  "lon": 101.6382457,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "D1-G-08",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Atelier 1",
+    "amenity": "cafe",
+    "branch": "Edusphere, Cyberjaya",
+    "brand": "Mixue Ice Cream & Tea",
+    "brand:en": "MIXUEBINGCHENG",
+    "brand:wikidata": "Q107406476",
+    "brand:zh": "蜜雪冰城",
+    "cuisine": "ice_cream;bubble_tea",
+    "name": "Mixue",
+    "name:en": "Mixue",
+    "name:zh": "蜜雪冰城",
+    "operator": "Seratus Maju Jaya Sdn. Bhd.",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12798931758,
+  "lat": 2.9335570,
+  "lon": 101.6377235,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "ZUS Coffee",
+    "brand:wikidata": "Q110811473",
+    "cuisine": "coffee_shop",
+    "name": "ZUS Coffee",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12935465809,
+  "lat": 2.9103587,
+  "lon": 101.6304347,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Musolla",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 12945825801,
+  "lat": 2.9234323,
+  "lon": 101.6372623,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Aldar Lounge"
+  }
+},
+{
+  "type": "node",
+  "id": 12945825901,
+  "lat": 2.9257796,
+  "lon": 101.6510244,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Barakat Hotpot"
+  }
+},
+{
+  "type": "node",
+  "id": 12951021601,
+  "lat": 2.9232758,
+  "lon": 101.6629819,
+  "tags": {
+    "amenity": "fast_food",
+    "name": "AllAce Cyberjaya"
+  }
+},
+{
+  "type": "node",
+  "id": 12993822347,
+  "lat": 2.9167270,
+  "lon": 101.6498927,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "Mixue Ice Cream & Tea",
+    "brand:wikidata": "Q107406476",
+    "cuisine": "ice_cream;bubble_tea",
+    "name": "Mixue",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13040946415,
+  "lat": 2.9219892,
+  "lon": 101.6508911,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Lot GW-B3",
+    "addr:postcode": "63000",
+    "addr:street": "Lingkaran Cyber Point Timur",
+    "amenity": "cafe",
+    "brand": "Luckin Coffee",
+    "brand:wikidata": "Q56811344",
+    "cuisine": "coffee_shop",
+    "name": "Luckin Coffee",
+    "phone": "+60122515133",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13334960216,
+  "lat": 2.9241737,
+  "lon": 101.6562599,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "No 1, Blok E",
+    "addr:place": "Cyber 12",
+    "addr:postcode": "63200",
+    "addr:street": "Jalan GC 4",
+    "amenity": "restaurant",
+    "check_date": "2025-11-27",
+    "cuisine": "chinese",
+    "name": "Face To Face Noodle House",
+    "operator": "JS Bestfood Sdn Bhd",
+    "phone": "+60 3-8322 1652"
+  }
+},
+{
+  "type": "node",
+  "id": 13378192705,
+  "lat": 2.9204951,
+  "lon": 101.6365420,
+  "tags": {
+    "addr:housenumber": "GP3A-03M",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Multimedia",
+    "amenity": "cafe",
+    "name": "The Botanist",
+    "opening_hours": "Mo-Su 07:30-16:00",
+    "website": "https://thebotanistcafe.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 13532567863,
+  "lat": 2.9337205,
+  "lon": 101.6370039,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "The Coffee Bean & Tea Leaf",
+    "brand:wikidata": "Q1141384",
+    "cuisine": "coffee_shop",
+    "name": "The Coffee Bean & Tea Leaf",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13532567870,
+  "lat": 2.9247672,
+  "lon": 101.6515696,
+  "tags": {
+    "amenity": "bank",
+    "brand": "Bank Islam",
+    "brand:wikidata": "Q4115279",
+    "name": "Bank Islam"
+  }
+},
+{
+  "type": "node",
+  "id": 13591407998,
+  "lat": 2.9182167,
+  "lon": 101.6602169,
+  "tags": {
+    "addr:city": "Cyberjaya,",
+    "addr:housenumber": "Level 1, Tower 1,Menara Cyber Axis",
+    "addr:postcode": "63000",
+    "addr:street": "Jln Impact",
+    "government": "government",
+    "name": "NATIONAL CYBER COORDINATION AND COMMAND CENTRE (NC4) National Cyber Security Agency (NACSA)",
+    "office": "government"
+  }
+},
+{
+  "type": "node",
+  "id": 13731566110,
+  "lat": 2.9205950,
+  "lon": 101.6366850,
+  "tags": {
+    "amenity": "cafe",
+    "name": "San Francisco Coffee"
+  }
+},
+{
+  "type": "node",
+  "id": 13807265092,
+  "lat": 2.9336239,
+  "lon": 101.6374608,
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "Subway",
+    "brand:wikidata": "Q244457",
+    "cuisine": "sandwich",
+    "name": "Subway",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13807265094,
+  "lat": 2.9335252,
+  "lon": 101.6379148,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "Luckin Coffee",
+    "brand:wikidata": "Q56811344",
+    "cuisine": "coffee_shop",
+    "name": "Luckin Coffee",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13928024128,
+  "lat": 2.9258242,
+  "lon": 101.6504221,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "E-G-6",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Perdana",
+    "amenity": "restaurant",
+    "cuisine": "coffee_shop;tea;dessert",
+    "name": "SenjaBrew MY",
+    "opening_hours": "Friday 21:00 - Saturday 01:00, Saturday 18:00 - Sunday 01:00, Sunday 21:00-23:00",
+    "phone": "+601113027759",
+    "website": "https://linktr.ee/senjabrew.my?ltsid=1a7efa19-14bd-4e82-8d75-89ce20944036"
+  }
+},
+{
+  "type": "node",
+  "id": 13952236901,
+  "lat": 2.9188717,
+  "lon": 101.6511966,
+  "tags": {
+    "addr:housenumber": "A-G-02",
+    "addr:postcode": "63000",
+    "addr:street": "Lingkaran Cyber Point Timur",
+    "name": "De Cyber Boutique Hotel",
+    "opening_hours": "24/7",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13974031529,
+  "lat": 2.9276675,
+  "lon": 101.6417057,
+  "tags": {
+    "amenity": "cafe",
+    "name": "HE & SHE COFFEE MENU",
+    "opening_hours": "Mo-Fr 08:30-18:30; Sa-Su 9:30-15:00"
+  }
+},
+{
+  "type": "node",
+  "id": 13995535798,
+  "lat": 2.9211980,
+  "lon": 101.6360807,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Orion Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 13997330939,
+  "lat": 2.9164709,
+  "lon": 101.6314852,
+  "tags": {
+    "amenity": "restaurant",
+    "name": "Ceria Cafe"
+  }
+},
+{
+  "type": "node",
+  "id": 13997330940,
+  "lat": 2.9164146,
+  "lon": 101.6317266,
+  "tags": {
+    "amenity": "place_of_worship",
+    "denomination": "sunni",
+    "name": "Surau Ar-Rayyan Ceria",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 14041650220,
+  "lat": 2.9153439,
+  "lon": 101.6502222,
+  "tags": {
+    "amenity": "cafe",
+    "brand": "ZUS Coffee",
+    "brand:wikidata": "Q110811473",
+    "cuisine": "coffee_shop",
+    "name": "ZUS Coffee",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 14072157810,
+  "lat": 2.9178685,
+  "lon": 101.6607422,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Level 3, Tower 2, Menara Cyber Axis",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan IMPACT",
+    "description": "Official Registry of .MY domain name",
+    "government": "yes",
+    "name": "MYNIC Berhad",
+    "office": "government",
+    "opening_hours": "Mo-Fr 09:00-18:00",
+    "phone": "+603 8008 2000",
+    "website": "https://www.mynic.my"
+  }
+},
+{
+  "type": "node",
+  "id": 14113919901,
+  "lat": 2.9333779,
+  "lon": 101.6382259,
+  "tags": {
+    "amenity": "restaurant",
+    "check_date": "2026-08-23",
+    "cuisine": "arab;kebab;malaysian",
+    "name": "Amir Damascus"
+  }
+},
+{
+  "type": "node",
+  "id": 14284236835,
+  "lat": 2.9069780,
+  "lon": 101.6349505,
+  "tags": {
+    "amenity": "community_centre",
+    "community_centre": "community_hall",
+    "name": "Dewan Komuniti Cyber 10",
+    "operator": "MPS",
+    "operator:type": "public"
+  }
+},
+{
+  "type": "node",
+  "id": 14306306086,
+  "lat": 2.9188023,
+  "lon": 101.6591367,
+  "tags": {
+    "amenity": "place_of_worship",
+    "name": "Surau Petronas",
+    "place_of_worship": "musalla",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "node",
+  "id": 14306355019,
+  "lat": 2.9203141,
+  "lon": 101.6564523,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "malaysian",
+    "name": "Pak Ngah Kopitiam",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 14306355020,
+  "lat": 2.9200656,
+  "lon": 101.6565015,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "malaysian;indian",
+    "name": "Syed Bistro",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 14306355021,
+  "lat": 2.9201868,
+  "lon": 101.6563372,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "mexican;italian",
+    "name": "Alpaca Chacha",
+    "outdoor_seating": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 14306355022,
+  "lat": 2.9200466,
+  "lon": 101.6563715,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "chinese",
+    "name": "SiChuan Mixed Rice Hot pot",
+    "name:zh": "川菜火锅"
+  }
+},
+{
+  "type": "node",
+  "id": 14309328167,
+  "lat": 2.9257684,
+  "lon": 101.6505204,
+  "tags": {
+    "addr:block": "Block D",
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:state": "Selangor",
+    "addr:street": "CBD Perdana 3, Centrus Mall",
+    "addr:unit": "D-LG-6",
+    "amenity": "restaurant",
+    "cuisine": "filipino;chinese",
+    "name": "Fiesta Cabalen",
+    "non_halal": "yes",
+    "operator": "Fiesta Cabalen Sdn. Bhd.",
+    "phone": "+60196771168"
+  }
+},
+{
+  "type": "node",
+  "id": 14309388241,
+  "lat": 2.9208710,
+  "lon": 101.6508482,
+  "tags": {
+    "amenity": "restaurant",
+    "cuisine": "steak_house",
+    "name": "Kars Fine Meat & Steak"
+  }
+},
+{
+  "type": "node",
+  "id": 14318302158,
+  "lat": 2.9243432,
+  "lon": 101.6637628,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "2250, Co Place 6",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Usahawan 1",
+    "government": "education",
+    "name": "Perbadanan Kota Buku (PKB)",
+    "office": "government",
+    "opening_hours": "Mo-Fri 09:00-17:00",
+    "phone": "0383204756",
+    "website": "https://kotabuku.my/"
+  }
+},
+{
+  "type": "node",
+  "id": 14318341272,
+  "lat": 2.9248461,
+  "lon": 101.6633906,
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Usahawan 1",
+    "government": "education",
+    "name": "Majlis Buku Kebangsaan Malaysia (MBKM)",
+    "office": "government",
+    "opening_hours": "Mo-Fri 09:00-17:00",
+    "website": "https://mbkm.my/"
+  }
+},
+{
+  "type": "way",
+  "id": 133054990,
+  "center": {
+    "lat": 2.9278700,
+    "lon": 101.6422422
+  },
+  "tags": {
+    "amenity": "university",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Universiti Multimedia",
+    "name:en": "Multimedia University",
+    "name:ms": "Universiti Multimedia",
+    "name:zh": "多媒体大学",
+    "name:zh-Hans": "多媒体大学",
+    "name:zh-Hant": "多媒體大學",
+    "short_name": "MMU",
+    "website": "https://www.mmu.edu.my/",
+    "wheelchair": "limited",
+    "wikidata": "Q1421182",
+    "wikimedia_commons": "Category:Multimedia University",
+    "wikipedia": "en:Multimedia University"
+  }
+},
+{
+  "type": "way",
+  "id": 133054992,
+  "center": {
+    "lat": 2.9304396,
+    "lon": 101.6568237
+  },
+  "tags": {
+    "building": "office",
+    "name": "Telekom Malaysia",
+    "name:en": "Telekom Malaysia",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 133054999,
+  "center": {
+    "lat": 2.9305191,
+    "lon": 101.6589461
+  },
+  "tags": {
+    "building": "office",
+    "name": "TM R&D",
+    "name:en": "TM R&D",
+    "website": "https://www.tmrnd.com.my/"
+  }
+},
+{
+  "type": "way",
+  "id": 133480447,
+  "center": {
+    "lat": 2.9262514,
+    "lon": 101.6427815
+  },
+  "tags": {
+    "alt_name": "FCM",
+    "building": "university",
+    "building:levels": "5",
+    "height": "30",
+    "layer": "1",
+    "name": "Faculty Of Creative Multimedia",
+    "name:en": "Faculty Of Creative Multimedia"
+  }
+},
+{
+  "type": "way",
+  "id": 133480448,
+  "center": {
+    "lat": 2.9263141,
+    "lon": 101.6413684
+  },
+  "tags": {
+    "alt_name": "FAIE",
+    "building": "university",
+    "building:levels": "5",
+    "name": "Faculty of Artificial Intelligence and Engineering",
+    "name:en": "Faculty of Artificial Intelligence and Engineering",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 133480449,
+  "center": {
+    "lat": 2.9286716,
+    "lon": 101.6410973
+  },
+  "tags": {
+    "alt_name": "FCI",
+    "building": "university",
+    "building:levels": "10",
+    "name": "Faculty Of Computing and Informatics",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 133480452,
+  "center": {
+    "lat": 2.9283926,
+    "lon": 101.6397443
+  },
+  "tags": {
+    "building": "office",
+    "name": "MSC Malaysia Technology Commercilization Centre"
+  }
+},
+{
+  "type": "way",
+  "id": 133480481,
+  "center": {
+    "lat": 2.9242509,
+    "lon": 101.6430302
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "denomination": "sunni",
+    "is_in": "Universiti Multimedia",
+    "name": "Surau Al Hidayah",
+    "name:ms": "Surau Al Hidayah",
+    "religion": "muslim",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 133480484,
+  "center": {
+    "lat": 2.9275805,
+    "lon": 101.6416746
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "yes",
+    "name": "Siti Hasmaah Digital Library",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 133480488,
+  "center": {
+    "lat": 2.9254294,
+    "lon": 101.6420225
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "layer": "1",
+    "name": "Student Affair Division",
+    "name:en": "Student Affair Division",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 133480491,
+  "center": {
+    "lat": 2.9276595,
+    "lon": 101.6423117
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "10",
+    "layer": "1",
+    "name": "Central Lecture Complex",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 133751215,
+  "center": {
+    "lat": 2.9378768,
+    "lon": 101.6426276
+  },
+  "tags": {
+    "alt_name": "Cyberjaya Community Club",
+    "leisure": "park",
+    "name": "Taman Tasik Cyberjaya",
+    "name:en": "Cyberjaya Lake Park",
+    "name:ms": "Taman Tasik Cyberjaya",
+    "source": "Bing",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 133751216,
+  "center": {
+    "lat": 2.9338855,
+    "lon": 101.6456182
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63200",
+    "addr:street": "Persiaran Semarak Api",
+    "amenity": "townhall",
+    "building": "office",
+    "level": "3",
+    "name": "Majlis Perbandaran Sepang",
+    "name:en": "Sepang Municipal Council",
+    "name:ms": "Majlis Perbandaran Sepang",
+    "name:zh": "雪邦市议会",
+    "name:zh-Hans": "雪邦市议会",
+    "name:zh-Hant": "雪邦市議會",
+    "source": "Bing",
+    "townhall:type": "municipality",
+    "website": "https://www.mpsepang.gov.my/",
+    "wikidata": "Q7382539",
+    "wikipedia": "ms:Majlis Perbandaran Sepang"
+  }
+},
+{
+  "type": "way",
+  "id": 136048333,
+  "center": {
+    "lat": 2.9257751,
+    "lon": 101.6386993
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "13",
+    "name": "Blok C2",
+    "name:en": "Block C2",
+    "name:ms": "Blok C2"
+  }
+},
+{
+  "type": "way",
+  "id": 136048337,
+  "center": {
+    "lat": 2.9243006,
+    "lon": 101.6383219
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "12",
+    "name": "Block B2"
+  }
+},
+{
+  "type": "way",
+  "id": 136048345,
+  "center": {
+    "lat": 2.9227960,
+    "lon": 101.6387347
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "12",
+    "name": "Block A2"
+  }
+},
+{
+  "type": "way",
+  "id": 136048346,
+  "center": {
+    "lat": 2.9241617,
+    "lon": 101.6391665
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "Badminton Court"
+  }
+},
+{
+  "type": "way",
+  "id": 136048351,
+  "center": {
+    "lat": 2.9231398,
+    "lon": 101.6383302
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "12",
+    "name": "Block A3"
+  }
+},
+{
+  "type": "way",
+  "id": 136048353,
+  "center": {
+    "lat": 2.9246404,
+    "lon": 101.6387309
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "12",
+    "name": "Block B3"
+  }
+},
+{
+  "type": "way",
+  "id": 136048357,
+  "center": {
+    "lat": 2.9254332,
+    "lon": 101.6382619
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "13",
+    "name": "Block C1"
+  }
+},
+{
+  "type": "way",
+  "id": 136048359,
+  "center": {
+    "lat": 2.9224525,
+    "lon": 101.6383172
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "12",
+    "name": "Block A1"
+  }
+},
+{
+  "type": "way",
+  "id": 136048362,
+  "center": {
+    "lat": 2.9239476,
+    "lon": 101.6387653
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "12",
+    "name": "Block B1"
+  }
+},
+{
+  "type": "way",
+  "id": 136048364,
+  "center": {
+    "lat": 2.9261303,
+    "lon": 101.6382611
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "13",
+    "name": "Block C3"
+  }
+},
+{
+  "type": "way",
+  "id": 167293135,
+  "center": {
+    "lat": 2.9204475,
+    "lon": 101.6315910
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Cyberjaya",
+    "name:en": "Hospital Cyberjaya",
+    "name:ms": "Hospital Cyberjaya",
+    "name:zh": "赛城医院",
+    "name:zh-Hans": "赛城医院",
+    "name:zh-Hant": "賽城醫院",
+    "operator": "Kementerian Kesihatan Malaysia",
+    "operator:short": "KKM",
+    "operator:type": "government",
+    "operator:wikidata": "Q4294352",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 295176645,
+  "center": {
+    "lat": 2.9103540,
+    "lon": 101.6550928
+  },
+  "tags": {
+    "amenity": "college",
+    "building": "yes",
+    "name": "Kirkby International College",
+    "name:en": "Kirkby International College",
+    "wheelchair": "yes",
+    "wikipedia": "en:Kirkby International College"
+  }
+},
+{
+  "type": "way",
+  "id": 295176646,
+  "center": {
+    "lat": 2.9082715,
+    "lon": 101.6558382
+  },
+  "tags": {
+    "building": "office",
+    "name": "Cyberview",
+    "name:en": "Cyberview",
+    "office": "company",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295176653,
+  "center": {
+    "lat": 2.9091070,
+    "lon": 101.6547654
+  },
+  "tags": {
+    "building": "office",
+    "name": "Malaysian Global Innovation and Creativity Centre (MaGIC)",
+    "name:en": "Malaysian Global Innovation and Creativity Centre (MaGIC)",
+    "name:zh": "马来西亚全球革新与创意中心",
+    "name:zh-Hans": "马来西亚全球革新与创意中心",
+    "name:zh-Hant": "馬來西亞全球革新與創意中心",
+    "office": "company",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 295176658,
+  "center": {
+    "lat": 2.9093182,
+    "lon": 101.6554882
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Obama Oval",
+    "name:en": "Obama Oval"
+  }
+},
+{
+  "type": "way",
+  "id": 295177512,
+  "center": {
+    "lat": 2.9103785,
+    "lon": 101.6570573
+  },
+  "tags": {
+    "building": "office",
+    "name": "Dell Global Business Centre",
+    "name:en": "Dell Global Business Centre",
+    "office": "company",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295177552,
+  "center": {
+    "lat": 2.9103379,
+    "lon": 101.6576501
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Dell Global IT Centre Car Park",
+    "name:en": "Dell Global IT Centre Car Park",
+    "parking": "surface",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295178057,
+  "center": {
+    "lat": 2.9120750,
+    "lon": 101.6548297
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Park n Ride",
+    "name:en": "Park n Ride",
+    "parking": "surface",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295178068,
+  "center": {
+    "lat": 2.9127742,
+    "lon": 101.6556690
+  },
+  "tags": {
+    "building": "office",
+    "name": "CSF Computer Exchange 1",
+    "name:en": "CSF Computer Exchange 1",
+    "office": "company",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295178255,
+  "center": {
+    "lat": 2.9101293,
+    "lon": 101.6501058
+  },
+  "tags": {
+    "building": "office",
+    "name": "Menara Hasil",
+    "name:ms": "Menara Hasil"
+  }
+},
+{
+  "type": "way",
+  "id": 295241888,
+  "center": {
+    "lat": 2.9128017,
+    "lon": 101.6568286
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "building": "yes",
+    "layer": "1",
+    "name": "Balai Bomba dan Penyelamat Cyberjaya",
+    "name:ms": "Balai Bomba dan Penyelamat Cyberjaya"
+  }
+},
+{
+  "type": "way",
+  "id": 295242440,
+  "center": {
+    "lat": 2.9124475,
+    "lon": 101.6577253
+  },
+  "tags": {
+    "amenity": "fire_station",
+    "name": "Balai Bomba dan Penyelamat Cyberjaya",
+    "name:ms": "Balai Bomba dan Penyelamat Cyberjaya"
+  }
+},
+{
+  "type": "way",
+  "id": 295242716,
+  "center": {
+    "lat": 2.9138916,
+    "lon": 101.6561349
+  },
+  "tags": {
+    "building": "office",
+    "name": "HP",
+    "name:en": "HP",
+    "name:ms": "HP",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295243526,
+  "center": {
+    "lat": 2.9145276,
+    "lon": 101.6564905
+  },
+  "tags": {
+    "building": "office",
+    "name": "RBC Dexia Investor Services",
+    "name:en": "RBC Dexia Investor Services",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295244047,
+  "center": {
+    "lat": 2.9157616,
+    "lon": 101.6568480
+  },
+  "tags": {
+    "building": "office",
+    "layer": "1",
+    "name": "FSBM Holdings",
+    "name:en": "FSBM Holdings",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295246536,
+  "center": {
+    "lat": 2.9185320,
+    "lon": 101.6554681
+  },
+  "tags": {
+    "building": "office",
+    "name": "Bank Negara Malaysia Data Centre",
+    "name:en": "Bank Negara Malaysia Data Centre",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295257306,
+  "center": {
+    "lat": 2.9172262,
+    "lon": 101.6619362
+  },
+  "tags": {
+    "building": "office",
+    "name": "CX2 Computer Exchange",
+    "name:en": "CX2 Computer Exchange",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295261438,
+  "center": {
+    "lat": 2.9197563,
+    "lon": 101.6591474
+  },
+  "tags": {
+    "addr:housenumber": "9",
+    "addr:street": "Cottage Walk",
+    "amenity": "cafe",
+    "branch": "Cyberjaya",
+    "building": "yes",
+    "name": "Hometown Hainan Coffee"
+  }
+},
+{
+  "type": "way",
+  "id": 295261440,
+  "center": {
+    "lat": 2.9208716,
+    "lon": 101.6592047
+  },
+  "tags": {
+    "addr:housenumber": "1",
+    "addr:street": "Cottage Walk",
+    "amenity": "restaurant",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Man Ayam Kampung",
+    "name:ms": "Restoran JS Maju"
+  }
+},
+{
+  "type": "way",
+  "id": 295261441,
+  "center": {
+    "lat": 2.9199569,
+    "lon": 101.6591555
+  },
+  "tags": {
+    "addr:housenumber": "8",
+    "addr:street": "Cottage Walk",
+    "alt_name": "Kentucky Fried Chicken",
+    "amenity": "fast_food",
+    "brand": "KFC",
+    "brand:wikidata": "Q524757",
+    "building": "yes",
+    "cuisine": "chicken",
+    "name": "KFC",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295261443,
+  "center": {
+    "lat": 2.9208007,
+    "lon": 101.6592043
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "2",
+    "addr:street": "Cottage Walk",
+    "amenity": "fast_food",
+    "brand": "Taco Bell",
+    "brand:wikidata": "Q752941",
+    "brand:wikipedia": "en:Nando's",
+    "building": "yes",
+    "building:levels": "2",
+    "cuisine": "tex-mex",
+    "name": "Taco Bell",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295261449,
+  "center": {
+    "lat": 2.9205721,
+    "lon": 101.6592050
+  },
+  "tags": {
+    "addr:housenumber": "3A",
+    "addr:street": "Cottage Walk",
+    "amenity": "cafe",
+    "building": "yes",
+    "name": "Kenangan Coffee"
+  }
+},
+{
+  "type": "way",
+  "id": 295261451,
+  "center": {
+    "lat": 2.9204110,
+    "lon": 101.6591954
+  },
+  "tags": {
+    "addr:street": "Cottage Walk",
+    "amenity": "restaurant",
+    "building": "yes",
+    "name": "Ketam Manis"
+  }
+},
+{
+  "type": "way",
+  "id": 295262504,
+  "center": {
+    "lat": 2.9192046,
+    "lon": 101.6612768
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan IMPACT",
+    "brand": "MIGHT",
+    "building": "office",
+    "name": "MIGHT Partnership Hub",
+    "name:en": "MIGHT Partnership Hub",
+    "office": "government agency",
+    "opening_hours": "Mo-Fr 08:30-17:30",
+    "operator": "Malaysian Industry-Government group for High Technology (MIGHT)",
+    "phone": "+603 8315 7888",
+    "website": "https://might.org.my/"
+  }
+},
+{
+  "type": "way",
+  "id": 295599079,
+  "center": {
+    "lat": 2.9221967,
+    "lon": 101.6636364
+  },
+  "tags": {
+    "access": "private",
+    "amenity": "parking",
+    "name": "MCMC Parking"
+  }
+},
+{
+  "type": "way",
+  "id": 295599080,
+  "center": {
+    "lat": 2.9216623,
+    "lon": 101.6636730
+  },
+  "tags": {
+    "building": "office",
+    "government": "data_protection",
+    "name": "Suruhanjaya Komunikasi dan Multimedia Malaysia",
+    "name:en": "Malaysian Communication and Multimedia Commission",
+    "name:ms": "Suruhanjaya Komunikasi dan Multimedia Malaysia",
+    "office": "government",
+    "short_name": "MCMC"
+  }
+},
+{
+  "type": "way",
+  "id": 295599493,
+  "center": {
+    "lat": 2.9232657,
+    "lon": 101.6619090
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Multimedia",
+    "building": "yes",
+    "building:levels": "6",
+    "name": "Shaftsbury Square Shop & Retail",
+    "name:en": "Shaftsbury Square Shop & Retail",
+    "opening_hours": "Mo-Su 09:00-22:00",
+    "payment:credit_cards": "yes",
+    "payment:notes": "yes",
+    "shop": "mall",
+    "website": "https://www.shaftsburysquare.com.my/getting-here/",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 295599993,
+  "center": {
+    "lat": 2.9203386,
+    "lon": 101.6568966
+  },
+  "tags": {
+    "building": "office",
+    "name": "Prima Avenue 6",
+    "name:en": "Prima Avenue 6",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295599994,
+  "center": {
+    "lat": 2.9203910,
+    "lon": 101.6574744
+  },
+  "tags": {
+    "building": "office",
+    "name": "Prima Avenue 7",
+    "name:en": "Prima Avenue 7",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295599997,
+  "center": {
+    "lat": 2.9203566,
+    "lon": 101.6580447
+  },
+  "tags": {
+    "building": "office",
+    "name": "Prima Avenue 8",
+    "name:en": "Prima Avenue 8",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295600768,
+  "center": {
+    "lat": 2.9211073,
+    "lon": 101.6570313
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "asian",
+    "name": "Padi House",
+    "name:en": "Padi House"
+  }
+},
+{
+  "type": "way",
+  "id": 295600771,
+  "center": {
+    "lat": 2.9210962,
+    "lon": 101.6569012
+  },
+  "tags": {
+    "amenity": "cafe",
+    "brand:wikidata": "Q7085308",
+    "brand:wikipedia": "en:OldTown White Coffee",
+    "building": "yes",
+    "check_date": "2026-10-14",
+    "cuisine": "malaysian;coffee_shop",
+    "name": "Rich Kopitiam",
+    "outdoor_seating": "yes",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295600775,
+  "center": {
+    "lat": 2.9213645,
+    "lon": 101.6569534
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "check_date": "2026-10-14",
+    "cuisine": "korean",
+    "name": "NakNak",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295600776,
+  "center": {
+    "lat": 2.9211748,
+    "lon": 101.6579918
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Prima Avenue 1",
+    "name:en": "Prima Avenue 1",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295600781,
+  "center": {
+    "lat": 2.9213072,
+    "lon": 101.6564662
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "asian",
+    "name": "Kitchen Village",
+    "name:en": "Kitchen Village"
+  }
+},
+{
+  "type": "way",
+  "id": 295600787,
+  "center": {
+    "lat": 2.9212485,
+    "lon": 101.6575304
+  },
+  "tags": {
+    "building": "office",
+    "name": "Prima Avenue 2",
+    "name:en": "Prima Avenue 2",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295601805,
+  "center": {
+    "lat": 2.9220373,
+    "lon": 101.6558579
+  },
+  "tags": {
+    "building": "office",
+    "name": "Wisma MISC",
+    "name:ms": "Wisma MISC",
+    "office": "company",
+    "wikidata": "Q1886831"
+  }
+},
+{
+  "type": "way",
+  "id": 295601814,
+  "center": {
+    "lat": 2.9223698,
+    "lon": 101.6571929
+  },
+  "tags": {
+    "brand": "DHL",
+    "brand:wikidata": "Q489815",
+    "building": "office",
+    "check_date": "2026-10-14",
+    "name": "DHL",
+    "name:en": "DHL IT Services",
+    "office": "logistics"
+  }
+},
+{
+  "type": "way",
+  "id": 295601820,
+  "center": {
+    "lat": 2.9223366,
+    "lon": 101.6575424
+  },
+  "tags": {
+    "access": "private",
+    "amenity": "parking",
+    "covered": "no",
+    "fee": "no",
+    "name": "DHL Parking",
+    "name:en": "DHL Parking",
+    "operator": "DHL",
+    "operator:type": "private",
+    "park_ride": "no",
+    "parking": "surface",
+    "supervised": "no",
+    "surface": "paved",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295605071,
+  "center": {
+    "lat": 2.9216026,
+    "lon": 101.6591284
+  },
+  "tags": {
+    "access": "private",
+    "amenity": "parking",
+    "covered": "no",
+    "name": "MDeC Parking",
+    "name:en": "MDeC Parking",
+    "park_ride": "no",
+    "parking": "surface",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295606396,
+  "center": {
+    "lat": 2.9072484,
+    "lon": 101.6527233
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000 Sepang",
+    "amenity": "police",
+    "email": "kpb_cyberjaya@rmp.gov.my",
+    "name": "Kompleks Balai Polis Cyberjaya",
+    "name:ms": "Kompleks Balai Polis Cyberjaya",
+    "phone": "+603 8318 2222",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 295606581,
+  "center": {
+    "lat": 2.9057974,
+    "lon": 101.6527297
+  },
+  "tags": {
+    "building": "office",
+    "name": "Basis Bay",
+    "name:en": "Basis Bay",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295607707,
+  "center": {
+    "lat": 2.9091780,
+    "lon": 101.6500180
+  },
+  "tags": {
+    "name": "HASIL",
+    "name:en": "HASIL",
+    "name:ms": "HASIL",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 295609727,
+  "center": {
+    "lat": 2.9154371,
+    "lon": 101.6488101
+  },
+  "tags": {
+    "building": "office",
+    "name": "Wisma Mustapha Kamal"
+  }
+},
+{
+  "type": "way",
+  "id": 295609728,
+  "center": {
+    "lat": 2.9176468,
+    "lon": 101.6488986
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "The Domain",
+    "name:en": "The Domain"
+  }
+},
+{
+  "type": "way",
+  "id": 295610842,
+  "center": {
+    "lat": 2.9080670,
+    "lon": 101.6482978
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Rimba Permai",
+    "government": "yes",
+    "layer": "1",
+    "name": "Ibu Pejabat Jabatan Pengairan dan Saliran (JPS) Malaysia",
+    "name:en": "Department of Irrigation and Drainage Malaysia",
+    "office": "government",
+    "opening_hours": "Mo-Fr 08:00-17:00",
+    "phone": "+60 03-8682 9200",
+    "website": "https://www.water.gov.my/"
+  }
+},
+{
+  "type": "way",
+  "id": 295649044,
+  "center": {
+    "lat": 2.9120429,
+    "lon": 101.6641299
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "amenity": "school",
+    "name": "Sekolah Seri Puteri Cyberjaya",
+    "name:ms": "Sekolah Seri Puteri Cyberjaya",
+    "name:zh": "赛城斯里布特里理科中学",
+    "name:zh-Hans": "赛城斯里布特里理科中学",
+    "name:zh-Hant": "賽城斯里布特里理科中學",
+    "website": "https://seriputeri.edu.my/",
+    "wikidata": "Q7447311",
+    "wikipedia": "en:Sekolah Seri Puteri"
+  }
+},
+{
+  "type": "way",
+  "id": 295652451,
+  "center": {
+    "lat": 2.9099428,
+    "lon": 101.6623847
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "1",
+    "leisure": "sports_centre",
+    "name": "La Vida Clubhouse",
+    "name:en": "La Vida Clubhouse"
+  }
+},
+{
+  "type": "way",
+  "id": 295953467,
+  "center": {
+    "lat": 2.9205986,
+    "lon": 101.6551024
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "3517",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Teknokrat 5",
+    "addr:suburb": "Cyber 5",
+    "air_conditioning": "yes",
+    "building": "office",
+    "government": "government",
+    "name": "SEDA Malaysia",
+    "name:en": "Sustainable Energy Development Authority (SEDA) Malaysia",
+    "office": "government",
+    "opening_hours": "Mo-Fr 09:00-16:30",
+    "phone": "+603-8870 5800",
+    "website": "https://www.seda.gov.my/"
+  }
+},
+{
+  "type": "way",
+  "id": 295953475,
+  "center": {
+    "lat": 2.9199756,
+    "lon": 101.6544328
+  },
+  "tags": {
+    "building": "yes",
+    "name": "JPJ IT Centre",
+    "name:en": "JPJ IT Centre",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 295953719,
+  "center": {
+    "lat": 2.9212322,
+    "lon": 101.6538807
+  },
+  "tags": {
+    "building": "office",
+    "name": "BMW Malaysia",
+    "name:en": "BMW Malaysia",
+    "name:ms": "BMW Malaysia",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298489041,
+  "center": {
+    "lat": 2.9241126,
+    "lon": 101.6588492
+  },
+  "tags": {
+    "building": "office",
+    "name": "Enterprise Building 3",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298494900,
+  "center": {
+    "lat": 2.9250508,
+    "lon": 101.6619376
+  },
+  "tags": {
+    "building": "office",
+    "name": "Block 2300 Century Square",
+    "name:en": "Block 2300 Century Square",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298494908,
+  "center": {
+    "lat": 2.9244350,
+    "lon": 101.6618385
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan Usahawan",
+    "building": "office",
+    "building:levels": "3",
+    "layer": "1",
+    "name": "CoPlace 11",
+    "name:en": "CoPlace 11",
+    "name:ms": "CoPlace 11"
+  }
+},
+{
+  "type": "way",
+  "id": 298495096,
+  "center": {
+    "lat": 2.9244402,
+    "lon": 101.6636010
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Wisma Shell",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298495493,
+  "center": {
+    "lat": 2.9257072,
+    "lon": 101.6612113
+  },
+  "tags": {
+    "building": "office",
+    "name": "Block 2310 Century Square",
+    "name:en": "Block 2310 Century Square",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298495494,
+  "center": {
+    "lat": 2.9256139,
+    "lon": 101.6606130
+  },
+  "tags": {
+    "building": "office",
+    "name": "CoPlace 9",
+    "name:en": "CoPlace 9"
+  }
+},
+{
+  "type": "way",
+  "id": 298498632,
+  "center": {
+    "lat": 2.9250002,
+    "lon": 101.6636295
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Bangunan Mustapha Kamal",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298503535,
+  "center": {
+    "lat": 2.9260373,
+    "lon": 101.6630239
+  },
+  "tags": {
+    "building": "office",
+    "name": "SME Technopreneur Centre",
+    "name:en": "SME Technopreneur Centre",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298506058,
+  "center": {
+    "lat": 2.9277296,
+    "lon": 101.6609063
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Sports Arena Cyberjaya",
+    "name:en": "Sports Arena Cyberjaya"
+  }
+},
+{
+  "type": "way",
+  "id": 298507651,
+  "center": {
+    "lat": 2.9268963,
+    "lon": 101.6608667
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Sports Arena Cyberjaya Parking",
+    "name:en": "Sports Arena Cyberjaya Parking",
+    "parking": "surface"
+  }
+},
+{
+  "type": "way",
+  "id": 298515041,
+  "center": {
+    "lat": 2.9288545,
+    "lon": 101.6608772
+  },
+  "tags": {
+    "building": "office",
+    "name": "City Command Centre",
+    "name:en": "City Command Centre",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298521698,
+  "center": {
+    "lat": 2.9233140,
+    "lon": 101.6560322
+  },
+  "tags": {
+    "addr:housenumber": "CoPlace 12",
+    "alt_name": "CoPlace 12",
+    "building": "office",
+    "name": "Enterprise Building 1",
+    "name:en": "Enterprise Building 1",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298805090,
+  "center": {
+    "lat": 2.9230559,
+    "lon": 101.6541596
+  },
+  "tags": {
+    "air_conditioning": "yes",
+    "building": "office",
+    "name": "Quill 2",
+    "smoking": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 298806250,
+  "center": {
+    "lat": 2.9237807,
+    "lon": 101.6543675
+  },
+  "tags": {
+    "building": "office",
+    "name": "IBM",
+    "name:en": "IBM",
+    "name:ms": "IBM",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298813966,
+  "center": {
+    "lat": 2.9255324,
+    "lon": 101.6536830
+  },
+  "tags": {
+    "building": "office",
+    "name": "Emerio Building",
+    "name:en": "Emerio Building",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 298817357,
+  "center": {
+    "lat": 2.9273174,
+    "lon": 101.6539149
+  },
+  "tags": {
+    "building": "office",
+    "name": "Wisma Shell-U Village",
+    "name:en": "Wisma Shell-U Village",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 302587041,
+  "center": {
+    "lat": 2.9241126,
+    "lon": 101.6588492
+  },
+  "tags": {
+    "building": "commercial",
+    "building:levels": "4",
+    "capacity": "1",
+    "name": "Enterprise Building 3",
+    "name:en": "Enterprise Building 3",
+    "parking": "underground",
+    "smoking": "separated"
+  }
+},
+{
+  "type": "way",
+  "id": 303270075,
+  "center": {
+    "lat": 2.9228022,
+    "lon": 101.6493774
+  },
+  "tags": {
+    "leisure": "park",
+    "name": "Cyberjaya Mini Park",
+    "name:en": "Cyberjaya Mini Park"
+  }
+},
+{
+  "type": "way",
+  "id": 303271717,
+  "center": {
+    "lat": 2.9245083,
+    "lon": 101.6473908
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Blok B",
+    "name:en": "Block B",
+    "name:ms": "Blok B"
+  }
+},
+{
+  "type": "way",
+  "id": 303271721,
+  "center": {
+    "lat": 2.9238622,
+    "lon": 101.6473787
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Blok C",
+    "name:en": "Block C",
+    "name:ms": "Blok C"
+  }
+},
+{
+  "type": "way",
+  "id": 303271725,
+  "center": {
+    "lat": 2.9254530,
+    "lon": 101.6472969
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Blok A",
+    "name:en": "Block A",
+    "name:ms": "Blok A"
+  }
+},
+{
+  "type": "way",
+  "id": 303272536,
+  "center": {
+    "lat": 2.9270062,
+    "lon": 101.6472969
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:street": "Lingkaran Cyber Point Barat",
+    "amenity": "school",
+    "name": "elc International School Cyberjaya Campus",
+    "name:en": "elc International School Cyberjaya Campus",
+    "website": "https://www.elc.edu.my/"
+  }
+},
+{
+  "type": "way",
+  "id": 303570727,
+  "center": {
+    "lat": 2.9201514,
+    "lon": 101.6475181
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Block A"
+  }
+},
+{
+  "type": "way",
+  "id": 303570733,
+  "center": {
+    "lat": 2.9200993,
+    "lon": 101.6484337
+  },
+  "tags": {
+    "addr:postcode": "63000",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "Block G"
+  }
+},
+{
+  "type": "way",
+  "id": 303570737,
+  "center": {
+    "lat": 2.9205839,
+    "lon": 101.6483273
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Block F"
+  }
+},
+{
+  "type": "way",
+  "id": 303570741,
+  "center": {
+    "lat": 2.9201723,
+    "lon": 101.6480293
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "G, 1, 2, 3, 4, 5, 6, 7",
+    "name": "Block H"
+  }
+},
+{
+  "type": "way",
+  "id": 303571954,
+  "center": {
+    "lat": 2.9203729,
+    "lon": 101.6462502
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Cyberia Crescent 2",
+    "name:en": "Cyberia Crescent 2"
+  }
+},
+{
+  "type": "way",
+  "id": 303572575,
+  "center": {
+    "lat": 2.9203933,
+    "lon": 101.6417193
+  },
+  "tags": {
+    "building": "office",
+    "name": "TM Cyberjaya",
+    "name:en": "TM Cyberjaya",
+    "office": "company"
+  }
+},
+{
+  "type": "way",
+  "id": 303573892,
+  "center": {
+    "lat": 2.9191469,
+    "lon": 101.6385703
+  },
+  "tags": {
+    "amenity": "school",
+    "name": "SK Cyberjaya",
+    "name:ms": "SK Cyberjaya",
+    "name:zh": "赛城国小",
+    "name:zh-Hans": "赛城国小",
+    "name:zh-Hant": "賽城國小"
+  }
+},
+{
+  "type": "way",
+  "id": 303573894,
+  "center": {
+    "lat": 2.9187411,
+    "lon": 101.6395480
+  },
+  "tags": {
+    "amenity": "school",
+    "name": "SMK Cyberjaya",
+    "name:ms": "SMK Cyberjaya",
+    "name:zh": "赛城国中",
+    "name:zh-Hans": "赛城国中",
+    "name:zh-Hant": "賽城國中"
+  }
+},
+{
+  "type": "way",
+  "id": 364358700,
+  "center": {
+    "lat": 2.9220744,
+    "lon": 101.6511202
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:section": "Cyber 12",
+    "addr:street": "Lingkaran Cyber Point Timur",
+    "building": "yes",
+    "building:levels": "5",
+    "layer": "1",
+    "name": "DPulze Shopping Centre",
+    "name:en": "DPulze Shopping Centre",
+    "opening_hours": "Mo-Su 10:00-22:00",
+    "phone": "0386895501",
+    "shop": "mall",
+    "website": "https://dpulze.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 374495080,
+  "center": {
+    "lat": 2.9215709,
+    "lon": 101.6410930
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Visitor Car Park"
+  }
+},
+{
+  "type": "way",
+  "id": 581754614,
+  "center": {
+    "lat": 2.9226743,
+    "lon": 101.6369487
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Pan'Gaea Show Village",
+    "name:en": "Pan'Gaea Show Village"
+  }
+},
+{
+  "type": "way",
+  "id": 581755153,
+  "center": {
+    "lat": 2.9264044,
+    "lon": 101.6358848
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "27",
+    "name": "Tower D"
+  }
+},
+{
+  "type": "way",
+  "id": 581783340,
+  "center": {
+    "lat": 2.9162463,
+    "lon": 101.6493319
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Domain 3"
+  }
+},
+{
+  "type": "way",
+  "id": 581785035,
+  "center": {
+    "lat": 2.9322935,
+    "lon": 101.6470174
+  },
+  "tags": {
+    "amenity": "community_centre",
+    "building": "yes",
+    "name": "Dewan Masjid Raja Haji Fisabilillah",
+    "name:ms": "Dewan Masjid Raja Haji Fisabilillah"
+  }
+},
+{
+  "type": "way",
+  "id": 581791010,
+  "center": {
+    "lat": 2.9188277,
+    "lon": 101.6573400
+  },
+  "tags": {
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran APEC",
+    "building": "commercial",
+    "name": "CyberSquare",
+    "name:en": "CyberSquare"
+  }
+},
+{
+  "type": "way",
+  "id": 581791402,
+  "center": {
+    "lat": 2.9192047,
+    "lon": 101.6546136
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Premela Suites",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 581791405,
+  "center": {
+    "lat": 2.9161200,
+    "lon": 101.6543971
+  },
+  "tags": {
+    "building": "commercial",
+    "building:levels": "5",
+    "name": "Wisma Suria"
+  }
+},
+{
+  "type": "way",
+  "id": 581820654,
+  "center": {
+    "lat": 2.9222552,
+    "lon": 101.6348221
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "4",
+    "name": "Gem In Mall",
+    "name:en": "Gem In Mall",
+    "shop": "mall",
+    "wikimedia_commons": "File:Gem In Mall (221225) (cropped).jpg"
+  }
+},
+{
+  "type": "way",
+  "id": 660793652,
+  "center": {
+    "lat": 2.9244663,
+    "lon": 101.6367752
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "40",
+    "name": "Solstice Tower 1",
+    "name:en": "Solstice Tower 1"
+  }
+},
+{
+  "type": "way",
+  "id": 660793653,
+  "center": {
+    "lat": 2.9244509,
+    "lon": 101.6362332
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "40",
+    "name": "Solstice Tower 2",
+    "name:en": "Solstice Tower 2"
+  }
+},
+{
+  "type": "way",
+  "id": 660793654,
+  "center": {
+    "lat": 2.9243854,
+    "lon": 101.6371654
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Paragon Tower B",
+    "name:en": "Paragon Tower B"
+  }
+},
+{
+  "type": "way",
+  "id": 660793655,
+  "center": {
+    "lat": 2.9235552,
+    "lon": 101.6371680
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Paragon Tower A",
+    "name:en": "Paragon Tower A"
+  }
+},
+{
+  "type": "way",
+  "id": 686317483,
+  "center": {
+    "lat": 2.9232484,
+    "lon": 101.6346520
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Mutiara Ville Tower C",
+    "name:en": "Mutiara Ville Tower C"
+  }
+},
+{
+  "type": "way",
+  "id": 686317486,
+  "center": {
+    "lat": 2.9238017,
+    "lon": 101.6330965
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Mutiara Ville Tower H"
+  }
+},
+{
+  "type": "way",
+  "id": 686317487,
+  "center": {
+    "lat": 2.9242833,
+    "lon": 101.6333691
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Mutiara Ville Tower J",
+    "name:en": "Mutiara Ville Tower J"
+  }
+},
+{
+  "type": "way",
+  "id": 686317489,
+  "center": {
+    "lat": 2.9242625,
+    "lon": 101.6346715
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Mutiara Ville Tower F",
+    "name:en": "Mutiara Ville Tower F"
+  }
+},
+{
+  "type": "way",
+  "id": 686317491,
+  "center": {
+    "lat": 2.9237911,
+    "lon": 101.6349230
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Mutiara Ville Tower E",
+    "name:en": "Mutiara Ville Tower E"
+  }
+},
+{
+  "type": "way",
+  "id": 768053430,
+  "center": {
+    "lat": 2.9237860,
+    "lon": 101.6336382
+  },
+  "tags": {
+    "building": "apartments",
+    "layer": "1",
+    "name": "Mutiara Ville Tower I"
+  }
+},
+{
+  "type": "way",
+  "id": 768053431,
+  "center": {
+    "lat": 2.9232562,
+    "lon": 101.6334662
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Mutiara Ville Tower G",
+    "name:en": "Mutiara Ville Tower G"
+  }
+},
+{
+  "type": "way",
+  "id": 768053434,
+  "center": {
+    "lat": 2.9230536,
+    "lon": 101.6333704
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Mutiara Ville G Parking Lot",
+    "name:en": "Mutiara Ville G Parking Lot"
+  }
+},
+{
+  "type": "way",
+  "id": 770103585,
+  "center": {
+    "lat": 2.9118398,
+    "lon": 101.6530615
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Block 12, Star Central @ Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Lingkaran Cyber Point Timur",
+    "building": "university",
+    "building:levels": "G,4A,5,6,7",
+    "name": "University Malaysia of Computer Science & Engineering (UNIMY)",
+    "name:en": "University Malaysia of Computer Science & Engineering (UNIMY)"
+  }
+},
+{
+  "type": "way",
+  "id": 804514511,
+  "center": {
+    "lat": 2.9222043,
+    "lon": 101.6507952
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "20",
+    "name": "Dpulze Service Apartment"
+  }
+},
+{
+  "type": "way",
+  "id": 804514513,
+  "center": {
+    "lat": 2.9229505,
+    "lon": 101.6620124
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan IMPACT",
+    "building": "office",
+    "building:levels": "22",
+    "name": "MCMC Tower 1",
+    "office": "government",
+    "website": "https://www.mcmc.gov.my"
+  }
+},
+{
+  "type": "way",
+  "id": 804514514,
+  "center": {
+    "lat": 2.9228446,
+    "lon": 101.6628099
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Jalan IMPACT",
+    "building": "office",
+    "building:levels": "22",
+    "name": "MCMC Tower 2",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 848498979,
+  "center": {
+    "lat": 2.9285898,
+    "lon": 101.6561052
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Block 3420",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Semarak Api",
+    "amenity": "university",
+    "name": "Kolej UNIKOP",
+    "old_name": "Ericsson",
+    "website": "https://unikop.edu.my/"
+  }
+},
+{
+  "type": "way",
+  "id": 877918157,
+  "center": {
+    "lat": 2.9083697,
+    "lon": 101.6569863
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Rekascape",
+    "name:en": "Rekascape"
+  }
+},
+{
+  "type": "way",
+  "id": 921284236,
+  "center": {
+    "lat": 2.9243838,
+    "lon": 101.6456668
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Hostel Parking",
+    "parking": "surface"
+  }
+},
+{
+  "type": "way",
+  "id": 921284237,
+  "center": {
+    "lat": 2.9251492,
+    "lon": 101.6458257
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Hostel Parking",
+    "parking": "surface"
+  }
+},
+{
+  "type": "way",
+  "id": 921284238,
+  "center": {
+    "lat": 2.9247374,
+    "lon": 101.6431790
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Hostel Parking",
+    "name:en": "Hostel Parking",
+    "parking": "surface"
+  }
+},
+{
+  "type": "way",
+  "id": 921284239,
+  "center": {
+    "lat": 2.9254539,
+    "lon": 101.6412042
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "University Parking",
+    "name:en": "University Parking",
+    "parking": "surface",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 921288815,
+  "center": {
+    "lat": 2.9254992,
+    "lon": 101.6454545
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Hostel Parking",
+    "name:en": "Hostel Parking",
+    "parking": "surface"
+  }
+},
+{
+  "type": "way",
+  "id": 944292854,
+  "center": {
+    "lat": 2.9173462,
+    "lon": 101.6524147
+  },
+  "tags": {
+    "amenity": "fuel",
+    "brand": "Shell",
+    "brand:wikidata": "Q110716465",
+    "brand:wikipedia": "en:Shell plc",
+    "name": "Shell",
+    "name:en": "Shell",
+    "name:ms": "Shell"
+  }
+},
+{
+  "type": "way",
+  "id": 944310123,
+  "center": {
+    "lat": 2.9263718,
+    "lon": 101.6301909
+  },
+  "tags": {
+    "amenity": "school",
+    "name": "SJK (C) Union, Cyberjaya",
+    "name:en": "SJK (C) Union, Cyberjaya",
+    "name:zh": "赛城联合华文小学",
+    "name:zh-Hans": "赛城联合华文小学",
+    "name:zh-Hant": "賽城聯合華文小學",
+    "official_name": "Sekolah Jenis Kebangsaan (C) Union",
+    "wikidata": "Q20464501",
+    "wikipedia": "ms:Sekolah Jenis Kebangsaan (C) Union, Selangor"
+  }
+},
+{
+  "type": "way",
+  "id": 1078548254,
+  "center": {
+    "lat": 2.9118267,
+    "lon": 101.6525769
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Block 10",
+    "addr:postcode": "63000",
+    "addr:street": "Lingkaran Cyber Point Timur",
+    "building": "commercial",
+    "building:levels": "8",
+    "name": "Dagang Net Tower",
+    "name:en": "Dagang Net Tower"
+  }
+},
+{
+  "type": "way",
+  "id": 1079882737,
+  "center": {
+    "lat": 2.9336994,
+    "lon": 101.6365689
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "McDonald's",
+    "brand:wikidata": "Q38076",
+    "brand:wikipedia": "en:McDonald's",
+    "building": "yes",
+    "cuisine": "burger",
+    "name": "McDonald's",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1080495343,
+  "center": {
+    "lat": 2.9322164,
+    "lon": 101.6480476
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Semarak Api",
+    "alt_name": "Masjid Cyberjaya",
+    "amenity": "place_of_worship",
+    "denomination": "sunni",
+    "landuse": "religious",
+    "name": "Masjid Raja Haji Fi Sabilillah",
+    "name:en": "Raja Haji Fi Sabilillah Mosque",
+    "name:ms": "Masjid Raja Haji Fi Sabilillah",
+    "name:ms-Arab": "مسجد راج حاج في سبيل الله",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 1080497943,
+  "center": {
+    "lat": 2.9151225,
+    "lon": 101.6375676
+  },
+  "tags": {
+    "amenity": "school",
+    "name": "King Henry VIII College",
+    "name:en": "King Henry VIII College",
+    "name:zh": "亨利八世国王学院",
+    "name:zh-Hans": "亨利八世国王学院",
+    "name:zh-Hant": "亨利八世國王學院"
+  }
+},
+{
+  "type": "way",
+  "id": 1091750001,
+  "center": {
+    "lat": 2.9284430,
+    "lon": 101.6309005
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Selangorku PR1MA Lakefront Homes",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Sepang",
+    "building": "apartments",
+    "building:levels": "21",
+    "name": "Blok D",
+    "name:en": "Block D",
+    "name:ms": "Blok D"
+  }
+},
+{
+  "type": "way",
+  "id": 1091750002,
+  "center": {
+    "lat": 2.9283119,
+    "lon": 101.6299087
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Selangorku PR1MA Lakefront Homes",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Sepang",
+    "building": "apartments",
+    "building:levels": "21",
+    "name": "Blok C",
+    "name:en": "Block C",
+    "name:ms": "Blok C"
+  }
+},
+{
+  "type": "way",
+  "id": 1091750003,
+  "center": {
+    "lat": 2.9276168,
+    "lon": 101.6300055
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Selangorku PR1MA Lakefront Homes",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Sepang",
+    "building": "apartments",
+    "building:levels": "21",
+    "name": "Blok A",
+    "name:en": "Block A",
+    "name:ms": "Blok A"
+  }
+},
+{
+  "type": "way",
+  "id": 1091750004,
+  "center": {
+    "lat": 2.9277482,
+    "lon": 101.6309950
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:housenumber": "Selangorku PR1MA Lakefront Homes",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Sepang",
+    "building": "apartments",
+    "building:levels": "21",
+    "name": "Blok B",
+    "name:en": "Block B",
+    "name:ms": "Blok B"
+  }
+},
+{
+  "type": "way",
+  "id": 1103350280,
+  "center": {
+    "lat": 2.9291631,
+    "lon": 101.6305676
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Lakefront Homes Persiaran Sepang Cyber 11",
+    "building": "apartments",
+    "name": "Tower 2",
+    "name:en": "Tower 2"
+  }
+},
+{
+  "type": "way",
+  "id": 1103350422,
+  "center": {
+    "lat": 2.9290508,
+    "lon": 101.6297692
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Sepang Cyber 11",
+    "building": "apartments",
+    "name": "Tower 1",
+    "name:en": "Tower 1"
+  }
+},
+{
+  "type": "way",
+  "id": 1103350767,
+  "center": {
+    "lat": 2.9298022,
+    "lon": 101.6296629
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Sepang Cyber 11",
+    "building": "apartments",
+    "name": "Tower 3",
+    "name:en": "Tower 3"
+  }
+},
+{
+  "type": "way",
+  "id": 1131261057,
+  "center": {
+    "lat": 2.9211486,
+    "lon": 101.6558485
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "branch": "Cyberjaya",
+    "brand": "McDonald's",
+    "brand:wikidata": "Q38076",
+    "brand:wikipedia": "en:McDonald's",
+    "building": "yes",
+    "cuisine": "burger",
+    "name": "McDonald's",
+    "source": "https://openstreetcam.org/details/3572913/28",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1165917210,
+  "center": {
+    "lat": 2.9308252,
+    "lon": 101.6374110
+  },
+  "tags": {
+    "alt_name": "Cyberjaya University",
+    "amenity": "university",
+    "name": "University of Cyberjaya",
+    "short_name": "UoC",
+    "source": "https://www.bing.com/maps?cp=2.930403~101.638026&lvl=17&dir=299.375&style=x&v=2&sV=1",
+    "wikidata": "Q22344812",
+    "wikimedia_commons": "Category:University of Cyberjaya",
+    "wikipedia": "en:University of Cyberjaya"
+  }
+},
+{
+  "type": "way",
+  "id": 1207813062,
+  "center": {
+    "lat": 2.9307704,
+    "lon": 101.6577616
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "mosque",
+    "name": "Surau Al Falah TM Cyberjaya",
+    "religion": "muslim"
+  }
+},
+{
+  "type": "way",
+  "id": 1218341188,
+  "center": {
+    "lat": 2.9237836,
+    "lon": 101.6343088
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "Mutiara Ville Tower D",
+    "name:en": "Mutiara Ville Tower D"
+  }
+},
+{
+  "type": "way",
+  "id": 1227107406,
+  "center": {
+    "lat": 2.9111463,
+    "lon": 101.6303901
+  },
+  "tags": {
+    "amenity": "community_centre",
+    "building": "yes",
+    "community_centre": "community_hall",
+    "name": "Dewan Serbaguna",
+    "name:ms": "Dewan Serbaguna"
+  }
+},
+{
+  "type": "way",
+  "id": 1239208011,
+  "center": {
+    "lat": 2.9256990,
+    "lon": 101.6358904
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "27",
+    "name": "Tower C"
+  }
+},
+{
+  "type": "way",
+  "id": 1239208012,
+  "center": {
+    "lat": 2.9251947,
+    "lon": 101.6369810
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "27",
+    "name": "Tower A"
+  }
+},
+{
+  "type": "way",
+  "id": 1239208013,
+  "center": {
+    "lat": 2.9251936,
+    "lon": 101.6362975
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "27",
+    "name": "Tower B"
+  }
+},
+{
+  "type": "way",
+  "id": 1247156133,
+  "center": {
+    "lat": 2.9181999,
+    "lon": 101.6308583
+  },
+  "tags": {
+    "amenity": "fuel",
+    "brand": "Shell",
+    "brand:wikidata": "Q110716465",
+    "name": "Shell"
+  }
+},
+{
+  "type": "way",
+  "id": 1352516669,
+  "center": {
+    "lat": 2.9220560,
+    "lon": 101.6590006
+  },
+  "tags": {
+    "addr:housenumber": "2360",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran APEC",
+    "landuse": "commercial",
+    "name": "Malaysia Digital Economy Corporation (MDEC)",
+    "name:en": "Malaysia Digital Economy Corporation (MDEC)",
+    "name:zh": "马来西亚数字经济发展局",
+    "name:zh-Hans": "马来西亚数字经济发展局",
+    "name:zh-Hant": "馬來西亞數位經濟發展局",
+    "office": "company",
+    "opening_hours": "Mo-Fr 09:00-18:00",
+    "phone": "+6038315300"
+  }
+},
+{
+  "type": "way",
+  "id": 1363287282,
+  "center": {
+    "lat": 2.9288606,
+    "lon": 101.6537244
+  },
+  "tags": {
+    "addr:housenumber": "Tower 2",
+    "building": "apartments",
+    "name": "Tower 2"
+  }
+},
+{
+  "type": "way",
+  "id": 1382433832,
+  "center": {
+    "lat": 2.9229998,
+    "lon": 101.6542588
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "City University Cyberjaya Campus",
+    "name:en": "City University Cyberjaya Campus",
+    "name:ms": "Universiti City Kampus Cyberjaya",
+    "wikidata": "Q30643258",
+    "wikipedia": "en:City University Malaysia"
+  }
+},
+{
+  "type": "way",
+  "id": 1475082627,
+  "center": {
+    "lat": 2.9352844,
+    "lon": 101.6375945
+  },
+  "tags": {
+    "amenity": "fuel",
+    "brand": "Petron",
+    "brand:wikidata": "Q7179011",
+    "name": "Petron"
+  }
+},
+{
+  "type": "way",
+  "id": 1502415384,
+  "center": {
+    "lat": 2.9190661,
+    "lon": 101.6590275
+  },
+  "tags": {
+    "amenity": "fuel",
+    "branch": "Cyberjaya",
+    "brand": "Petronas",
+    "brand:wikidata": "Q221692",
+    "fuel:diesel": "yes",
+    "fuel:octane_91": "yes",
+    "fuel:octane_98": "yes",
+    "name": "Petronas"
+  }
+},
+{
+  "type": "way",
+  "id": 1568298919,
+  "center": {
+    "lat": 2.9069512,
+    "lon": 101.6333829
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "park",
+    "name": "Sejati Lakeside Park"
+  }
+},
+{
+  "type": "way",
+  "id": 1568299279,
+  "center": {
+    "lat": 2.9061543,
+    "lon": 101.6339807
+  },
+  "tags": {
+    "access": "yes",
+    "leisure": "park",
+    "name": "Basketball court and fitness area"
+  }
+},
+{
+  "type": "relation",
+  "id": 3968729,
+  "center": {
+    "lat": 2.9241126,
+    "lon": 101.6588492
+  },
+  "tags": {
+    "building": "yes",
+    "name": "ENT3",
+    "name:en": "ENT3",
+    "office": "yes",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 3969082,
+  "center": {
+    "lat": 2.9271624,
+    "lon": 101.6624596
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "CoPlace 1",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 3972501,
+  "center": {
+    "lat": 2.9280286,
+    "lon": 101.6586037
+  },
+  "tags": {
+    "building": "office",
+    "name": "NTT MSC Cyberjaya",
+    "name:en": "NTT MSC Cyberjaya",
+    "office": "company",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 7084852,
+  "center": {
+    "lat": 2.9199787,
+    "lon": 101.6543120
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "JPJ Car Park",
+    "name:en": "JPJ Car Park",
+    "parking": "surface",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 7101836,
+  "center": {
+    "lat": 2.9233285,
+    "lon": 101.6561534
+  },
+  "tags": {
+    "amenity": "parking",
+    "name": "Enterprise Bulding 1 Parking",
+    "name:en": "Enterprise Bulding 1 Parking",
+    "parking": "surface",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 7102014,
+  "center": {
+    "lat": 2.9230276,
+    "lon": 101.6542584
+  },
+  "tags": {
+    "access": "customers",
+    "amenity": "parking",
+    "covered": "no",
+    "name": "City University Parking",
+    "name:en": "City University Parking",
+    "operator": "City University",
+    "parking": "surface",
+    "surface": "asphalt",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 9188347,
+  "center": {
+    "lat": 2.9247249,
+    "lon": 101.6365876
+  },
+  "tags": {
+    "addr:city": "Cyberjaya",
+    "addr:postcode": "63000",
+    "addr:street": "Persiaran Bestari",
+    "building": "apartments",
+    "name": "Solstice Cyberjaya",
+    "site": "building",
+    "type": "site"
+  }
+},
+{
+  "type": "relation",
+  "id": 11499638,
+  "center": {
+    "lat": 2.9248437,
+    "lon": 101.6455217
+  },
+  "tags": {
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "4",
+    "internet_access": "wlan",
+    "name": "HB1",
+    "name:en": "HB1",
+    "name:ms": "HB1",
+    "operator": "Universiti Multimedia",
+    "operator:en": "Multimedia University",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 12481780,
+  "center": {
+    "lat": 2.9251486,
+    "lon": 101.6437885
+  },
+  "tags": {
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "4",
+    "internet_access": "wlan",
+    "layer": "1",
+    "name": "HB3",
+    "name:en": "HB3",
+    "name:ms": "HB3",
+    "operator": "Universiti Multimedia",
+    "operator:en": "Multimedia University",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 12481781,
+  "center": {
+    "lat": 2.9251486,
+    "lon": 101.6448051
+  },
+  "tags": {
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "4",
+    "internet_access": "wlan",
+    "name": "HB2",
+    "name:en": "HB2",
+    "name:ms": "HB2",
+    "operator": "Universiti Multimedia",
+    "operator:en": "Multimedia University",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 16927008,
+  "center": {
+    "lat": 2.9259549,
+    "lon": 101.6442780
+  },
+  "tags": {
+    "amenity": "student_accommodation",
+    "building": "dormitory",
+    "building:levels": "4",
+    "internet_access": "wlan",
+    "name": "HB4",
+    "name:en": "HB4",
+    "name:ms": "HB4",
+    "operator": "Universiti Multimedia",
+    "operator:en": "Multimedia University",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 21159855,
+  "center": {
+    "lat": 2.9069385,
+    "lon": 101.6557868
+  },
+  "tags": {
+    "building": "hotel",
+    "name": "Dash Box Hotel",
+    "tourism": "hotel",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

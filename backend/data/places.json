@@ -1,0 +1,1857 @@
+[
+ {
+  "id": "osm-n7656504119",
+  "name": "99 Speedmart",
+  "kind": "supermarket",
+  "lat": 2.9232797,
+  "lon": 101.6604927
+ },
+ {
+  "id": "osm-n7656590694",
+  "name": "99 Speedmart",
+  "kind": "supermarket",
+  "lat": 2.9244391,
+  "lon": 101.6372091
+ },
+ {
+  "id": "osm-n12697954036",
+  "name": "99 Speedmart",
+  "kind": "supermarket",
+  "lat": 2.9157108,
+  "lon": 101.6492497
+ },
+ {
+  "id": "osm-n6186357447",
+  "name": "A&C Grocery",
+  "kind": "supermarket",
+  "lat": 2.924815,
+  "lon": 101.6362535
+ },
+ {
+  "id": "osm-n11349374623",
+  "name": "Afly Clinic",
+  "kind": "clinic",
+  "lat": 2.9236335,
+  "lon": 101.6516172
+ },
+ {
+  "id": "osm-n12672981808",
+  "name": "Ahmad's",
+  "kind": "fast_food",
+  "lat": 2.9239493,
+  "lon": 101.655896
+ },
+ {
+  "id": "osm-n1472136337",
+  "name": "Al-Naz Maju",
+  "kind": "restaurant",
+  "lat": 2.9152403,
+  "lon": 101.6508942
+ },
+ {
+  "id": "osm-n12945825801",
+  "name": "Aldar Lounge",
+  "kind": "restaurant",
+  "lat": 2.9234323,
+  "lon": 101.6372623
+ },
+ {
+  "id": "osm-n12951021601",
+  "name": "AllAce Cyberjaya",
+  "kind": "fast_food",
+  "lat": 2.9232758,
+  "lon": 101.6629819
+ },
+ {
+  "id": "osm-n14306355021",
+  "name": "Alpaca Chacha",
+  "kind": "restaurant",
+  "lat": 2.9201868,
+  "lon": 101.6563372
+ },
+ {
+  "id": "osm-n14113919901",
+  "name": "Amir Damascus",
+  "kind": "restaurant",
+  "lat": 2.9333779,
+  "lon": 101.6382259
+ },
+ {
+  "id": "osm-n11338230395",
+  "name": "Ayam Getok Mantul",
+  "kind": "restaurant",
+  "lat": 2.9263155,
+  "lon": 101.6514201
+ },
+ {
+  "id": "osm-w136048346",
+  "name": "Badminton Court",
+  "kind": "sports_centre",
+  "lat": 2.9241617,
+  "lon": 101.6391665
+ },
+ {
+  "id": "osm-w295241888",
+  "name": "Balai Bomba dan Penyelamat Cyberjaya",
+  "kind": "fire_station",
+  "lat": 2.9128017,
+  "lon": 101.6568286
+ },
+ {
+  "id": "osm-w295242440",
+  "name": "Balai Bomba dan Penyelamat Cyberjaya",
+  "kind": "fire_station",
+  "lat": 2.9124475,
+  "lon": 101.6577253
+ },
+ {
+  "id": "osm-w298498632",
+  "name": "Bangunan Mustapha Kamal",
+  "kind": "company",
+  "lat": 2.9250002,
+  "lon": 101.6636295
+ },
+ {
+  "id": "osm-n13532567870",
+  "name": "Bank Islam",
+  "kind": "bank",
+  "lat": 2.9247672,
+  "lon": 101.6515696
+ },
+ {
+  "id": "osm-w295246536",
+  "name": "Bank Negara Malaysia Data Centre",
+  "kind": "company",
+  "lat": 2.918532,
+  "lon": 101.6554681
+ },
+ {
+  "id": "osm-n12945825901",
+  "name": "Barakat Hotpot",
+  "kind": "restaurant",
+  "lat": 2.9257796,
+  "lon": 101.6510244
+ },
+ {
+  "id": "osm-w295606581",
+  "name": "Basis Bay",
+  "kind": "company",
+  "lat": 2.9057974,
+  "lon": 101.6527297
+ },
+ {
+  "id": "osm-w1568299279",
+  "name": "Basketball court and fitness area",
+  "kind": "park",
+  "lat": 2.9061543,
+  "lon": 101.6339807
+ },
+ {
+  "id": "osm-n9264874900",
+  "name": "Beryll Inn Cyberjaya",
+  "kind": "hotel",
+  "lat": 2.9234822,
+  "lon": 101.6516288
+ },
+ {
+  "id": "osm-w298494900",
+  "name": "Block 2300 Century Square",
+  "kind": "company",
+  "lat": 2.9250508,
+  "lon": 101.6619376
+ },
+ {
+  "id": "osm-w298495493",
+  "name": "Block 2310 Century Square",
+  "kind": "company",
+  "lat": 2.9257072,
+  "lon": 101.6612113
+ },
+ {
+  "id": "osm-n10544068368",
+  "name": "Block 2320 Century Square",
+  "kind": "company",
+  "lat": 2.9256064,
+  "lon": 101.6606282
+ },
+ {
+  "id": "osm-w303271725",
+  "name": "Block A",
+  "kind": "apartments",
+  "lat": 2.925453,
+  "lon": 101.6472969
+ },
+ {
+  "id": "osm-w303570727",
+  "name": "Block A",
+  "kind": "apartments",
+  "lat": 2.9201514,
+  "lon": 101.6475181
+ },
+ {
+  "id": "osm-w1091750003",
+  "name": "Block A",
+  "kind": "apartments",
+  "lat": 2.9276168,
+  "lon": 101.6300055
+ },
+ {
+  "id": "osm-w136048359",
+  "name": "Block A1",
+  "kind": "apartments",
+  "lat": 2.9224525,
+  "lon": 101.6383172
+ },
+ {
+  "id": "osm-w136048345",
+  "name": "Block A2",
+  "kind": "apartments",
+  "lat": 2.922796,
+  "lon": 101.6387347
+ },
+ {
+  "id": "osm-w136048351",
+  "name": "Block A3",
+  "kind": "apartments",
+  "lat": 2.9231398,
+  "lon": 101.6383302
+ },
+ {
+  "id": "osm-w303271717",
+  "name": "Block B",
+  "kind": "apartments",
+  "lat": 2.9245083,
+  "lon": 101.6473908
+ },
+ {
+  "id": "osm-w1091750004",
+  "name": "Block B",
+  "kind": "apartments",
+  "lat": 2.9277482,
+  "lon": 101.630995
+ },
+ {
+  "id": "osm-w136048362",
+  "name": "Block B1",
+  "kind": "apartments",
+  "lat": 2.9239476,
+  "lon": 101.6387653
+ },
+ {
+  "id": "osm-w136048337",
+  "name": "Block B2",
+  "kind": "apartments",
+  "lat": 2.9243006,
+  "lon": 101.6383219
+ },
+ {
+  "id": "osm-w136048353",
+  "name": "Block B3",
+  "kind": "apartments",
+  "lat": 2.9246404,
+  "lon": 101.6387309
+ },
+ {
+  "id": "osm-w303271721",
+  "name": "Block C",
+  "kind": "apartments",
+  "lat": 2.9238622,
+  "lon": 101.6473787
+ },
+ {
+  "id": "osm-w136048357",
+  "name": "Block C1",
+  "kind": "apartments",
+  "lat": 2.9254332,
+  "lon": 101.6382619
+ },
+ {
+  "id": "osm-w136048333",
+  "name": "Block C2",
+  "kind": "apartments",
+  "lat": 2.9257751,
+  "lon": 101.6386993
+ },
+ {
+  "id": "osm-w136048364",
+  "name": "Block C3",
+  "kind": "apartments",
+  "lat": 2.9261303,
+  "lon": 101.6382611
+ },
+ {
+  "id": "osm-w1091750001",
+  "name": "Block D",
+  "kind": "apartments",
+  "lat": 2.928443,
+  "lon": 101.6309005
+ },
+ {
+  "id": "osm-w303570737",
+  "name": "Block F",
+  "kind": "apartments",
+  "lat": 2.9205839,
+  "lon": 101.6483273
+ },
+ {
+  "id": "osm-w303570733",
+  "name": "Block G",
+  "kind": "apartments",
+  "lat": 2.9200993,
+  "lon": 101.6484337
+ },
+ {
+  "id": "osm-w303570741",
+  "name": "Block H",
+  "kind": "apartments",
+  "lat": 2.9201723,
+  "lon": 101.6480293
+ },
+ {
+  "id": "osm-w295953719",
+  "name": "BMW Malaysia",
+  "kind": "company",
+  "lat": 2.9212322,
+  "lon": 101.6538807
+ },
+ {
+  "id": "osm-n10844093203",
+  "name": "Burger King",
+  "kind": "fast_food",
+  "lat": 2.9201128,
+  "lon": 101.6360702
+ },
+ {
+  "id": "osm-n5565588401",
+  "name": "Canteen Sk Cyberjaya",
+  "kind": "fast_food",
+  "lat": 2.9186515,
+  "lon": 101.6386131
+ },
+ {
+  "id": "osm-w133480491",
+  "name": "Central Lecture Complex",
+  "kind": "university",
+  "lat": 2.9276595,
+  "lon": 101.6423117
+ },
+ {
+  "id": "osm-n13997330939",
+  "name": "Ceria Cafe",
+  "kind": "restaurant",
+  "lat": 2.9164709,
+  "lon": 101.6314852
+ },
+ {
+  "id": "osm-n7656505732",
+  "name": "Chatime",
+  "kind": "cafe",
+  "lat": 2.9234087,
+  "lon": 101.6616554
+ },
+ {
+  "id": "osm-n9592334818",
+  "name": "Chennai Spice",
+  "kind": "restaurant",
+  "lat": 2.9260832,
+  "lon": 101.655643
+ },
+ {
+  "id": "osm-n7652818086",
+  "name": "CIMB Bank",
+  "kind": "bank",
+  "lat": 2.9212475,
+  "lon": 101.6560363
+ },
+ {
+  "id": "osm-w298515041",
+  "name": "City Command Centre",
+  "kind": "company",
+  "lat": 2.9288545,
+  "lon": 101.6608772
+ },
+ {
+  "id": "osm-w1382433832",
+  "name": "City University Cyberjaya Campus",
+  "kind": "university",
+  "lat": 2.9229998,
+  "lon": 101.6542588
+ },
+ {
+  "id": "osm-r3969082",
+  "name": "CoPlace 1",
+  "kind": "commercial",
+  "lat": 2.9271624,
+  "lon": 101.6624596
+ },
+ {
+  "id": "osm-w298494908",
+  "name": "CoPlace 11",
+  "kind": "office",
+  "lat": 2.924435,
+  "lon": 101.6618385
+ },
+ {
+  "id": "osm-w298495494",
+  "name": "CoPlace 9",
+  "kind": "office",
+  "lat": 2.9256139,
+  "lon": 101.660613
+ },
+ {
+  "id": "osm-n11273571752",
+  "name": "Corner 23",
+  "kind": "restaurant",
+  "lat": 2.921322,
+  "lon": 101.657011
+ },
+ {
+  "id": "osm-w295178068",
+  "name": "CSF Computer Exchange 1",
+  "kind": "company",
+  "lat": 2.9127742,
+  "lon": 101.655669
+ },
+ {
+  "id": "osm-n12714049173",
+  "name": "Cube Bistro",
+  "kind": "restaurant",
+  "lat": 2.9229169,
+  "lon": 101.6512434
+ },
+ {
+  "id": "osm-w295257306",
+  "name": "CX2 Computer Exchange",
+  "kind": "company",
+  "lat": 2.9172262,
+  "lon": 101.6619362
+ },
+ {
+  "id": "osm-w303571954",
+  "name": "Cyberia Crescent 2",
+  "kind": "apartments",
+  "lat": 2.9203729,
+  "lon": 101.6462502
+ },
+ {
+  "id": "osm-w303270075",
+  "name": "Cyberjaya Mini Park",
+  "kind": "park",
+  "lat": 2.9228022,
+  "lon": 101.6493774
+ },
+ {
+  "id": "osm-n9634240953",
+  "name": "CyberSecurity Malaysia",
+  "kind": "government",
+  "lat": 2.9180027,
+  "lon": 101.6604784
+ },
+ {
+  "id": "osm-w581791010",
+  "name": "CyberSquare",
+  "kind": "commercial",
+  "lat": 2.9188277,
+  "lon": 101.65734
+ },
+ {
+  "id": "osm-w295176646",
+  "name": "Cyberview",
+  "kind": "company",
+  "lat": 2.9082715,
+  "lon": 101.6558382
+ },
+ {
+  "id": "osm-w1078548254",
+  "name": "Dagang Net Tower",
+  "kind": "commercial",
+  "lat": 2.9118267,
+  "lon": 101.6525769
+ },
+ {
+  "id": "osm-r21159855",
+  "name": "Dash Box Hotel",
+  "kind": "hotel",
+  "lat": 2.9069385,
+  "lon": 101.6557868
+ },
+ {
+  "id": "osm-n13952236901",
+  "name": "De Cyber Boutique Hotel",
+  "kind": "hotel",
+  "lat": 2.9188717,
+  "lon": 101.6511966
+ },
+ {
+  "id": "osm-w295177512",
+  "name": "Dell Global Business Centre",
+  "kind": "company",
+  "lat": 2.9103785,
+  "lon": 101.6570573
+ },
+ {
+  "id": "osm-w295610842",
+  "name": "Department of Irrigation and Drainage Malaysia",
+  "kind": "government",
+  "lat": 2.908067,
+  "lon": 101.6482978
+ },
+ {
+  "id": "osm-n14284236835",
+  "name": "Dewan Komuniti Cyber 10",
+  "kind": "community_centre",
+  "lat": 2.906978,
+  "lon": 101.6349505
+ },
+ {
+  "id": "osm-w581785035",
+  "name": "Dewan Masjid Raja Haji Fisabilillah",
+  "kind": "community_centre",
+  "lat": 2.9322935,
+  "lon": 101.6470174
+ },
+ {
+  "id": "osm-w1227107406",
+  "name": "Dewan Serbaguna",
+  "kind": "community_centre",
+  "lat": 2.9111463,
+  "lon": 101.6303901
+ },
+ {
+  "id": "osm-w581783340",
+  "name": "Domain 3",
+  "kind": "apartments",
+  "lat": 2.9162463,
+  "lon": 101.6493319
+ },
+ {
+  "id": "osm-n1469118586",
+  "name": "Domino's",
+  "kind": "fast_food",
+  "lat": 2.9169971,
+  "lon": 101.649774
+ },
+ {
+  "id": "osm-w804514511",
+  "name": "Dpulze Service Apartment",
+  "kind": "apartments",
+  "lat": 2.9222043,
+  "lon": 101.6507952
+ },
+ {
+  "id": "osm-w364358700",
+  "name": "DPulze Shopping Centre",
+  "kind": "mall",
+  "lat": 2.9220744,
+  "lon": 101.6511202
+ },
+ {
+  "id": "osm-w303272536",
+  "name": "elc International School Cyberjaya Campus",
+  "kind": "school",
+  "lat": 2.9270062,
+  "lon": 101.6472969
+ },
+ {
+  "id": "osm-w298813966",
+  "name": "Emerio Building",
+  "kind": "company",
+  "lat": 2.9255324,
+  "lon": 101.653683
+ },
+ {
+  "id": "osm-r3968729",
+  "name": "ENT3",
+  "kind": "office",
+  "lat": 2.9241126,
+  "lon": 101.6588492
+ },
+ {
+  "id": "osm-w298521698",
+  "name": "Enterprise Building 1",
+  "kind": "company",
+  "lat": 2.923314,
+  "lon": 101.6560322
+ },
+ {
+  "id": "osm-w298489041",
+  "name": "Enterprise Building 3",
+  "kind": "company",
+  "lat": 2.9241126,
+  "lon": 101.6588492
+ },
+ {
+  "id": "osm-n9592334717",
+  "name": "Experian Global Delivery Center Malaysia",
+  "kind": "company",
+  "lat": 2.9248576,
+  "lon": 101.6545863
+ },
+ {
+  "id": "osm-n13334960216",
+  "name": "Face To Face Noodle House",
+  "kind": "restaurant",
+  "lat": 2.9241737,
+  "lon": 101.6562599
+ },
+ {
+  "id": "osm-w133480448",
+  "name": "Faculty of Artificial Intelligence and Engineering",
+  "kind": "university",
+  "lat": 2.9263141,
+  "lon": 101.6413684
+ },
+ {
+  "id": "osm-w133480449",
+  "name": "Faculty Of Computing and Informatics",
+  "kind": "university",
+  "lat": 2.9286716,
+  "lon": 101.6410973
+ },
+ {
+  "id": "osm-w133480447",
+  "name": "Faculty Of Creative Multimedia",
+  "kind": "university",
+  "lat": 2.9262514,
+  "lon": 101.6427815
+ },
+ {
+  "id": "osm-n12697954037",
+  "name": "Famous Bistro Cafe 2",
+  "kind": "restaurant",
+  "lat": 2.915702,
+  "lon": 101.6494371
+ },
+ {
+  "id": "osm-n14309328167",
+  "name": "Fiesta Cabalen",
+  "kind": "restaurant",
+  "lat": 2.9257684,
+  "lon": 101.6505204
+ },
+ {
+  "id": "osm-w295244047",
+  "name": "FSBM Holdings",
+  "kind": "company",
+  "lat": 2.9157616,
+  "lon": 101.656848
+ },
+ {
+  "id": "osm-n11813703635",
+  "name": "GB Network Solutions Sdn. Bhd.",
+  "kind": "it",
+  "lat": 2.9260571,
+  "lon": 101.650423
+ },
+ {
+  "id": "osm-w581820654",
+  "name": "Gem In Mall",
+  "kind": "mall",
+  "lat": 2.9222552,
+  "lon": 101.6348221
+ },
+ {
+  "id": "osm-n9887721717",
+  "name": "GoHalal Cafe",
+  "kind": "cafe",
+  "lat": 2.9117351,
+  "lon": 101.6526322
+ },
+ {
+  "id": "osm-n9598482217",
+  "name": "Harleyz",
+  "kind": "fast_food",
+  "lat": 2.9282757,
+  "lon": 101.6546487
+ },
+ {
+  "id": "osm-n12194025771",
+  "name": "Hasbul Brothers",
+  "kind": "office",
+  "lat": 2.9247337,
+  "lon": 101.6511246
+ },
+ {
+  "id": "osm-w295607707",
+  "name": "HASIL",
+  "kind": "government",
+  "lat": 2.909178,
+  "lon": 101.650018
+ },
+ {
+  "id": "osm-n13974031529",
+  "name": "HE & SHE COFFEE MENU",
+  "kind": "cafe",
+  "lat": 2.9276675,
+  "lon": 101.6417057
+ },
+ {
+  "id": "osm-n9598482317",
+  "name": "Heli Chicken",
+  "kind": "fast_food",
+  "lat": 2.9284098,
+  "lon": 101.6542626
+ },
+ {
+  "id": "osm-w295261438",
+  "name": "Hometown Hainan Coffee",
+  "kind": "cafe",
+  "lat": 2.9197563,
+  "lon": 101.6591474
+ },
+ {
+  "id": "osm-w167293135",
+  "name": "Hospital Cyberjaya",
+  "kind": "hospital",
+  "lat": 2.9204475,
+  "lon": 101.631591
+ },
+ {
+  "id": "osm-w295242716",
+  "name": "HP",
+  "kind": "company",
+  "lat": 2.9138916,
+  "lon": 101.6561349
+ },
+ {
+  "id": "osm-n7656505729",
+  "name": "HSBC",
+  "kind": "bank",
+  "lat": 2.9232708,
+  "lon": 101.6604129
+ },
+ {
+  "id": "osm-w298806250",
+  "name": "IBM",
+  "kind": "company",
+  "lat": 2.9237807,
+  "lon": 101.6543675
+ },
+ {
+  "id": "osm-n12676256806",
+  "name": "Jaya Grocer",
+  "kind": "supermarket",
+  "lat": 2.9221437,
+  "lon": 101.6506471
+ },
+ {
+  "id": "osm-w295953475",
+  "name": "JPJ IT Centre",
+  "kind": "company",
+  "lat": 2.9199756,
+  "lon": 101.6544328
+ },
+ {
+  "id": "osm-n14309388241",
+  "name": "Kars Fine Meat & Steak",
+  "kind": "restaurant",
+  "lat": 2.920871,
+  "lon": 101.6508482
+ },
+ {
+  "id": "osm-w295261449",
+  "name": "Kenangan Coffee",
+  "kind": "cafe",
+  "lat": 2.9205721,
+  "lon": 101.659205
+ },
+ {
+  "id": "osm-w295261451",
+  "name": "Ketam Manis",
+  "kind": "restaurant",
+  "lat": 2.920411,
+  "lon": 101.6591954
+ },
+ {
+  "id": "osm-n8742907673",
+  "name": "KFC",
+  "kind": "fast_food",
+  "lat": 2.9331743,
+  "lon": 101.6385253
+ },
+ {
+  "id": "osm-w295261441",
+  "name": "KFC",
+  "kind": "fast_food",
+  "lat": 2.9199569,
+  "lon": 101.6591555
+ },
+ {
+  "id": "osm-n11648656969",
+  "name": "KGB Courtyard Cyberjaya",
+  "kind": "fast_food",
+  "lat": 2.9202443,
+  "lon": 101.6361627
+ },
+ {
+  "id": "osm-w1080497943",
+  "name": "King Henry VIII College",
+  "kind": "school",
+  "lat": 2.9151225,
+  "lon": 101.6375676
+ },
+ {
+  "id": "osm-w295176645",
+  "name": "Kirkby International College",
+  "kind": "college",
+  "lat": 2.910354,
+  "lon": 101.6550928
+ },
+ {
+  "id": "osm-w295600781",
+  "name": "Kitchen Village",
+  "kind": "restaurant",
+  "lat": 2.9213072,
+  "lon": 101.6564662
+ },
+ {
+  "id": "osm-w848498979",
+  "name": "Kolej UNIKOP",
+  "kind": "university",
+  "lat": 2.9285898,
+  "lon": 101.6561052
+ },
+ {
+  "id": "osm-w295606396",
+  "name": "Kompleks Balai Polis Cyberjaya",
+  "kind": "police",
+  "lat": 2.9072484,
+  "lon": 101.6527233
+ },
+ {
+  "id": "osm-w295652451",
+  "name": "La Vida Clubhouse",
+  "kind": "sports_centre",
+  "lat": 2.9099428,
+  "lon": 101.6623847
+ },
+ {
+  "id": "osm-n13040946415",
+  "name": "Luckin Coffee",
+  "kind": "cafe",
+  "lat": 2.9219892,
+  "lon": 101.6508911
+ },
+ {
+  "id": "osm-n13807265094",
+  "name": "Luckin Coffee",
+  "kind": "cafe",
+  "lat": 2.9335252,
+  "lon": 101.6379148
+ },
+ {
+  "id": "osm-n14318341272",
+  "name": "Majlis Buku Kebangsaan Malaysia (MBKM)",
+  "kind": "government",
+  "lat": 2.9248461,
+  "lon": 101.6633906
+ },
+ {
+  "id": "osm-n12194025768",
+  "name": "Makang",
+  "kind": "restaurant",
+  "lat": 2.9248394,
+  "lon": 101.6510817
+ },
+ {
+  "id": "osm-w1352516669",
+  "name": "Malaysia Digital Economy Corporation (MDEC)",
+  "kind": "company",
+  "lat": 2.922056,
+  "lon": 101.6590006
+ },
+ {
+  "id": "osm-w295599080",
+  "name": "Malaysian Communication and Multimedia Commission",
+  "kind": "government",
+  "lat": 2.9216623,
+  "lon": 101.663673
+ },
+ {
+  "id": "osm-w295176653",
+  "name": "Malaysian Global Innovation and Creativity Centre (MaGIC)",
+  "kind": "company",
+  "lat": 2.909107,
+  "lon": 101.6547654
+ },
+ {
+  "id": "osm-w295261440",
+  "name": "Man Ayam Kampung",
+  "kind": "restaurant",
+  "lat": 2.9208716,
+  "lon": 101.6592047
+ },
+ {
+  "id": "osm-n12408452354",
+  "name": "Mapskart Technology Sdn Bhd",
+  "kind": "company",
+  "lat": 2.9157199,
+  "lon": 101.6493126
+ },
+ {
+  "id": "osm-n5565638654",
+  "name": "Marrybrown",
+  "kind": "fast_food",
+  "lat": 2.9170585,
+  "lon": 101.6497669
+ },
+ {
+  "id": "osm-n7656505728",
+  "name": "Maybank",
+  "kind": "bank",
+  "lat": 2.923256,
+  "lon": 101.6603465
+ },
+ {
+  "id": "osm-n8742910464",
+  "name": "McCafé",
+  "kind": "cafe",
+  "lat": 2.9211841,
+  "lon": 101.6558274
+ },
+ {
+  "id": "osm-w1079882737",
+  "name": "McDonald's",
+  "kind": "fast_food",
+  "lat": 2.9336994,
+  "lon": 101.6365689
+ },
+ {
+  "id": "osm-w1131261057",
+  "name": "McDonald's",
+  "kind": "fast_food",
+  "lat": 2.9211486,
+  "lon": 101.6558485
+ },
+ {
+  "id": "osm-w804514513",
+  "name": "MCMC Tower 1",
+  "kind": "government",
+  "lat": 2.9229505,
+  "lon": 101.6620124
+ },
+ {
+  "id": "osm-w804514514",
+  "name": "MCMC Tower 2",
+  "kind": "government",
+  "lat": 2.9228446,
+  "lon": 101.6628099
+ },
+ {
+  "id": "osm-w295178255",
+  "name": "Menara Hasil",
+  "kind": "office",
+  "lat": 2.9101293,
+  "lon": 101.6501058
+ },
+ {
+  "id": "osm-n12797531348",
+  "name": "Mixue",
+  "kind": "cafe",
+  "lat": 2.9326849,
+  "lon": 101.6382457
+ },
+ {
+  "id": "osm-n12993822347",
+  "name": "Mixue",
+  "kind": "cafe",
+  "lat": 2.916727,
+  "lon": 101.6498927
+ },
+ {
+  "id": "osm-n6186594846",
+  "name": "Monjo Coffee",
+  "kind": "cafe",
+  "lat": 2.9231613,
+  "lon": 101.6615221
+ },
+ {
+  "id": "osm-n11338230394",
+  "name": "Mr Mee Authentic Xinjiang Cuisine Chinese Muslim Restaurant",
+  "kind": "restaurant",
+  "lat": 2.9262326,
+  "lon": 101.6514275
+ },
+ {
+  "id": "osm-n9591993029",
+  "name": "Mr. Kabab & Biryani",
+  "kind": "restaurant",
+  "lat": 2.9153546,
+  "lon": 101.6498204
+ },
+ {
+  "id": "osm-w133480452",
+  "name": "MSC Malaysia Technology Commercilization Centre",
+  "kind": "office",
+  "lat": 2.9283926,
+  "lon": 101.6397443
+ },
+ {
+  "id": "osm-n11276589241",
+  "name": "Multi Purpose Hall, JPS Malaysia",
+  "kind": "government",
+  "lat": 2.9087136,
+  "lon": 101.6482484
+ },
+ {
+  "id": "osm-w133054990",
+  "name": "Multimedia University",
+  "kind": "university",
+  "lat": 2.92787,
+  "lon": 101.6422422
+ },
+ {
+  "id": "osm-n12265757359",
+  "name": "Murni Discovery",
+  "kind": "restaurant",
+  "lat": 2.9211991,
+  "lon": 101.6367794
+ },
+ {
+  "id": "osm-w686317483",
+  "name": "Mutiara Ville Tower C",
+  "kind": "apartments",
+  "lat": 2.9232484,
+  "lon": 101.634652
+ },
+ {
+  "id": "osm-w1218341188",
+  "name": "Mutiara Ville Tower D",
+  "kind": "apartments",
+  "lat": 2.9237836,
+  "lon": 101.6343088
+ },
+ {
+  "id": "osm-w686317491",
+  "name": "Mutiara Ville Tower E",
+  "kind": "apartments",
+  "lat": 2.9237911,
+  "lon": 101.634923
+ },
+ {
+  "id": "osm-w686317489",
+  "name": "Mutiara Ville Tower F",
+  "kind": "apartments",
+  "lat": 2.9242625,
+  "lon": 101.6346715
+ },
+ {
+  "id": "osm-w768053431",
+  "name": "Mutiara Ville Tower G",
+  "kind": "apartments",
+  "lat": 2.9232562,
+  "lon": 101.6334662
+ },
+ {
+  "id": "osm-w686317486",
+  "name": "Mutiara Ville Tower H",
+  "kind": "apartments",
+  "lat": 2.9238017,
+  "lon": 101.6330965
+ },
+ {
+  "id": "osm-w768053430",
+  "name": "Mutiara Ville Tower I",
+  "kind": "apartments",
+  "lat": 2.923786,
+  "lon": 101.6336382
+ },
+ {
+  "id": "osm-w686317487",
+  "name": "Mutiara Ville Tower J",
+  "kind": "apartments",
+  "lat": 2.9242833,
+  "lon": 101.6333691
+ },
+ {
+  "id": "osm-n14072157810",
+  "name": "MYNIC Berhad",
+  "kind": "government",
+  "lat": 2.9178685,
+  "lon": 101.6607422
+ },
+ {
+  "id": "osm-w295600775",
+  "name": "NakNak",
+  "kind": "restaurant",
+  "lat": 2.9213645,
+  "lon": 101.6569534
+ },
+ {
+  "id": "osm-n9591578068",
+  "name": "Nam Heong Ipoh",
+  "kind": "restaurant",
+  "lat": 2.928627,
+  "lon": 101.653911
+ },
+ {
+  "id": "osm-n9592334817",
+  "name": "Nasi Kandar Pelita",
+  "kind": "restaurant",
+  "lat": 2.9245828,
+  "lon": 101.6561105
+ },
+ {
+  "id": "osm-n12194025767",
+  "name": "Nasi Kukus Papa",
+  "kind": "restaurant",
+  "lat": 2.9252221,
+  "lon": 101.6510515
+ },
+ {
+  "id": "osm-n13591407998",
+  "name": "NATIONAL CYBER COORDINATION AND COMMAND CENTRE (NC4) National Cyber Security Agency (NACSA)",
+  "kind": "government",
+  "lat": 2.9182167,
+  "lon": 101.6602169
+ },
+ {
+  "id": "osm-r3972501",
+  "name": "NTT MSC Cyberjaya",
+  "kind": "company",
+  "lat": 2.9280286,
+  "lon": 101.6586037
+ },
+ {
+  "id": "osm-w295176658",
+  "name": "Obama Oval",
+  "kind": "park",
+  "lat": 2.9093182,
+  "lon": 101.6554882
+ },
+ {
+  "id": "osm-n5565592554",
+  "name": "Office SK Cyberjaya",
+  "kind": "office",
+  "lat": 2.9193234,
+  "lon": 101.6385372
+ },
+ {
+  "id": "osm-n12194025770",
+  "name": "Ohana Mediclinic",
+  "kind": "clinic",
+  "lat": 2.9247413,
+  "lon": 101.6510817
+ },
+ {
+  "id": "osm-n13995535798",
+  "name": "Orion Clinic",
+  "kind": "clinic",
+  "lat": 2.921198,
+  "lon": 101.6360807
+ },
+ {
+  "id": "osm-w295600768",
+  "name": "Padi House",
+  "kind": "restaurant",
+  "lat": 2.9211073,
+  "lon": 101.6570313
+ },
+ {
+  "id": "osm-n6557042814",
+  "name": "Padi House Cafeteria and Deli Cafe",
+  "kind": "restaurant",
+  "lat": 2.9206692,
+  "lon": 101.6381612
+ },
+ {
+  "id": "osm-n14306355019",
+  "name": "Pak Ngah Kopitiam",
+  "kind": "restaurant",
+  "lat": 2.9203141,
+  "lon": 101.6564523
+ },
+ {
+  "id": "osm-w581754614",
+  "name": "Pan'Gaea Show Village",
+  "kind": "commercial",
+  "lat": 2.9226743,
+  "lon": 101.6369487
+ },
+ {
+  "id": "osm-n6186635207",
+  "name": "Paragon Management Office",
+  "kind": "office",
+  "lat": 2.9235377,
+  "lon": 101.6372622
+ },
+ {
+  "id": "osm-w660793655",
+  "name": "Paragon Tower A",
+  "kind": "commercial",
+  "lat": 2.9235552,
+  "lon": 101.637168
+ },
+ {
+  "id": "osm-w660793654",
+  "name": "Paragon Tower B",
+  "kind": "commercial",
+  "lat": 2.9243854,
+  "lon": 101.6371654
+ },
+ {
+  "id": "osm-n14318302158",
+  "name": "Perbadanan Kota Buku (PKB)",
+  "kind": "government",
+  "lat": 2.9243432,
+  "lon": 101.6637628
+ },
+ {
+  "id": "osm-w1502415384",
+  "name": "Petronas",
+  "kind": "fuel",
+  "lat": 2.9190661,
+  "lon": 101.6590275
+ },
+ {
+  "id": "osm-n4734012904",
+  "name": "Poolside Cafe",
+  "kind": "cafe",
+  "lat": 2.924322,
+  "lon": 101.6393065
+ },
+ {
+  "id": "osm-n11273571753",
+  "name": "Power Stall",
+  "kind": "restaurant",
+  "lat": 2.9213732,
+  "lon": 101.6569905
+ },
+ {
+  "id": "osm-w581791402",
+  "name": "Premela Suites",
+  "kind": "hotel",
+  "lat": 2.9192047,
+  "lon": 101.6546136
+ },
+ {
+  "id": "osm-w295600776",
+  "name": "Prima Avenue 1",
+  "kind": "company",
+  "lat": 2.9211748,
+  "lon": 101.6579918
+ },
+ {
+  "id": "osm-w295600787",
+  "name": "Prima Avenue 2",
+  "kind": "company",
+  "lat": 2.9212485,
+  "lon": 101.6575304
+ },
+ {
+  "id": "osm-w295599993",
+  "name": "Prima Avenue 6",
+  "kind": "company",
+  "lat": 2.9203386,
+  "lon": 101.6568966
+ },
+ {
+  "id": "osm-w295599994",
+  "name": "Prima Avenue 7",
+  "kind": "company",
+  "lat": 2.920391,
+  "lon": 101.6574744
+ },
+ {
+  "id": "osm-w295599997",
+  "name": "Prima Avenue 8",
+  "kind": "company",
+  "lat": 2.9203566,
+  "lon": 101.6580447
+ },
+ {
+  "id": "osm-w298805090",
+  "name": "Quill 2",
+  "kind": "office",
+  "lat": 2.9230559,
+  "lon": 101.6541596
+ },
+ {
+  "id": "osm-w1080495343",
+  "name": "Raja Haji Fi Sabilillah Mosque",
+  "kind": "place_of_worship",
+  "lat": 2.9322164,
+  "lon": 101.6480476
+ },
+ {
+  "id": "osm-w295243526",
+  "name": "RBC Dexia Investor Services",
+  "kind": "company",
+  "lat": 2.9145276,
+  "lon": 101.6564905
+ },
+ {
+  "id": "osm-w877918157",
+  "name": "Rekascape",
+  "kind": "commercial",
+  "lat": 2.9083697,
+  "lon": 101.6569863
+ },
+ {
+  "id": "osm-n9593522217",
+  "name": "Restaurant All in All",
+  "kind": "restaurant",
+  "lat": 2.9263007,
+  "lon": 101.6561552
+ },
+ {
+  "id": "osm-n4488395404",
+  "name": "Restaurant Erra",
+  "kind": "restaurant",
+  "lat": 2.9188493,
+  "lon": 101.6315777
+ },
+ {
+  "id": "osm-n11640545613",
+  "name": "Restoran Fu Jee Ulu Yam Loh Mee - Cyberjaya 富记正宗福建乌鲁音卤面",
+  "kind": "restaurant",
+  "lat": 2.9244387,
+  "lon": 101.6566583
+ },
+ {
+  "id": "osm-w295600771",
+  "name": "Rich Kopitiam",
+  "kind": "cafe",
+  "lat": 2.9210962,
+  "lon": 101.6569012
+ },
+ {
+  "id": "osm-n5565638651",
+  "name": "Saba Restaurant",
+  "kind": "restaurant",
+  "lat": 2.9229127,
+  "lon": 101.6513286
+ },
+ {
+  "id": "osm-n9613050435",
+  "name": "Safaa Restaurant",
+  "kind": "restaurant",
+  "lat": 2.922944,
+  "lon": 101.6516362
+ },
+ {
+  "id": "osm-n5565626150",
+  "name": "Salam Noodles",
+  "kind": "restaurant",
+  "lat": 2.926043,
+  "lon": 101.6514399
+ },
+ {
+  "id": "osm-n9592334718",
+  "name": "San Francisco Coffee",
+  "kind": "cafe",
+  "lat": 2.9246851,
+  "lon": 101.6546728
+ },
+ {
+  "id": "osm-n13731566110",
+  "name": "San Francisco Coffee",
+  "kind": "cafe",
+  "lat": 2.920595,
+  "lon": 101.636685
+ },
+ {
+  "id": "osm-n11338185215",
+  "name": "Santapan Cafe",
+  "kind": "cafe",
+  "lat": 2.9254896,
+  "lon": 101.6514429
+ },
+ {
+  "id": "osm-n12720749963",
+  "name": "Secret Recipe",
+  "kind": "fast_food",
+  "lat": 2.9232551,
+  "lon": 101.6630907
+ },
+ {
+  "id": "osm-w1568298919",
+  "name": "Sejati Lakeside Park",
+  "kind": "park",
+  "lat": 2.9069512,
+  "lon": 101.6333829
+ },
+ {
+  "id": "osm-n11349374625",
+  "name": "Sekolah Rendah Islam Al-Imtiyaz",
+  "kind": "school",
+  "lat": 2.9235783,
+  "lon": 101.651621
+ },
+ {
+  "id": "osm-w295649044",
+  "name": "Sekolah Seri Puteri Cyberjaya",
+  "kind": "school",
+  "lat": 2.9120429,
+  "lon": 101.6641299
+ },
+ {
+  "id": "osm-n13928024128",
+  "name": "SenjaBrew MY",
+  "kind": "restaurant",
+  "lat": 2.9258242,
+  "lon": 101.6504221
+ },
+ {
+  "id": "osm-w133751216",
+  "name": "Sepang Municipal Council",
+  "kind": "townhall",
+  "lat": 2.9338855,
+  "lon": 101.6456182
+ },
+ {
+  "id": "osm-w295599493",
+  "name": "Shaftsbury Square Shop & Retail",
+  "kind": "mall",
+  "lat": 2.9232657,
+  "lon": 101.661909
+ },
+ {
+  "id": "osm-w944292854",
+  "name": "Shell",
+  "kind": "fuel",
+  "lat": 2.9173462,
+  "lon": 101.6524147
+ },
+ {
+  "id": "osm-w1247156133",
+  "name": "Shell",
+  "kind": "fuel",
+  "lat": 2.9181999,
+  "lon": 101.6308583
+ },
+ {
+  "id": "osm-n12265757356",
+  "name": "Shisha Town",
+  "kind": "cafe",
+  "lat": 2.9212041,
+  "lon": 101.6369232
+ },
+ {
+  "id": "osm-n14306355022",
+  "name": "SiChuan Mixed Rice Hot pot",
+  "kind": "restaurant",
+  "lat": 2.9200466,
+  "lon": 101.6563715
+ },
+ {
+  "id": "osm-n11338185208",
+  "name": "Sifu Salai",
+  "kind": "restaurant",
+  "lat": 2.9258199,
+  "lon": 101.6514342
+ },
+ {
+  "id": "osm-w133480484",
+  "name": "Siti Hasmaah Digital Library",
+  "kind": "library",
+  "lat": 2.9275805,
+  "lon": 101.6416746
+ },
+ {
+  "id": "osm-w944310123",
+  "name": "SJK (C) Union, Cyberjaya",
+  "kind": "school",
+  "lat": 2.9263718,
+  "lon": 101.6301909
+ },
+ {
+  "id": "osm-w303573892",
+  "name": "SK Cyberjaya",
+  "kind": "school",
+  "lat": 2.9191469,
+  "lon": 101.6385703
+ },
+ {
+  "id": "osm-w298503535",
+  "name": "SME Technopreneur Centre",
+  "kind": "company",
+  "lat": 2.9260373,
+  "lon": 101.6630239
+ },
+ {
+  "id": "osm-w303573894",
+  "name": "SMK Cyberjaya",
+  "kind": "school",
+  "lat": 2.9187411,
+  "lon": 101.639548
+ },
+ {
+  "id": "osm-r9188347",
+  "name": "Solstice Cyberjaya",
+  "kind": "apartments",
+  "lat": 2.9247249,
+  "lon": 101.6365876
+ },
+ {
+  "id": "osm-n6186357455",
+  "name": "Solstice Management Office",
+  "kind": "office",
+  "lat": 2.9246349,
+  "lon": 101.6366759
+ },
+ {
+  "id": "osm-w660793652",
+  "name": "Solstice Tower 1",
+  "kind": "apartments",
+  "lat": 2.9244663,
+  "lon": 101.6367752
+ },
+ {
+  "id": "osm-w660793653",
+  "name": "Solstice Tower 2",
+  "kind": "apartments",
+  "lat": 2.9244509,
+  "lon": 101.6362332
+ },
+ {
+  "id": "osm-w298506058",
+  "name": "Sports Arena Cyberjaya",
+  "kind": "sports_centre",
+  "lat": 2.9277296,
+  "lon": 101.6609063
+ },
+ {
+  "id": "osm-n6186594849",
+  "name": "Star Grocer",
+  "kind": "supermarket",
+  "lat": 2.9229347,
+  "lon": 101.6629041
+ },
+ {
+  "id": "osm-n7600015085",
+  "name": "Star Grocer",
+  "kind": "supermarket",
+  "lat": 2.9188269,
+  "lon": 101.6568542
+ },
+ {
+  "id": "osm-n7599761885",
+  "name": "Starbucks",
+  "kind": "cafe",
+  "lat": 2.9208574,
+  "lon": 101.655971
+ },
+ {
+  "id": "osm-w133480488",
+  "name": "Student Affair Division",
+  "kind": "university",
+  "lat": 2.9254294,
+  "lon": 101.6420225
+ },
+ {
+  "id": "osm-n12720749961",
+  "name": "Subway",
+  "kind": "fast_food",
+  "lat": 2.9234019,
+  "lon": 101.6624359
+ },
+ {
+  "id": "osm-n13807265092",
+  "name": "Subway",
+  "kind": "fast_food",
+  "lat": 2.9336239,
+  "lon": 101.6374608
+ },
+ {
+  "id": "osm-n5565626151",
+  "name": "Sultan Cuisine Restaurant",
+  "kind": "restaurant",
+  "lat": 2.9263693,
+  "lon": 101.6510533
+ },
+ {
+  "id": "osm-w1207813062",
+  "name": "Surau Al Falah TM Cyberjaya",
+  "kind": "place_of_worship",
+  "lat": 2.9307704,
+  "lon": 101.6577616
+ },
+ {
+  "id": "osm-w133480481",
+  "name": "Surau Al Hidayah",
+  "kind": "place_of_worship",
+  "lat": 2.9242509,
+  "lon": 101.6430302
+ },
+ {
+  "id": "osm-n13997330940",
+  "name": "Surau Ar-Rayyan Ceria",
+  "kind": "place_of_worship",
+  "lat": 2.9164146,
+  "lon": 101.6317266
+ },
+ {
+  "id": "osm-n14306306086",
+  "name": "Surau Petronas",
+  "kind": "place_of_worship",
+  "lat": 2.9188023,
+  "lon": 101.6591367
+ },
+ {
+  "id": "osm-n5565588400",
+  "name": "Surau Smk Cyberjaya",
+  "kind": "place_of_worship",
+  "lat": 2.918907,
+  "lon": 101.6389375
+ },
+ {
+  "id": "osm-w295953467",
+  "name": "Sustainable Energy Development Authority (SEDA) Malaysia",
+  "kind": "government",
+  "lat": 2.9205986,
+  "lon": 101.6551024
+ },
+ {
+  "id": "osm-n14306355020",
+  "name": "Syed Bistro",
+  "kind": "restaurant",
+  "lat": 2.9200656,
+  "lon": 101.6565015
+ },
+ {
+  "id": "osm-n10544068367",
+  "name": "T-Systems Malaysia Sdn. Bhd.",
+  "kind": "company",
+  "lat": 2.9244545,
+  "lon": 101.661837
+ },
+ {
+  "id": "osm-w295261443",
+  "name": "Taco Bell",
+  "kind": "fast_food",
+  "lat": 2.9208007,
+  "lon": 101.6592043
+ },
+ {
+  "id": "osm-n5565643967",
+  "name": "Tealive",
+  "kind": "cafe",
+  "lat": 2.9153194,
+  "lon": 101.6505756
+ },
+ {
+  "id": "osm-n12720749957",
+  "name": "Tealive",
+  "kind": "cafe",
+  "lat": 2.9233813,
+  "lon": 101.6609432
+ },
+ {
+  "id": "osm-w133054992",
+  "name": "Telekom Malaysia",
+  "kind": "company",
+  "lat": 2.9304396,
+  "lon": 101.6568237
+ },
+ {
+  "id": "osm-n13378192705",
+  "name": "The Botanist",
+  "kind": "cafe",
+  "lat": 2.9204951,
+  "lon": 101.636542
+ },
+ {
+  "id": "osm-n7602728987",
+  "name": "The Coffee Bean & Tea Leaf",
+  "kind": "cafe",
+  "lat": 2.917191,
+  "lon": 101.6523372
+ },
+ {
+  "id": "osm-n13532567863",
+  "name": "The Coffee Bean & Tea Leaf",
+  "kind": "cafe",
+  "lat": 2.9337205,
+  "lon": 101.6370039
+ },
+ {
+  "id": "osm-w295609728",
+  "name": "The Domain",
+  "kind": "apartments",
+  "lat": 2.9176468,
+  "lon": 101.6488986
+ },
+ {
+  "id": "osm-w303572575",
+  "name": "TM Cyberjaya",
+  "kind": "company",
+  "lat": 2.9203933,
+  "lon": 101.6417193
+ },
+ {
+  "id": "osm-w133054999",
+  "name": "TM R&D",
+  "kind": "office",
+  "lat": 2.9305191,
+  "lon": 101.6589461
+ },
+ {
+  "id": "osm-w1103350280",
+  "name": "Tower 2",
+  "kind": "apartments",
+  "lat": 2.9291631,
+  "lon": 101.6305676
+ },
+ {
+  "id": "osm-w1363287282",
+  "name": "Tower 2",
+  "kind": "apartments",
+  "lat": 2.9288606,
+  "lon": 101.6537244
+ },
+ {
+  "id": "osm-w1239208012",
+  "name": "Tower A",
+  "kind": "apartments",
+  "lat": 2.9251947,
+  "lon": 101.636981
+ },
+ {
+  "id": "osm-w1239208013",
+  "name": "Tower B",
+  "kind": "apartments",
+  "lat": 2.9251936,
+  "lon": 101.6362975
+ },
+ {
+  "id": "osm-w1239208011",
+  "name": "Tower C",
+  "kind": "apartments",
+  "lat": 2.925699,
+  "lon": 101.6358904
+ },
+ {
+  "id": "osm-w581755153",
+  "name": "Tower D",
+  "kind": "apartments",
+  "lat": 2.9264044,
+  "lon": 101.6358848
+ },
+ {
+  "id": "osm-n5027680921",
+  "name": "Traskun Pakistani Restaurant",
+  "kind": "restaurant",
+  "lat": 2.9249185,
+  "lon": 101.6510787
+ },
+ {
+  "id": "osm-n12458026464",
+  "name": "UniMAP@KL",
+  "kind": "university",
+  "lat": 2.9242986,
+  "lon": 101.6581814
+ },
+ {
+  "id": "osm-w770103585",
+  "name": "University Malaysia of Computer Science & Engineering (UNIMY)",
+  "kind": "university",
+  "lat": 2.9118398,
+  "lon": 101.6530615
+ },
+ {
+  "id": "osm-w1165917210",
+  "name": "University of Cyberjaya",
+  "kind": "university",
+  "lat": 2.9308252,
+  "lon": 101.637411
+ },
+ {
+  "id": "osm-n11934911248",
+  "name": "UST Global (Malaysia) Sdn Bhd",
+  "kind": "office",
+  "lat": 2.9150951,
+  "lon": 101.658675
+ },
+ {
+  "id": "osm-n10544068454",
+  "name": "Village Grocer",
+  "kind": "supermarket",
+  "lat": 2.9197051,
+  "lon": 101.6364634
+ },
+ {
+  "id": "osm-w295601805",
+  "name": "Wisma MISC",
+  "kind": "company",
+  "lat": 2.9220373,
+  "lon": 101.6558579
+ },
+ {
+  "id": "osm-w295609727",
+  "name": "Wisma Mustapha Kamal",
+  "kind": "office",
+  "lat": 2.9154371,
+  "lon": 101.6488101
+ },
+ {
+  "id": "osm-w298495096",
+  "name": "Wisma Shell",
+  "kind": "company",
+  "lat": 2.9244402,
+  "lon": 101.663601
+ },
+ {
+  "id": "osm-w298817357",
+  "name": "Wisma Shell-U Village",
+  "kind": "company",
+  "lat": 2.9273174,
+  "lon": 101.6539149
+ },
+ {
+  "id": "osm-w581791405",
+  "name": "Wisma Suria",
+  "kind": "commercial",
+  "lat": 2.91612,
+  "lon": 101.6543971
+ },
+ {
+  "id": "osm-n4467589994",
+  "name": "Yasmin Cyberjaya",
+  "kind": "place_of_worship",
+  "lat": 2.9255941,
+  "lon": 101.6510365
+ },
+ {
+  "id": "osm-n12194025766",
+  "name": "Zam Ikan Bakar",
+  "kind": "restaurant",
+  "lat": 2.9253933,
+  "lon": 101.6510565
+ },
+ {
+  "id": "osm-n11934911246",
+  "name": "ZUS Coffee",
+  "kind": "cafe",
+  "lat": 2.9146238,
+  "lon": 101.6586345
+ },
+ {
+  "id": "osm-n12672981807",
+  "name": "ZUS Coffee",
+  "kind": "cafe",
+  "lat": 2.9217431,
+  "lon": 101.6506291
+ },
+ {
+  "id": "osm-n12720749960",
+  "name": "ZUS Coffee",
+  "kind": "cafe",
+  "lat": 2.9234378,
+  "lon": 101.6612651
+ },
+ {
+  "id": "osm-n12798931758",
+  "name": "ZUS Coffee",
+  "kind": "cafe",
+  "lat": 2.933557,
+  "lon": 101.6377235
+ },
+ {
+  "id": "osm-n14041650220",
+  "name": "ZUS Coffee",
+  "kind": "cafe",
+  "lat": 2.9153439,
+  "lon": 101.6502222
+ }
+]

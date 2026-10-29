@@ -1,0 +1,245 @@
+[
+ {
+  "id": "persiaran-sepang",
+  "name": "Persiaran Sepang",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 7561.2,
+  "edge_count": 78,
+  "lanes": null
+ },
+ {
+  "id": "persiaran-multimedia",
+  "name": "Persiaran Multimedia",
+  "highway": "primary",
+  "free_flow_kmh": 60,
+  "length_m": 6729.0,
+  "edge_count": 80,
+  "lanes": "2"
+ },
+ {
+  "id": "persiaran-semarak-api",
+  "name": "Persiaran Semarak Api",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 6420.9,
+  "edge_count": 77,
+  "lanes": null
+ },
+ {
+  "id": "persiaran-apec",
+  "name": "Persiaran APEC",
+  "highway": "primary",
+  "free_flow_kmh": 60,
+  "length_m": 6218.1,
+  "edge_count": 70,
+  "lanes": "2"
+ },
+ {
+  "id": "persiaran-bestari",
+  "name": "Persiaran Bestari",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 6153.0,
+  "edge_count": 73,
+  "lanes": "2"
+ },
+ {
+  "id": "persiaran-rimba-permai",
+  "name": "Persiaran Rimba Permai",
+  "highway": "primary",
+  "free_flow_kmh": 60,
+  "length_m": 5958.3,
+  "edge_count": 70,
+  "lanes": null
+ },
+ {
+  "id": "persiaran-ceria",
+  "name": "Persiaran Ceria",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 5580.0,
+  "edge_count": 49,
+  "lanes": null
+ },
+ {
+  "id": "jalan-fauna-1",
+  "name": "Jalan Fauna 1",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 4114.2,
+  "edge_count": 43,
+  "lanes": null
+ },
+ {
+  "id": "jalan-impact",
+  "name": "Jalan IMPACT",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 2605.7,
+  "edge_count": 40,
+  "lanes": "2"
+ },
+ {
+  "id": "persiaran-cyber-point-selatan",
+  "name": "Persiaran Cyber Point Selatan",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 2353.6,
+  "edge_count": 21,
+  "lanes": null
+ },
+ {
+  "id": "persiaran-neuron",
+  "name": "Persiaran Neuron",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 2119.2,
+  "edge_count": 35,
+  "lanes": null
+ },
+ {
+  "id": "persiaran-flora",
+  "name": "Persiaran Flora",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 1994.9,
+  "edge_count": 24,
+  "lanes": null
+ },
+ {
+  "id": "lingkaran-cyber-point-barat",
+  "name": "Lingkaran Cyber Point Barat",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 1867.0,
+  "edge_count": 28,
+  "lanes": null
+ },
+ {
+  "id": "jalan-teknokrat-3",
+  "name": "Jalan Teknokrat 3",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 1833.7,
+  "edge_count": 30,
+  "lanes": "2"
+ },
+ {
+  "id": "jalan-cyber-point-5",
+  "name": "Jalan Cyber Point 5",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 1548.1,
+  "edge_count": 37,
+  "lanes": null
+ },
+ {
+  "id": "lingkaran-cyber-point-timur",
+  "name": "Lingkaran Cyber Point Timur",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 1526.0,
+  "edge_count": 32,
+  "lanes": null
+ },
+ {
+  "id": "jalan-teknokrat-4",
+  "name": "Jalan Teknokrat 4",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 1081.2,
+  "edge_count": 15,
+  "lanes": "2"
+ },
+ {
+  "id": "lebuhraya-damansara-puchong-putrajaya-dan-cyberj",
+  "name": "Lebuhraya Damansara‒Puchong ‒ Putrajaya dan Cyberjaya",
+  "highway": "trunk",
+  "free_flow_kmh": 80,
+  "length_m": 1070.7,
+  "edge_count": 6,
+  "lanes": "3"
+ },
+ {
+  "id": "jalan-silikon",
+  "name": "Jalan Silikon",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 1053.2,
+  "edge_count": 12,
+  "lanes": null
+ },
+ {
+  "id": "persiaran-tasik",
+  "name": "Persiaran Tasik",
+  "highway": "primary",
+  "free_flow_kmh": 60,
+  "length_m": 1035.8,
+  "edge_count": 9,
+  "lanes": null
+ },
+ {
+  "id": "jalan-cyber-point-1",
+  "name": "Jalan Cyber Point 1",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 772.0,
+  "edge_count": 9,
+  "lanes": null
+ },
+ {
+  "id": "jalan-cyber-point-2",
+  "name": "Jalan Cyber Point 2",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 727.8,
+  "edge_count": 11,
+  "lanes": null
+ },
+ {
+  "id": "putrajaya-link",
+  "name": "Putrajaya Link",
+  "highway": "motorway",
+  "free_flow_kmh": 90,
+  "length_m": 619.2,
+  "edge_count": 4,
+  "lanes": "6"
+ },
+ {
+  "id": "jalan-teknokrat-6",
+  "name": "Jalan Teknokrat 6",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 574.4,
+  "edge_count": 22,
+  "lanes": "2"
+ },
+ {
+  "id": "lingkaran-silikon",
+  "name": "Lingkaran Silikon",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 532.3,
+  "edge_count": 13,
+  "lanes": "1"
+ },
+ {
+  "id": "jalan-teknokrat-2",
+  "name": "Jalan Teknokrat 2",
+  "highway": "secondary",
+  "free_flow_kmh": 50,
+  "length_m": 514.0,
+  "edge_count": 6,
+  "lanes": "2"
+ },
+ {
+  "id": "persiaran-simfoni",
+  "name": "Persiaran Simfoni",
+  "highway": "tertiary",
+  "free_flow_kmh": 40,
+  "length_m": 276.2,
+  "edge_count": 6,
+  "lanes": null
+ }
+]
