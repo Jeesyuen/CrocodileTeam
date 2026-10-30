@@ -2,168 +2,319 @@
 
 **Predict Traffic. Detect Hazards. Navigate Smarter.**
 
-Cyberjaya 5G Future Talent Innovation Challenge 2026 · Track 2: Connected & Safe Mobility · Team CrocodileTeam
+Hazard-aware walking and driving navigation for Cyberjaya, powered by community reports, live alerts and traffic forecasting.
 
-SafeRoute AI combines community hazard reporting, AI photo analysis, live route alerts and congestion forecasting
-into a single routing engine for walking and driving in a Cyberjaya pilot area.
+| | |
+|---|---|
+| **Challenge** | Cyberjaya 5G Future Talent Innovation Challenge 2026 · Track 2: Connected & Safe Mobility |
+| **Team** | CrocodileTeam |
+| **Deployed app** | _not deployed yet (runs locally, see [Setup](#setup-and-run-locally))_ |
+| **Demo videos** | _to be added (1-minute tour and full walkthrough)_ |
+| **Pitch deck** | _to be added_ |
 
-> **Demo data notice.** Roads, footpaths and places are real OpenStreetMap data. Seeded hazards, all traffic
-> observations and traffic forecasts are **synthetic** and labelled as such throughout the app. No live traffic
-> feed is connected.
+> **Demo data notice.** Roads, footpaths and places are real OpenStreetMap data. The seeded hazards and all
+> traffic observations and forecasts are **synthetic** and are labelled as such everywhere in the app. No live
+> traffic feed is connected.
 
 ---
 
-## What works
+## Problem statement
 
-| Area | Implemented |
-|---|---|
-| Smart Navigation | Walk / drive route comparison (Fastest, Safest, Smart Balance) on a real OSM graph with time, distance, safety, hazards and differences vs the AI-recommended route; closures and hazard-affected segments drawn on the actual paths; hazards on the selected route highlighted; live alerts with your-route-vs-alternative comparison; after a reroute, a previous-vs-new summary and the old route as a dotted line; mobile bottom sheet with route pills |
-| Hazard reporting | Photo upload (re-encoded, EXIF/GPS stripped) → optional AI suggestion → category / severity / obstruction → pin with live path-match preview → duplicate merge |
-| AI image analysis | Claude vision with strict JSON-schema output, validation, timeout / refusal / invalid-output handling. Without a key the app says so and the user classifies manually |
-| Real-time | WebSocket alerts targeted to sessions whose route crosses the affected segments, reconnect with backoff, duplicate suppression, unread counts, notification centre |
-| Hazard-aware routing | Reports linked to real path segments (≤ 12 m reliable, ≤ 25 m approximate). Unverified → warning; verified → caution; operator-confirmed closure → excluded. Closures are never auto-reopened |
-| Traffic AI | Synthetic 35-day history for 27 named corridors, historical-average baseline vs RandomForest, 15/30/60-min horizons (and extended), uncertainty from tree spread, time-dependent routing (speed at the time you enter each road), congestion heatmap with numbered hotspots, 3-hour departure-time selector, usual-vs-fastest journey-time chart, time savings by route and by departure, best time to leave, evaluation table |
-| Hazard map | Zoom-aware marker clustering, lifecycle (unverified / verified / closure / resolved) and category quick filters, marker preview with photo and status, hazards on your planned route highlighted, operator actions in the detail drawer |
-| Operations | Verification queue, location correction, verify/reject/merge, severity & restriction, maintenance assignment, completion evidence, resolve, reopen path, full incident history, analytics, reset demo data |
-| Maps | Google Maps base map + Google Places search when a browser key is configured; otherwise a clearly labelled Leaflet / OpenStreetMap demo map. Routes are drawn from the SafeRoute engine in both cases |
-| Roles | Student, driver, safety operator, maintenance — enforced server-side on every endpoint |
+Students, staff and drivers in Cyberjaya move between campuses, offices and malls every day, on foot and by car.
+The routes they rely on change in ways that today's map apps don't capture:
+
+- **Hazards go unreported.** Fallen trees, flooding, potholes and broken walkways are seen by many people but
+  reach nobody who could warn others or fix them.
+- **No warning on the way.** Someone who has already set off has no idea a path ahead has just been blocked.
+- **"Fastest" isn't always safe.** Navigation ranks routes by time only; poorly lit or hazard-prone paths are
+  never weighed against a slightly longer, safer one.
+- **Congestion is a surprise.** Drivers can't see how the next few hours will develop or when it's best to leave.
+- **Slow, untracked follow-up.** When a hazard is reported, there's no shared record of who verified it, who is
+  fixing it and when the path is safe to use again.
+
+## Our solution
+
+SafeRoute AI is a navigation and incident-management app for a Cyberjaya pilot area. It plans routes on the real
+footpath and road network, keeps them away from reported hazards, alerts people already on the move, and forecasts
+traffic. Every AI suggestion is explained, and **only a human operator can confirm a closure**.
+
+It has four role-based views:
+
+**Student / pedestrian**
+- **Smart Navigation**: three route options (Fastest, Safest and an AI-recommended Smart Balance), each with time,
+  distance, an explainable safety score and the hazards on it.
+- **Live alerts and rerouting**: if a hazard is reported on your route while you're navigating, you get an alert
+  within about a second, with your route compared side by side against a hazard-free alternative.
+- **Report a hazard**: photo, category, severity and a pin that is matched to the exact mapped path. AI photo
+  analysis suggests a category when it is configured.
+- **Community Hazard Map**, **My Reports** and **Notifications** to follow what happens next.
+
+**Driver**
+- Everything above in drive mode, with time-dependent routing on the road network.
+- **Traffic AI**: congestion heatmap and hotspots, journey time by departure (usual vs fastest route), time
+  savings, and **best time to leave** for an arrival deadline.
+
+**Safety operator**
+- Live verification queue: verify, reject or merge duplicates, correct locations, set severity and restriction.
+- **Confirm closures**: routing then excludes the path until the operator explicitly reopens it.
+- Assign maintenance, accept clearance, resolve and reopen. Every action is written to an audit trail.
+- Analytics and the navigation sessions affected by each hazard.
+
+**Maintenance crew**
+- Assigned tasks with the affected path on a map, directions to the site, start work, completion photo and notes,
+  then request clearance. The crew cannot reopen a path themselves.
+
+## How it works
+
+- **Routing**: walking and driving use separate graphs built from OpenStreetMap. The search is a time-dependent
+  A* whose cost combines travel time with risk. Fastest ignores risk, Safest weighs it heavily, and Smart Balance
+  sits in between. Lines on the map always follow real edges; the short walk from your exact pin to the nearest
+  path is drawn dashed.
+- **Safety score**: `100 × (1 − weighted risk)`, with weights active hazards 35%, past incidents 25%, lighting
+  15%, weather 15% and path condition 10%. Missing lighting or surface data counts as uncertainty, not as safe.
+  It is a heuristic, not an accident probability.
+- **Hazard → path matching**: a report is linked to path segments within 12 m (reliable) or 25 m (approximate).
+  Unverified reports add a warning, verified hazards a caution, and confirmed closures remove the segment from
+  routing. Duplicates within 40 m and 48 h are merged.
+- **Targeted live alerts**: when a hazard affects segments that an active navigation session uses, the backend
+  computes an alternative and pushes it over a WebSocket to that user only, with duplicate suppression.
+- **Traffic forecasting**: a RandomForest model predicts corridor speeds 15, 30 and 60 minutes ahead (also 2 h and
+  4 h). Inputs are the corridor and road class, time of day, day of week, the current speed, the historical-average
+  baseline, and weather and incidents at the target time. Uncertainty comes from the spread across trees. On a
+  held-out week it beats the historical-average baseline (speed MAE 1.85 vs 2.21 km/h). Drive routes use the
+  forecast speed at the moment you reach each road.
+- **AI photo analysis**: Claude (`claude-opus-5-5`, server-side) returns a strict JSON classification that the
+  server validates. Without an API key, or if a call fails, the app says so and the reporter classifies
+  manually. AI never closes a path.
 
 ## Architecture
 
+```mermaid
+flowchart LR
+    subgraph Browser["Browser (React app)"]
+        UI["Pages: Navigate · Traffic AI · Hazard Map<br/>Report · Admin · Maintenance"]
+        MAP["Map layer<br/>Leaflet + OSM tiles, or Google Maps"]
+    end
+
+    subgraph API["FastAPI backend"]
+        R["REST routers<br/>/api/routes · /api/hazards · /api/traffic<br/>/api/maintenance · /api/dashboard · /api/auth"]
+        WS["WebSocket /ws/alerts"]
+        subgraph Engines["Services"]
+            ROUTE["Routing<br/>time-dependent A*"]
+            SAFE["Safety score"]
+            INC["Incidents<br/>matching · lifecycle · alerts"]
+            TRF["Traffic model<br/>RandomForest + baseline"]
+            AI["AI vision<br/>Claude"]
+        end
+    end
+
+    DB[("SQLite<br/>(PostgreSQL / PostGIS optional)")]
+    GRAPH[["OSM walk & drive graphs<br/>backend/data/*.json"]]
+    MODEL[["Trained model<br/>backend/models/"]]
+    CLAUDE(("Anthropic API"))
+    GMAPS(("Google Maps / Places<br/>optional"))
+
+    UI -- "JSON over HTTPS" --> R
+    WS -- "route.affected · hazard.*" --> UI
+    MAP -. "tiles / places" .-> GMAPS
+    R --> ROUTE & INC & TRF & AI
+    ROUTE --> SAFE
+    ROUTE --> GRAPH
+    INC --> WS
+    INC --> ROUTE
+    TRF --> MODEL
+    AI --> CLAUDE
+    R --> DB
+    INC --> DB
 ```
-frontend/  React 18 + TypeScript + Vite + Tailwind, Google Maps JS API or Leaflet, Recharts
-  src/components/map/primitives.tsx  markers / lines that render on either base map
-backend/   FastAPI, SQLAlchemy 2, scikit-learn, Anthropic SDK
-  app/services/graph.py          OSM walk & drive networks, spatial grid index
-  app/services/routing.py        time-dependent A* with risk-weighted costs
-  app/services/safety.py         explainable heuristic safety score
-  app/services/incidents.py      path matching, lifecycle, targeted alerts, rerouting
-  app/services/traffic_sim.py    reproducible synthetic traffic generator
-  app/services/traffic_model.py  baseline + RandomForest, evaluation, forecaster
-  app/services/ai_vision.py      Claude hazard photo classification
-  app/services/realtime.py       WebSocket manager / event bus
-  scripts/build_graph.py         builds graphs from data/raw/*.json (OSM extract)
-  migrations/001_postgis.sql     PostGIS columns + spatial indexes for Postgres
-```
 
-Walking and driving networks are separate graphs (walk: 3,163 nodes / 8,772 edges; drive: 2,591 nodes /
-5,047 directed edges, honouring one-ways), each restricted to its largest strongly connected component.
-Routes are only ever drawn from engine edges; the short dashed connector from your exact pin to the nearest
-network node is shown dashed because it is not a mapped road.
+### Layers
 
-### Google Maps
-
-Set `GOOGLE_MAPS_BROWSER_KEY` (and ideally `GOOGLE_MAPS_MAP_ID`) in `backend/.env` and restart the API.
-The key is delivered to signed-in users at runtime through `/api/map/config`, so the frontend needs no
-rebuild. It is a **browser key and is public by design**, so in Google Cloud Console:
-
-- enable **Maps JavaScript API** and **Places API (New)**;
-- restrict the key to those two APIs and to your site's HTTP referrers (e.g. `http://localhost:5173/*`
-  and your production domain);
-- create a Map ID (JavaScript, vector or raster) for Advanced Markers; without one the app uses
-  `DEMO_MAP_ID`, which is for development only. Cloud-based map styling attached to the Map ID can
-  give the base map the pastel look.
-
-What Google provides: the base map and place search (Places autocomplete restricted to the pilot area,
-results outside it are refused). What it does **not** provide: routes, travel times or traffic — those
-still come from the SafeRoute engine on the OpenStreetMap network and the synthetic traffic model, so
-route lines can sit a few metres off Google's road drawing where the two maps differ. If the key is
-missing, rejected or Google can't be reached, the app falls back to the OSM demo map and says why.
-
-### Safety score
-
-`Safety = 100 × (1 − weighted risk)` with weights: active hazards 35%, past incidents 25%, lighting 15%,
-weather 15%, path condition 10%. Unknown lighting/surface counts as 0.5 risk and lowers "data confidence".
-It is a heuristic, not an accident probability.
-
-### Traffic model (synthetic)
-
-Held-out final week, MAE in km/h (lower is better):
-
-| Horizon | RandomForest | Baseline |
+| Layer | What it does | Where |
 |---|---|---|
-| +15 min | 1.85 | 2.21 |
-| +30 min | 1.85 | 2.21 |
-| +60 min | 1.85 | 2.21 |
+| **Frontend** | Role-based pages, live alert handling (WebSocket with reconnect), map rendering through engine-neutral primitives that work on both Leaflet and Google Maps | `frontend/src/pages`, `context/`, `components/map/` |
+| **API** | REST endpoints with server-side role checks on every route, JWT auth, rate-limited reporting, image upload (re-encoded, EXIF/GPS stripped) | `backend/app/routers/`, `security.py` |
+| **Routing engine** | OSM network loading and spatial index, time-dependent A*, route description and explanation | `services/graph.py`, `routing.py`, `planner.py` |
+| **Safety** | Explainable per-route safety score and factor breakdown | `services/safety.py` |
+| **Incidents** | Path matching, duplicate detection, lifecycle transitions, audit history, targeted alerts and rerouting | `services/incidents.py`, `realtime.py` |
+| **Traffic AI** | Synthetic traffic generator, model training and evaluation, forecaster, best-departure search | `services/traffic_sim.py`, `traffic_model.py`, `routers/traffic.py` |
+| **AI vision** | Claude photo classification with schema validation and fallbacks | `services/ai_vision.py` |
+| **Data** | SQLAlchemy models (users, incidents, reports, impacts, sessions, tasks, notifications, history, traffic) | `backend/app/models.py` |
 
-The model takes the weather and incident flags at the target time as inputs (i.e. it assumes a weather
-forecast is available). Active SafeRoute incidents on a corridor (accident, flood, fallen tree, construction,
-debris) are fed into the model, so a reported crash slows predicted traffic on that road.
+### Key flows
 
-## Run locally
+1. **Plan a route**: `POST /api/routes/compare` builds the hazard index and traffic context, runs A* three times
+   (fastest / safest / balanced), scores each route and returns geometry, safety factors and an explanation.
+2. **Report → alert → reroute**: `POST /api/hazards` matches the pin to path segments and creates or merges the
+   incident. It then finds active sessions that use those segments, computes an alternative and pushes
+   `route.affected` to each affected user over the WebSocket.
+3. **Verify → fix → reopen**: operator verify (optionally closing the path) → assign → maintenance starts work
+   and requests clearance → operator resolves (the closure stays) → operator reopens the path. Each step is logged.
+4. **Traffic forecast**: `POST /api/traffic/predict` returns route options at the chosen departure, a 3-hour
+   timeline of usual vs fastest journey times, and insights generated only from those numbers.
 
-Requirements: Python 3.11+ and Node 20+.
+## Tech stack
+
+| Layer | Tools |
+|---|---|
+| Frontend | React 18, TypeScript, Vite, Tailwind CSS, React Router, Recharts, Leaflet / React-Leaflet, Google Maps JS API (optional), lucide-react |
+| Backend | Python, FastAPI, SQLAlchemy 2, Pydantic, WebSockets, PyJWT |
+| Routing & data | OpenStreetMap (Overpass extract), NetworkX for graph building, custom time-dependent A* |
+| Machine learning | scikit-learn (RandomForest), NumPy, pandas |
+| AI | Anthropic Claude (vision, structured JSON output) |
+| Database | SQLite (default); PostgreSQL / PostGIS supported via `DATABASE_URL` |
+| Testing | pytest (API and engine tests), Playwright (browser end-to-end checks) |
+| Deployment | Docker, docker-compose (PostGIS + API + nginx-served frontend) |
+
+## Project structure
+
+```
+CrocodileTeam/
+├── backend/
+│   ├── app/
+│   │   ├── main.py            # FastAPI app, routers, WebSocket endpoint, startup
+│   │   ├── config.py          # settings from backend/.env
+│   │   ├── models.py          # database tables
+│   │   ├── security.py        # auth, roles, rate limiting
+│   │   ├── seed.py            # demo users, synthetic hazards and traffic, model training
+│   │   ├── routers/           # auth, routes, hazards, traffic, maintenance, dashboard, admin, places, notifications
+│   │   └── services/          # graph, routing, planner, safety, incidents, realtime, traffic_sim, traffic_model, ai_vision
+│   ├── data/                  # OSM walk/drive graphs, places, traffic corridors (+ raw OSM extract)
+│   ├── scripts/build_graph.py # rebuilds the graphs from the raw OSM extract
+│   ├── migrations/            # PostGIS spatial columns and indexes
+│   └── tests/                 # pytest suite
+├── frontend/
+│   └── src/
+│       ├── pages/             # Overview, Navigate, TrafficForecast, HazardMap, ReportHazard, admin/, maintenance/ …
+│       ├── components/        # route cards, hazard panels, layout, map/ (Leaflet + Google engines)
+│       ├── context/           # auth, real-time alerts, navigation state
+│       └── lib/               # API client, types, formatting
+└── docker-compose.yml         # PostGIS + API + web
+```
+
+## Setup and run locally
+
+### Prerequisites
+
+- Python 3.11+
+- Node.js 20+ and npm
+- _(Optional)_ an Anthropic API key for AI photo analysis
+- _(Optional)_ a Google Maps browser key for the Google base map and place search
+
+### 1. Clone the repository
 
 ```bash
-# backend
+git clone https://github.com/Jeesyuen/CrocodileTeam.git
+cd CrocodileTeam
+```
+
+### 2. Backend
+
+```bash
 cd backend
 python -m venv .venv
-.venv\Scripts\activate            # macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env              # optional: ANTHROPIC_API_KEY (AI photos), GOOGLE_MAPS_BROWSER_KEY (Google Maps)
-python -m app.seed                # creates saferoute.db, seeds demo data, trains the model (~30 s first time)
-uvicorn app.main:app --port 8000  # API docs at http://localhost:8000/docs
 
-# frontend (new terminal)
-cd frontend
-npm install
-npm run dev                       # http://localhost:5173 (proxies /api, /uploads, /ws to :8000)
+# Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+# macOS / Linux
+source .venv/bin/activate
+
+pip install -r requirements.txt
+cp .env.example .env              # optional: add API keys, see Configuration
+python -m app.seed                # creates saferoute.db, seeds demo data, trains the traffic model (~30 s)
+uvicorn app.main:app --port 8000
 ```
 
-Demo accounts (password `demo1234`, also one-click on the login page):
+The API runs at http://localhost:8000, with interactive docs at http://localhost:8000/docs.
 
-| Role | Email |
-|---|---|
-| Student A (reports) | student.a@demo.saferoute.my |
-| Student B (navigates) | student.b@demo.saferoute.my |
-| Driver | driver@demo.saferoute.my |
-| Safety operator | operator@demo.saferoute.my |
-| Maintenance | maintenance@demo.saferoute.my |
+### 3. Frontend
 
-Operators can restore the dataset from **Admin Dashboard → Reset demo data** (demo mode only).
-
-### Tests
+In a second terminal:
 
 ```bash
-cd backend && python -m pytest -q        # 15 API tests: auth, roles, matching, routing, AI fallback,
-                                         # duplicates, live alerts, closures, rerouting, lifecycle,
-                                         # traffic forecasts, best departure, dashboards
-cd frontend && npm run build             # type-check + production build
+cd frontend
+npm install
+npm run dev
 ```
 
-## Demo scripts
+Open http://localhost:5173 and pick a demo account on the login page. The dev server forwards `/api`, `/uploads`
+and `/ws` to the backend on port 8000.
 
-**Demo A — Fallen tree.** Open two browser windows (use a private window for the second).
-1. Window 1: sign in as **Student B** → Smart Navigation → *Try a demo trip* (Multimedia University → DPulze) → **Start navigation**.
-2. Window 2: sign in as **Student A** → Report Hazard → upload a photo (AI suggests a category if a key is set) → *Fallen Tree*, High, Fully blocked → tap the map on Persiaran Multimedia along B's route (the panel confirms the path match) → Submit.
-3. Window 1 immediately shows *Hazard reported on your route* with an alternative → **Use alternative route**.
-4. Window 2: switch to **Operator** → Verification → Verify → *Confirm closure*. Routes now exclude that path.
-5. Operator → Maintenance → Assign. Switch to **Maintenance** → Start work → notes/photo → Request clearance.
-6. Operator → Accept & resolve (path stays closed) → **Reopen path**. Route options update live.
+### 4. Run the tests (optional)
 
-**Demo B — Congestion.** Sign in as **Driver** → Traffic AI. Set departure *Later* around 17:30 (or weather *Rain*):
-the heatmap, predicted peak, journey-time chart and AI insight update. Use **Best time to leave** with an
-arrive-by time, then **Use … departure** and **Open route in navigation**.
+```bash
+cd backend
+python -m pytest -q        # API and engine tests
+cd ../frontend
+npm run build              # type-check and production build
+```
 
-## Deployment
+## Configuration
 
-`docker compose up --build` runs PostgreSQL/PostGIS, the API and an nginx-served frontend
-(http://localhost:5173). The API container reseeds demo data on start. After the first start you can apply
-`backend/migrations/001_postgis.sql` for spatial columns and indexes. For production: set a long
-`JWT_SECRET`, `DEMO_MODE=false`, a referrer-restricted `GOOGLE_MAPS_BROWSER_KEY` + `GOOGLE_MAPS_MAP_ID`
-(or your own tile server via `VITE_MAP_TILE_URL` for the OSM map — OpenStreetMap's public tiles are for
-light use only), and keep `ANTHROPIC_API_KEY` server-side.
+| Setting | Where |
+|---|---|
+| AI photo analysis | `backend/.env` → `ANTHROPIC_API_KEY` (server-side only), `VISION_MODEL` |
+| Google Maps base map + place search | `backend/.env` → `GOOGLE_MAPS_BROWSER_KEY`, `GOOGLE_MAPS_MAP_ID` |
+| Database | `backend/.env` → `DATABASE_URL` (SQLite by default) |
+| JWT signing secret | `backend/.env` → `JWT_SECRET` (use a long random value in production) |
+| Allowed frontend origins (CORS) | `backend/.env` → `CORS_ORIGINS` |
+| Demo mode (demo accounts, reset button) | `backend/.env` → `DEMO_MODE` |
+| Backend URL for a separately hosted frontend | `frontend/.env` → `VITE_API_URL` |
+| OSM tile server for the fallback map | `frontend/.env` → `VITE_MAP_TILE_URL`, `VITE_MAP_TILE_ATTRIBUTION` |
+
+**Google Maps key:** the browser key is sent to signed-in users, so it is public by design. Restrict it in Google
+Cloud to your site's HTTP referrers and to *Maps JavaScript API* and *Places API (New)*. Without a key, or if
+Google rejects it, the app falls back to a clearly labelled OpenStreetMap map. Google provides only the base map
+and place search; routes, travel times and traffic always come from SafeRoute's own engine.
+
+## Demo data
+
+- **Accounts.** 20 demo users, all with password `demo1234` and one-click sign-in on the login page:
+
+  | Role | Email |
+  |---|---|
+  | Student A (reports hazards) | student.a@demo.saferoute.my |
+  | Student B (navigates, receives alerts) | student.b@demo.saferoute.my |
+  | Driver | driver@demo.saferoute.my |
+  | Safety operator | operator@demo.saferoute.my |
+  | Maintenance | maintenance@demo.saferoute.my |
+
+- **Hazards.** 34 synthetic hazards placed on real mapped paths, at different lifecycle stages.
+- **Traffic.** A reproducible synthetic history for 27 named corridors (rush hours, rain and incidents), used to
+  train and evaluate the model. Results on synthetic data say nothing about real-world accuracy.
+- **Reset.** Admin Dashboard → **Reset demo data** (operators, demo mode only) restores the original state.
+
+### Demo scripts
+
+**Demo A: fallen tree (live alert → closure → fix).** Use two browser windows, one of them private.
+1. Window 1, **Student B**: Smart Navigation → *Try a demo trip* → **Start navigation**.
+2. Window 2, **Student A**: Report Hazard → photo → *Fallen Tree*, High, Fully blocked → pin on B's route → Submit.
+3. Window 1 shows *Hazard reported on your route* with a comparison → **Use alternative route**.
+4. **Operator**: Hazard Management → Verify → *Confirm closure*. Routes now avoid that path.
+5. Operator → **Assign maintenance**. **Maintenance**: Start work → notes → request clearance.
+6. Operator: **Accept & resolve** (the path stays closed) → **Reopen path**.
+
+**Demo B: congestion (Traffic AI).** Sign in as **Driver** → Traffic AI. Pick a departure slot or a custom
+peak time (e.g. 17:30) to see the heatmap, hotspots and recommendation update. Then use **Best time to leave**
+with an arrive-by time, and **Open route in navigation**.
 
 ## Known limitations
 
-- Google Maps is used only as the base map and place search. Routing, ETAs and traffic do not use Google
-  Directions/Routes or Google live traffic. The Google path was checked in Google's keyless development
-  mode only (no production key was available); Places search needs a real key.
-- Without a Google key, place search uses 265 named OSM places inside the pilot area.
-- Cycling and motorcycle modes are not routed yet (the graph builder can add them).
-- The PostgreSQL/Docker path is provided but was not exercised in development (SQLite was used).
-  The schema is created from SQLAlchemy models rather than versioned Alembic migrations.
-- Uploaded photos are served from `/uploads` to anyone with the URL.
-- Rate limiting is in-memory (per process).
+- Traffic data is synthetic; there is no live traffic feed.
+- AI photo analysis needs an Anthropic API key and hasn't been tested against the live API here; without a key
+  it falls back to manual classification.
+- Google Maps mode was checked only in Google's keyless development mode; Places search needs a real key.
+- Cycling and motorcycle routing are not implemented yet.
+- The PostgreSQL / Docker setup is provided but was not exercised during development (SQLite was used). The
+  schema is created from the SQLAlchemy models; there are no versioned migrations.
+- Uploaded photos are served to anyone with the URL, and report rate limiting is in-memory.
+
+## Team
+
+**CrocodileTeam**
+
+- Chew Jee Syuen
+- Cheah Jie Xuan
+- Priscilia Lim Jyi Rou
 
 Map and place data © OpenStreetMap contributors, available under the ODbL.
