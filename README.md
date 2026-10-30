@@ -8,9 +8,9 @@ Hazard-aware walking and driving navigation for Cyberjaya, powered by community 
 |---|---|
 | **Challenge** | Cyberjaya 5G Future Talent Innovation Challenge 2026 · Track 2: Connected & Safe Mobility |
 | **Team** | CrocodileTeam |
-| **Deployed app** | _not deployed yet (runs locally, see [Setup](#setup-and-run-locally))_ |
-| **Demo videos** | _to be added (1-minute tour and full walkthrough)_ |
-| **Pitch deck** | _to be added_ |
+| **Deployed app** | https://saferoute-ai-8d7m.onrender.com (free plan: the first visit after idle takes about a minute) |
+| **Pitch video** | [Watch on YouTube](https://youtu.be/XwDlP8QxzvI) |
+| **Pitch deck** | [View on Google Drive](https://drive.google.com/file/d/1GXYRFu8aJAg2YgTKNfFdGFmwUIVtwb-z/view?usp=sharing) |
 
 > **Demo data notice.** Roads, footpaths and places are real OpenStreetMap data. The seeded hazards and all
 > traffic observations and forecasts are **synthetic** and are labelled as such everywhere in the app. No live
