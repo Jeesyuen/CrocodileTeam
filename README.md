@@ -222,7 +222,7 @@ python -m venv .venv
 source .venv/bin/activate
 
 pip install -r requirements.txt
-cp .env.example .env              # optional: add API keys, see Configuration
+cp .env.example .env              # optional: add API keys
 python -m app.seed                # creates saferoute.db, seeds demo data, trains the traffic model (~30 s)
 uvicorn app.main:app --port 8000
 ```
@@ -250,75 +250,6 @@ python -m pytest -q        # API and engine tests
 cd ../frontend
 npm run build              # type-check and production build
 ```
-
-## Configuration
-
-| Setting | Where |
-|---|---|
-| AI photo analysis | `backend/.env` → `ANTHROPIC_API_KEY` (server-side only), `VISION_MODEL` |
-| Google Maps base map + place search | `backend/.env` → `GOOGLE_MAPS_BROWSER_KEY`, `GOOGLE_MAPS_MAP_ID` |
-| Database | `backend/.env` → `DATABASE_URL` (SQLite by default) |
-| JWT signing secret | `backend/.env` → `JWT_SECRET` (use a long random value in production) |
-| Allowed frontend origins (CORS) | `backend/.env` → `CORS_ORIGINS` |
-| Demo mode (demo accounts, reset button) | `backend/.env` → `DEMO_MODE` |
-| Backend URL for a separately hosted frontend | `frontend/.env` → `VITE_API_URL` |
-| OSM tile server for the fallback map | `frontend/.env` → `VITE_MAP_TILE_URL`, `VITE_MAP_TILE_ATTRIBUTION` |
-
-**Google Maps key:** the browser key is sent to signed-in users, so it is public by design. Restrict it in Google
-Cloud to your site's HTTP referrers and to *Maps JavaScript API* and *Places API (New)*. Without a key, or if
-Google rejects it, the app falls back to a clearly labelled OpenStreetMap map. Google provides only the base map
-and place search; routes, travel times and traffic always come from SafeRoute's own engine.
-
-## Deploy on Render
-
-The repository includes a Render Blueprint. It deploys **one web service** built from the root `Dockerfile`:
-the React app, the API and the live-alert WebSocket share one URL, so no CORS or frontend API URL is needed.
-
-1. Push the repository to GitHub.
-2. In the Render dashboard: **New → Blueprint**, connect the repository and select `render.yaml`.
-3. When prompted, enter `ANTHROPIC_API_KEY` (and optionally the Google Maps values). `JWT_SECRET` is generated
-   automatically.
-4. Click **Apply**. The first build takes a few minutes. On first start the container seeds the demo data and
-   trains the traffic model (seeding runs only when the database is empty, so restarts keep real reports).
-5. Open the service URL (`https://<service-name>.onrender.com`) and check `/api/health` shows `"ai_configured": true`.
-
-**Plan:** `render.yaml` uses the free plan. It sleeps after 15 minutes idle (the next visit takes about a minute)
-and resets to the demo data on every restart. To keep the database, photos and model and never sleep, switch to
-`plan: starter` and add a 1 GB disk at `/var/data` (the comment at the top of `render.yaml` has the exact lines).
-
-**Before sharing the link:** set a monthly spending limit in the Anthropic console. Demo accounts are one-click,
-so anyone with the URL can trigger AI photo analysis.
-
-## Demo data
-
-- **Accounts.** 20 demo users, all with password `demo1234` and one-click sign-in on the login page:
-
-  | Role | Email |
-  |---|---|
-  | Student A (reports hazards) | student.a@demo.saferoute.my |
-  | Student B (navigates, receives alerts) | student.b@demo.saferoute.my |
-  | Driver | driver@demo.saferoute.my |
-  | Safety operator | operator@demo.saferoute.my |
-  | Maintenance | maintenance@demo.saferoute.my |
-
-- **Hazards.** 34 synthetic hazards placed on real mapped paths, at different lifecycle stages.
-- **Traffic.** A reproducible synthetic history for 27 named corridors (rush hours, rain and incidents), used to
-  train and evaluate the model. Results on synthetic data say nothing about real-world accuracy.
-- **Reset.** Admin Dashboard → **Reset demo data** (operators, demo mode only) restores the original state.
-
-### Demo scripts
-
-**Demo A: fallen tree (live alert → closure → fix).** Use two browser windows, one of them private.
-1. Window 1, **Student B**: Smart Navigation → *Try a demo trip* → **Start navigation**.
-2. Window 2, **Student A**: Report Hazard → photo → *Fallen Tree*, High, Fully blocked → pin on B's route → Submit.
-3. Window 1 shows *Hazard reported on your route* with a comparison → **Use alternative route**.
-4. **Operator**: Hazard Management → Verify → *Confirm closure*. Routes now avoid that path.
-5. Operator → **Assign maintenance**. **Maintenance**: Start work → notes → request clearance.
-6. Operator: **Accept & resolve** (the path stays closed) → **Reopen path**.
-
-**Demo B: congestion (Traffic AI).** Sign in as **Driver** → Traffic AI. Pick a departure slot or a custom
-peak time (e.g. 17:30) to see the heatmap, hotspots and recommendation update. Then use **Best time to leave**
-with an arrive-by time, and **Open route in navigation**.
 
 ## Known limitations
 
