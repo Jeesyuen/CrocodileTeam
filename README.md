@@ -190,7 +190,7 @@ CrocodileTeam/
 │       ├── context/           # auth, real-time alerts, navigation state
 │       └── lib/               # API client, types, formatting
 ├── Dockerfile                 # single image: builds the frontend, serves it with the API
-├── render.yaml                # Render Blueprint (one web service + persistent disk)
+├── render.yaml                # Render Blueprint (one web service, free plan)
 └── docker-compose.yml         # alternative: PostGIS + API + web
 ```
 
@@ -282,10 +282,9 @@ the React app, the API and the live-alert WebSocket share one URL, so no CORS or
    trains the traffic model (seeding runs only when the database is empty, so restarts keep real reports).
 5. Open the service URL (`https://<service-name>.onrender.com`) and check `/api/health` shows `"ai_configured": true`.
 
-**Plan:** `render.yaml` uses the Starter plan with a 1 GB disk (`/var/data`) so the database, photos and model
-survive restarts and the app never sleeps. To use the free plan, set `plan: free` and remove the `disk:` block.
-It still works, but it sleeps after 15 minutes idle (the next visit takes about a minute) and resets to the demo
-data on every restart.
+**Plan:** `render.yaml` uses the free plan. It sleeps after 15 minutes idle (the next visit takes about a minute)
+and resets to the demo data on every restart. To keep the database, photos and model and never sleep, switch to
+`plan: starter` and add a 1 GB disk at `/var/data` (the comment at the top of `render.yaml` has the exact lines).
 
 **Before sharing the link:** set a monthly spending limit in the Anthropic console. Demo accounts are one-click,
 so anyone with the URL can trigger AI photo analysis.
