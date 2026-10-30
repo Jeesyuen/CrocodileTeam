@@ -16,6 +16,9 @@ RUN pip install -r requirements.txt
 COPY backend/ ./
 COPY --from=web /web/dist /app/web
 ENV WEB_DIR=/app/web
+# Seed the demo data and train the traffic model at build time: training peaks above the free plan's 512 MB and is
+# slow on its CPU, so doing it at start-up kept the port closed until Render gave up.
+RUN python -m app.seed
 EXPOSE 8000
-# Seed demo data only when the database is empty (keeps real reports across restarts), then serve.
+# Seed only when the database is empty (e.g. a fresh persistent disk; keeps real reports across restarts), then serve.
 CMD ["sh", "-c", "python -m app.seed --if-empty && exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
