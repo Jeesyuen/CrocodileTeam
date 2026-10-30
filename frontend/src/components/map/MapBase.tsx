@@ -95,7 +95,7 @@ function LeafletMapView({ children, onMapClick, fitTo, fitKey, onApi }: ViewProp
       <LeafletApi onApi={onApi} />
       {onMapClick && <ClickHandler onClick={onMapClick} />}
       {fitTo && fitTo.length > 1 && <FitBounds points={fitTo} k={fitKey} />}
-      {children}
+      <LeafletEngine>{children}</LeafletEngine>
     </MapContainer>
   );
 }
@@ -106,6 +106,12 @@ function LeafletApi({ onApi }: { onApi: (a: MapApi) => void }) {
     onApi({ recenter: () => map.flyToBounds(PILOT_BOUNDS, { duration: 0.6 }), flyTo: (p, z) => map.flyTo(p, z) });
   }, [map, onApi]);
   return null;
+}
+
+function LeafletEngine({ children }: { children?: ReactNode }) {
+  const map = useMap();
+  const engine = useMemo<Engine>(() => ({ kind: "leaflet", map }), [map]);
+  return <EngineCtx.Provider value={engine}>{children}</EngineCtx.Provider>;
 }
 
 function ZoomControl() {

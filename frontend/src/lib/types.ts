@@ -39,7 +39,10 @@ export interface Incident {
   mode_relevance: "walk" | "drive" | "both"; match_quality: "reliable" | "approximate" | "none"; report_count: number;
   is_synthetic: boolean; created_at: string; updated_at: string; resolved_at: string | null; image_url: string | null;
   reporter_id: number | null; certainty: Certainty;
+  /** present when the list is requested with paths=true: active affected path segments */
+  affected_paths?: AffectedPath[];
 }
+export interface AffectedPath { network: Mode; impact_type: string; active: boolean; road: string | null; geometry: [number, number][] }
 export interface AIResult {
   status: "ok" | "uncertain" | "unavailable" | "error"; model: string | null; message: string;
   result: null | {
@@ -50,7 +53,7 @@ export interface AIResult {
 export interface IncidentDetail extends Incident {
   images: string[];
   impacts: { network: Mode; segment_id: string; impact_type: string; distance_m: number; active: boolean }[];
-  affected_paths: { network: Mode; impact_type: string; active: boolean; road: string | null; geometry: [number, number][] }[];
+  affected_paths: AffectedPath[];
   history: { action: string; from: string | null; to: string | null; note: string; actor: string; actor_role: Role | null; at: string }[];
   reports: { id: number; reporter: string | null; category: string; severity: Severity; description: string; created_at: string;
     images: string[]; ai: { model: string; status: string; output: AIResult; confidence: number | null; created_at: string }[] }[];
@@ -88,7 +91,7 @@ export interface TrafficForecast {
   segments: { id: string; name: string; highway: string; free_flow_kmh: number; length_m: number; incident: boolean; forecasts: SegmentForecast[] }[];
 }
 export interface TrafficPrediction extends RoutePlan {
-  timeline: { depart: string; duration_s: number; free_flow_s: number; delay_s: number }[];
+  timeline: { depart: string; duration_s: number; free_flow_s: number; delay_s: number; usual_s: number | null; same_path: boolean }[];
   insights: { type: string; text: string }[]; data_source: DataSource; model_version: string;
 }
 export interface BestDeparture {

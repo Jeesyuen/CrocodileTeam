@@ -17,12 +17,13 @@ into a single routing engine for walking and driving in a Cyberjaya pilot area.
 
 | Area | Implemented |
 |---|---|
-| Smart Navigation | Walk / drive route comparison (Fastest, Safest, Smart Balance) on a real OSM graph, safety scores with factor breakdown, start/end navigation sessions, live alerts, one-tap rerouting |
+| Smart Navigation | Walk / drive route comparison (Fastest, Safest, Smart Balance) on a real OSM graph with time, distance, safety, hazards and differences vs the AI-recommended route; closures and hazard-affected segments drawn on the actual paths; hazards on the selected route highlighted; live alerts with your-route-vs-alternative comparison; after a reroute, a previous-vs-new summary and the old route as a dotted line; mobile bottom sheet with route pills |
 | Hazard reporting | Photo upload (re-encoded, EXIF/GPS stripped) → optional AI suggestion → category / severity / obstruction → pin with live path-match preview → duplicate merge |
 | AI image analysis | Claude vision with strict JSON-schema output, validation, timeout / refusal / invalid-output handling. Without a key the app says so and the user classifies manually |
 | Real-time | WebSocket alerts targeted to sessions whose route crosses the affected segments, reconnect with backoff, duplicate suppression, unread counts, notification centre |
 | Hazard-aware routing | Reports linked to real path segments (≤ 12 m reliable, ≤ 25 m approximate). Unverified → warning; verified → caution; operator-confirmed closure → excluded. Closures are never auto-reopened |
-| Traffic AI | Synthetic 35-day history for 27 named corridors, historical-average baseline vs RandomForest, 15/30/60-min horizons (and extended), uncertainty from tree spread, time-dependent routing (speed at the time you enter each road), congestion heatmap, best time to leave, evaluation table |
+| Traffic AI | Synthetic 35-day history for 27 named corridors, historical-average baseline vs RandomForest, 15/30/60-min horizons (and extended), uncertainty from tree spread, time-dependent routing (speed at the time you enter each road), congestion heatmap with numbered hotspots, 3-hour departure-time selector, usual-vs-fastest journey-time chart, time savings by route and by departure, best time to leave, evaluation table |
+| Hazard map | Zoom-aware marker clustering, lifecycle (unverified / verified / closure / resolved) and category quick filters, marker preview with photo and status, hazards on your planned route highlighted, operator actions in the detail drawer |
 | Operations | Verification queue, location correction, verify/reject/merge, severity & restriction, maintenance assignment, completion evidence, resolve, reopen path, full incident history, analytics, reset demo data |
 | Maps | Google Maps base map + Google Places search when a browser key is configured; otherwise a clearly labelled Leaflet / OpenStreetMap demo map. Routes are drawn from the SafeRoute engine in both cases |
 | Roles | Student, driver, safety operator, maintenance — enforced server-side on every endpoint |

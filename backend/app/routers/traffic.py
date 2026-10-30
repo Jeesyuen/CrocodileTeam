@@ -99,6 +99,9 @@ def forecast(depart_at: datetime | None = None, weather: str = Query("auto", pat
     }
 
 
+TIMELINE_SLOTS = 13  # now … +3 h
+
+
 def _drive_plan(db, origin, destination, depart, weather, now, hz, prefs=("fastest", "safest", "balanced"),
                 include_usual=False):
     ctx = traffic_context(db, now, depart, weather)
@@ -120,14 +123,17 @@ def predict(body: TrafficRouteIn, db: Session = Depends(get_db)):
     o, d = (body.origin.lat, body.origin.lon), (body.destination.lat, body.destination.lon)
     hz = build_hazard_index(db, "drive")
     result = _routing_guard(lambda: _drive_plan(db, o, d, ref, body.weather, now, hz, include_usual=True))
+    # Departure timeline from now, in 15-min slots, so the departure selector and chart stay anchored
+    # while the user moves the chosen departure. Each slot evaluates the forecast-fastest route and the
+    # usual (free-flow shortest) route at that departure time.
     timeline = []
-    for i in range(0, 9):
-        t = floor_slot(ref) + timedelta(minutes=15 * i)
-        if t < now - timedelta(minutes=1):
-            t = now
-        r = _drive_plan(db, o, d, t, body.weather, now, hz, prefs=("fastest",))["routes"][0]
+    for i in range(TIMELINE_SLOTS):
+        t = now if i == 0 else floor_slot(now) + timedelta(minutes=15 * i)
+        res = _drive_plan(db, o, d, t, body.weather, now, hz, prefs=("fastest",), include_usual=True)
+        r, u = res["routes"][0], res.get("usual")
         timeline.append({"depart": t, "duration_s": r["duration_s"], "free_flow_s": r["free_flow_duration_s"],
-                         "delay_s": r["delay_s"]})
+                         "delay_s": r["delay_s"], "usual_s": u["duration_s"] if u else None,
+                         "same_path": bool(u and u["edge_ids"] == r["edge_ids"])})
     result.update(depart=ref, timeline=timeline, data_source=DATA_SOURCE, model_version=MODEL_VERSION,
                   insights=_insights(result, timeline))
     return result

@@ -156,6 +156,12 @@ def test_live_alert_closure_and_full_lifecycle(client, users):
     assert v.status_code == 200 and v.json()["certainty"] == "confirmed_closure"
     assert client.get("/api/notifications", headers=users["b"]).json()["unread"] >= n_before
 
+    # the community list exposes the closed path geometry for route maps
+    listed = client.get("/api/hazards?state=active&mode=walk&paths=true", headers=users["b"]).json()
+    mine = next(i for i in listed if i["id"] == hid)
+    assert mine["affected_paths"] and all(p["impact_type"] == "closure" and len(p["geometry"]) >= 2
+                                          for p in mine["affected_paths"])
+
     # routing avoids the confirmed closure
     data, _ = _walk_route(client, users["b"])
     assert all(not impacted & set(r["segment_ids"]) for r in data["routes"])
@@ -224,7 +230,8 @@ def test_traffic_predict_and_best_departure(client, users):
                     json={"origin": MMU, "destination": HOSPITAL, "weather": "clear"})
     assert p.status_code == 200, p.text
     j = p.json()
-    assert j["usual"] is not None and len(j["timeline"]) == 9 and j["insights"]
+    assert j["usual"] is not None and len(j["timeline"]) == 13 and j["insights"]
+    assert all(t["usual_s"] and t["usual_s"] >= t["duration_s"] - 1 for t in j["timeline"])
     b = client.post("/api/traffic/best-departure", headers=users["driver"],
                     json={"origin": MMU, "destination": HOSPITAL, "weather": "clear"}).json()
     assert b["recommended"]["duration_s"] <= min(o["duration_s"] for o in b["options"]) + 60

@@ -16,14 +16,14 @@ export function StatCard({ label, value, icon: Icon, tone = "lavender", hint, on
   };
   return (
     <button type="button" onClick={onClick} disabled={!onClick}
-      className="card card-pad flex items-center gap-4 text-left transition enabled:hover:-translate-y-0.5 enabled:hover:shadow-float disabled:cursor-default animate-rise">
+      className="card card-pad flex h-full items-center gap-4 text-left transition enabled:hover:-translate-y-0.5 enabled:hover:shadow-float disabled:cursor-default animate-rise">
       <span className={clsx("grid h-12 w-12 shrink-0 place-items-center rounded-2xl", tones[tone])}>
         <Icon size={22} strokeWidth={2.2} />
       </span>
       <span className="min-w-0">
         <span className="block text-2xl font-extrabold leading-tight">{value}</span>
-        <span className="block truncate text-sm text-muted">{label}</span>
-        {hint && <span className="block truncate text-xs text-muted/80">{hint}</span>}
+        <span className="block text-sm leading-snug text-muted">{label}</span>
+        {hint && <span className="mt-0.5 block text-xs leading-snug text-muted/80">{hint}</span>}
       </span>
     </button>
   );

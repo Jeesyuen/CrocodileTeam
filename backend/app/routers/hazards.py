@@ -61,7 +61,7 @@ def save_image(file: UploadFile, user: User, db: Session, folder: str = "hazards
 def list_hazards(
     category: str | None = None, severity: str | None = None, status: str | None = None,
     state: str | None = Query(None, pattern="^(active|resolved|all)$"), mode: str | None = None,
-    days: int | None = Query(None, ge=1, le=365), mine: bool = False,
+    days: int | None = Query(None, ge=1, le=365), mine: bool = False, paths: bool = False,
     db: Session = Depends(get_db), user: User = Depends(get_current_user),
 ):
     svc.expire_stale(db)
@@ -86,7 +86,13 @@ def list_hazards(
         # community view hides reports an operator rejected as false, unless they are your own
         own = select(HazardReport.incident_id).where(HazardReport.reporter_id == user.id)
         q = q.where((Incident.verification_status != Status.REJECTED) | Incident.id.in_(own))
-    return [svc.serialize_incident(i) for i in db.scalars(q).unique().all()]
+    out = []
+    for i in db.scalars(q).unique().all():
+        d = svc.serialize_incident(i)
+        if paths:  # active affected road/path segments, for drawing closures and cautions on route maps
+            d["affected_paths"] = svc.incident_paths(i, active_only=True, network=mode if mode in ("walk", "drive") else None)
+        out.append(d)
+    return out
 
 
 @router.get("/mine")

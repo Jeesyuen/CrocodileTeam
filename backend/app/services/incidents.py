@@ -134,12 +134,7 @@ def serialize_incident(inc: Incident, detail: bool = False) -> dict:
         d["images"] = images
         d["impacts"] = [{"network": i.network, "segment_id": i.segment_id, "impact_type": i.impact_type,
                          "distance_m": i.distance_m, "active": i.active} for i in inc.impacts]
-        net_geoms = []
-        for i in inc.impacts:
-            for e in get_network(i.network).seg_edges.get(i.segment_id, ())[:1]:
-                net_geoms.append({"network": i.network, "impact_type": i.impact_type, "active": i.active,
-                                  "road": e.name, "geometry": e.geom})
-        d["affected_paths"] = net_geoms
+        d["affected_paths"] = incident_paths(inc)
         d["history"] = [{"action": h.action, "from": h.from_status, "to": h.to_status, "note": h.note,
                          "actor": h.actor.name if h.actor else "System", "actor_role": h.actor.role if h.actor else None,
                          "at": h.created_at} for h in inc.history]
@@ -150,6 +145,18 @@ def serialize_incident(inc: Incident, detail: bool = False) -> dict:
                                  "confidence": a.confidence, "created_at": a.created_at} for a in r.analyses]}
                         for r in inc.reports]
     return d
+
+
+def incident_paths(inc: Incident, active_only: bool = False, network: str | None = None) -> list[dict]:
+    """Mapped path geometry each impact applies to (one edge per segment, i.e. a real network edge)."""
+    out = []
+    for i in inc.impacts:
+        if (active_only and not i.active) or (network and i.network != network):
+            continue
+        for e in get_network(i.network).seg_edges.get(i.segment_id, ())[:1]:
+            out.append({"network": i.network, "impact_type": i.impact_type, "active": i.active,
+                        "road": e.name, "geometry": e.geom})
+    return out
 
 
 def certainty_label(inc: Incident) -> str:

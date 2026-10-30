@@ -25,11 +25,11 @@ export function HazardReportCard({ inc, onClick, selected }: { inc: Incident; on
       <HazardThumb inc={inc} className="h-20 w-20 shrink-0 rounded-2xl" />
       <div className="min-w-0 flex-1">
         <div className="flex items-start justify-between gap-2">
-          <span className="truncate font-bold">{inc.category_label}</span>
+          <span className="font-bold leading-snug">{inc.category_label}</span>
           <SeverityBadge s={inc.severity} />
         </div>
         <div className="mt-0.5 flex items-center gap-1 truncate text-xs text-muted"><MapPin size={12} />{inc.location_label}</div>
-        <p className="mt-1 line-clamp-1 text-[13px] text-ink/80">{inc.description || "No description provided."}</p>
+        <p className="mt-1 line-clamp-2 text-[13px] leading-snug text-ink/80">{inc.description || "No description provided."}</p>
         <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
           <CertaintyBadge c={inc.certainty} />
           <IncidentStatusBadge s={inc.status} />

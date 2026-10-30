@@ -3,7 +3,7 @@
  * Pages draw markers and lines through these so they never depend on one map library.
  */
 import L from "leaflet";
-import { createContext, ReactNode, useContext, useEffect, useMemo, useRef } from "react";
+import { createContext, ReactNode, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { CircleMarker, Marker, Polyline, Popup, Tooltip } from "react-leaflet";
 import { readPosition, toLL } from "./google";
@@ -11,7 +11,7 @@ import { readPosition, toLL } from "./google";
 export interface MarkerIcon { html: string; size: [number, number]; anchor: [number, number] }
 
 export type Engine =
-  | { kind: "leaflet" }
+  | { kind: "leaflet"; map?: L.Map }
   | {
     kind: "google"; map: google.maps.Map;
     hover: (text: string | null, e?: Event) => void;
@@ -20,6 +20,30 @@ export type Engine =
 
 export const EngineCtx = createContext<Engine>({ kind: "leaflet" });
 const useEngine = () => useContext(EngineCtx);
+
+/** Current zoom of the enclosing map plus a way to zoom into a point (used by marker clustering). */
+export function useMapView() {
+  const engine = useEngine();
+  const read = () => (engine.kind === "google" ? engine.map.getZoom() : engine.map?.getZoom()) ?? 15;
+  const [zoom, setZoom] = useState(read);
+  useEffect(() => {
+    setZoom(read());
+    if (engine.kind === "google") {
+      const l = engine.map.addListener("zoom_changed", () => setZoom(engine.map.getZoom() ?? 15));
+      return () => l.remove();
+    }
+    const m = engine.map;
+    if (!m) return;
+    const h = () => setZoom(m.getZoom());
+    m.on("zoomend", h);
+    return () => { m.off("zoomend", h); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine]);
+  const focus = (p: [number, number], z: number) => {
+    if (engine.kind === "google") { engine.map.panTo(toLL(p)); engine.map.setZoom(z); } else engine.map?.flyTo(p, z, { duration: 0.5 });
+  };
+  return { zoom, focus };
+}
 
 const leafletIcons = new WeakMap<MarkerIcon, L.DivIcon>();
 function leafletIcon(icon: MarkerIcon) {

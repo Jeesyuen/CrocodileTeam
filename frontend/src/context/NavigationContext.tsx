@@ -5,7 +5,13 @@ import type { Incident, LatLon, Mode, Notification, Preference, Route, RoutePlan
 import { useAuth } from "./AuthContext";
 import { useRealtime, useRealtimeEvent } from "./RealtimeContext";
 
-export interface RouteAlert { notification: Notification; incident: Incident; alternative: Route | null; session_id: number }
+export interface RouteAlert {
+  notification: Notification; incident: Incident; alternative: Route | null; session_id: number;
+  /** the route the user was following when the alert arrived (client snapshot) */
+  previous: Route | null;
+}
+/** Shown after a reroute: what changed between the route you were on and the one you are on now. */
+export interface Reroute { previous: Route; current: Route; incident: Incident; at: number }
 
 interface NavState {
   mode: Mode; setMode: (m: Mode) => void;
@@ -16,6 +22,9 @@ interface NavState {
   plan: RoutePlan | null; loading: boolean; error: string | null;
   selected: Preference; setSelected: (p: Preference) => void;
   session: RouteSession | null; alert: RouteAlert | null; clearAlert: () => void;
+  /** dismiss the alert but keep following the current route (tells the server, which had pre-switched) */
+  keepCurrentRoute: () => Promise<void>;
+  reroute: Reroute | null; clearReroute: () => void;
   findRoutes: (opts?: { silent?: boolean; o?: LatLon; d?: LatLon; m?: Mode; depart?: string | null }) => Promise<RoutePlan | null>;
   startNavigation: () => Promise<void>;
   endNavigation: () => Promise<void>;
@@ -44,8 +53,11 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
   const [selected, setSelected] = useState<Preference>("balanced");
   const [session, setSession] = useState<RouteSession | null>(null);
   const [alert, setAlert] = useState<RouteAlert | null>(null);
-  const state = useRef({ mode, origin, destination, departAt, weather });
-  state.current = { mode, origin, destination, departAt, weather };
+  const [reroute, setReroute] = useState<Reroute | null>(null);
+  const state = useRef({ mode, origin, destination, departAt, weather, plan, session, selected });
+  state.current = { mode, origin, destination, departAt, weather, plan, session, selected };
+  // the exact route object being followed, so an alert can compare against it after the plan refreshes
+  const followed = useRef<Route | null>(null);
 
   useEffect(() => {
     let saved: Mode | undefined;
@@ -85,46 +97,69 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
       setOrigin(s.origin);
       setDestination(s.destination);
       setSelected(s.preference);
-      findRoutes({ silent: false, o: s.origin, d: s.destination, m: s.mode }).then(() => setSelected(s.preference));
+      findRoutes({ silent: false, o: s.origin, d: s.destination, m: s.mode }).then((p) => {
+        setSelected(s.preference);
+        followed.current = p?.routes.find((r) => r.edge_ids.join() === s.edge_ids.join()) ?? null;
+      });
     }).catch(() => {});
   }, [user, findRoutes]);
 
-  const startNavigation = useCallback(async () => {
-    if (!plan || !origin || !destination) return;
-    const r = plan.routes.find((x) => x.preference === selected) ?? plan.routes[0];
+  const follow = useCallback(async (r: Route, pref: Preference, m: Mode) => {
+    const o = state.current.origin, d = state.current.destination;
+    if (!o || !d) return;
     const s = await api<RouteSession>("/api/routes/sessions", {
-      body: { mode: plan.mode, preference: selected, origin, destination, edge_ids: r.edge_ids, segment_ids: r.segment_ids },
+      body: { mode: m, preference: pref, origin: o, destination: d, edge_ids: r.edge_ids, segment_ids: r.segment_ids },
     });
+    followed.current = r;
     setSession(s);
-  }, [plan, origin, destination, selected]);
+  }, []);
+
+  const startNavigation = useCallback(async () => {
+    if (!plan) return;
+    const r = plan.routes.find((x) => x.preference === selected) ?? plan.routes[0];
+    await follow(r, selected, plan.mode);
+    setReroute(null);
+  }, [plan, selected, follow]);
 
   const endNavigation = useCallback(async () => {
     if (session) await api(`/api/routes/sessions/${session.id}/end`, { method: "POST" }).catch(() => {});
     setSession(null);
     setAlert(null);
+    setReroute(null);
+    followed.current = null;
   }, [session]);
 
   const applyAlternative = useCallback(async () => {
-    const alt = alert?.alternative;
+    const a = alert;
+    const alt = a?.alternative;
     const p = await findRoutes({ silent: true });
-    if (p && alt) {
+    if (p && alt && a) {
+      // prefer the matching option in the refreshed comparison so the card, map and session agree
       const match = p.routes.find((r) => r.edge_ids.join() === alt.edge_ids.join());
       const pref = (match?.preference ?? alt.preference) as Preference;
+      const r = match ?? alt;
       setSelected(pref);
-      const r = match ?? p.routes.find((x) => x.preference === pref) ?? p.routes[0];
-      const o = state.current.origin, d = state.current.destination;
-      if (o && d) {
-        const s = await api<RouteSession>("/api/routes/sessions", {
-          body: { mode: p.mode, preference: pref, origin: o, destination: d, edge_ids: r.edge_ids, segment_ids: r.segment_ids },
-        });
-        setSession(s);
-      }
+      await follow(r, pref, p.mode);
+      if (a.previous) setReroute({ previous: a.previous, current: r, incident: a.incident, at: Date.now() });
     }
     setAlert(null);
-  }, [alert, findRoutes]);
+  }, [alert, findRoutes, follow]);
+
+  const keepCurrentRoute = useCallback(async () => {
+    const a = alert;
+    setAlert(null);
+    // the server pre-switches an affected session to the alternative; re-register the route the user keeps
+    if (a?.previous && a.alternative && state.current.session) {
+      await follow(a.previous, state.current.session.preference, state.current.session.mode).catch(() => {});
+    }
+  }, [alert, follow]);
 
   useRealtimeEvent(["route.affected"], (e) => {
-    const a = e.data as RouteAlert;
+    const s = state.current;
+    const sessionKey = s.session?.edge_ids.join();
+    const previous = (followed.current && followed.current.edge_ids.join() === sessionKey ? followed.current : null)
+      ?? s.plan?.routes.find((r) => r.edge_ids.join() === sessionKey) ?? null;
+    const a = { ...(e.data as Omit<RouteAlert, "previous">), previous } as RouteAlert;
     setAlert(a);
     findRoutes({ silent: true });
     if (onNavigatePage.current) return; // the Navigate page shows its own alert dialog
@@ -153,7 +188,8 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
   return (
     <Ctx.Provider value={{
       mode, setMode, origin, setOrigin, destination, setDestination, departAt, setDepartAt, weather, setWeather,
-      plan, loading, error, selected, setSelected, session, alert, clearAlert: () => setAlert(null),
+      plan, loading, error, selected, setSelected, session, alert, clearAlert: () => setAlert(null), keepCurrentRoute,
+      reroute, clearReroute: () => setReroute(null),
       findRoutes, startNavigation, endNavigation, applyAlternative, swap,
     }}>
       {children}
