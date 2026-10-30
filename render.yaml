@@ -1,0 +1,36 @@
+# Render Blueprint: one web service that serves the React app, the API and the live-alert WebSocket.
+# Render dashboard → New → Blueprint → pick this repository. You'll be asked for the secrets marked `sync: false`.
+#
+# Plan: "starter" + a 1 GB disk keeps the database, photos and trained model across restarts and never sleeps.
+# To run on the free plan instead, set `plan: free` and delete the `disk:` block. The app still works, but the
+# instance sleeps after 15 minutes idle (first visit then takes about a minute) and all data resets to the demo
+# data whenever it restarts.
+services:
+  - type: web
+    name: saferoute-ai
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    region: singapore
+    healthCheckPath: /api/health
+    disk:
+      name: saferoute-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:////var/data/saferoute.db
+      - key: UPLOAD_DIR
+        value: /var/data/uploads
+      - key: MODEL_DIR
+        value: /var/data/models
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DEMO_MODE
+        value: "true"
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GOOGLE_MAPS_BROWSER_KEY
+        sync: false
+      - key: GOOGLE_MAPS_MAP_ID
+        sync: false

@@ -2,8 +2,9 @@ import asyncio
 import logging
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, Query, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, HTTPException, Query, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from .config import get_settings
@@ -66,3 +67,18 @@ async def alerts(ws: WebSocket, token: str = Query(...)):
         pass
     finally:
         manager.disconnect(uid, ws)
+
+
+# Single-service deployment: serve the built React app; unknown paths fall back to index.html (client routing).
+# Registered last so /api, /ws, /uploads and /docs keep priority.
+if settings.web_dir and (settings.web_dir / "index.html").is_file():
+    web_root = settings.web_dir.resolve()
+
+    @app.get("/{path:path}", include_in_schema=False)
+    def spa(path: str):
+        if path.startswith(("api/", "ws/", "uploads/")):
+            raise HTTPException(404, "Not found")
+        f = (web_root / path).resolve()
+        if path and f.is_file() and web_root in f.parents:
+            return FileResponse(f)
+        return FileResponse(web_root / "index.html")

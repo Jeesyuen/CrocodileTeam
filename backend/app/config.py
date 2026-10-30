@@ -31,6 +31,8 @@ class Settings(BaseSettings):
     upload_dir: Path = BASE_DIR / "uploads"
     max_upload_mb: int = 8
     data_dir: Path = BASE_DIR / "data"
+    # Built frontend (frontend/dist) to serve from this app in a single-service deployment; unset in development.
+    web_dir: Path | None = None
     model_dir: Path = BASE_DIR / "models"
 
     # Demo mode exposes the demo account picker and the reset-demo-data endpoint.

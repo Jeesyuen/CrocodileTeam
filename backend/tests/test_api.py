@@ -272,3 +272,13 @@ def test_map_config_provider(client, users, monkeypatch):
     cfg = client.get("/api/map/config", headers=users["b"]).json()
     assert cfg["provider"] == "google"
     assert cfg["google"] == {"browser_key": "test-browser-key", "map_id": "DEMO_MAP_ID"}
+
+
+def test_deploy_seed_if_empty_keeps_data(client, users):
+    from app.seed import ensure_seeded
+    e = next(e for e in get_network("walk").edges.values() if e.length > 40)
+    p = e.geom[len(e.geom) // 2]
+    created = client.post("/api/hazards", headers=users["a"], json={"category": "other", "severity": "low",
+                                                                    "lat": p[0], "lon": p[1]}).json()["incident"]["id"]
+    assert ensure_seeded() == {"skipped": "database already seeded"}
+    assert client.get(f"/api/hazards/{created}", headers=users["a"]).status_code == 200

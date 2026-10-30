@@ -288,5 +288,15 @@ def run(retrain: bool = False, include_static: bool = True) -> dict:
     return stats
 
 
+def ensure_seeded() -> dict:
+    """Deployment start-up: seed only an empty database, so restarts keep real reports. Ensures the model exists."""
+    Base.metadata.create_all(engine)
+    with SessionLocal() as db:
+        if db.scalar(select(User.id).limit(1)) is None:
+            return run()
+        seed_model(db, retrain=False)  # trains only if the model files are missing
+    return {"skipped": "database already seeded"}
+
+
 if __name__ == "__main__":
-    print(run(retrain="--retrain" in sys.argv))
+    print(ensure_seeded() if "--if-empty" in sys.argv else run(retrain="--retrain" in sys.argv))

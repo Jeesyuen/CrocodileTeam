@@ -164,7 +164,7 @@ flowchart LR
 | AI | Anthropic Claude (vision, structured JSON output) |
 | Database | SQLite (default); PostgreSQL / PostGIS supported via `DATABASE_URL` |
 | Testing | pytest (API and engine tests), Playwright (browser end-to-end checks) |
-| Deployment | Docker, docker-compose (PostGIS + API + nginx-served frontend) |
+| Deployment | Docker; Render Blueprint (`render.yaml`, single service); docker-compose for PostgreSQL / PostGIS |
 
 ## Project structure
 
@@ -189,7 +189,9 @@ CrocodileTeam/
 │       ├── components/        # route cards, hazard panels, layout, map/ (Leaflet + Google engines)
 │       ├── context/           # auth, real-time alerts, navigation state
 │       └── lib/               # API client, types, formatting
-└── docker-compose.yml         # PostGIS + API + web
+├── Dockerfile                 # single image: builds the frontend, serves it with the API
+├── render.yaml                # Render Blueprint (one web service + persistent disk)
+└── docker-compose.yml         # alternative: PostGIS + API + web
 ```
 
 ## Setup and run locally
@@ -267,6 +269,27 @@ Cloud to your site's HTTP referrers and to *Maps JavaScript API* and *Places API
 Google rejects it, the app falls back to a clearly labelled OpenStreetMap map. Google provides only the base map
 and place search; routes, travel times and traffic always come from SafeRoute's own engine.
 
+## Deploy on Render
+
+The repository includes a Render Blueprint. It deploys **one web service** built from the root `Dockerfile`:
+the React app, the API and the live-alert WebSocket share one URL, so no CORS or frontend API URL is needed.
+
+1. Push the repository to GitHub.
+2. In the Render dashboard: **New → Blueprint**, connect the repository and select `render.yaml`.
+3. When prompted, enter `ANTHROPIC_API_KEY` (and optionally the Google Maps values). `JWT_SECRET` is generated
+   automatically.
+4. Click **Apply**. The first build takes a few minutes. On first start the container seeds the demo data and
+   trains the traffic model (seeding runs only when the database is empty, so restarts keep real reports).
+5. Open the service URL (`https://<service-name>.onrender.com`) and check `/api/health` shows `"ai_configured": true`.
+
+**Plan:** `render.yaml` uses the Starter plan with a 1 GB disk (`/var/data`) so the database, photos and model
+survive restarts and the app never sleeps. To use the free plan, set `plan: free` and remove the `disk:` block.
+It still works, but it sleeps after 15 minutes idle (the next visit takes about a minute) and resets to the demo
+data on every restart.
+
+**Before sharing the link:** set a monthly spending limit in the Anthropic console. Demo accounts are one-click,
+so anyone with the URL can trigger AI photo analysis.
+
 ## Demo data
 
 - **Accounts.** 20 demo users, all with password `demo1234` and one-click sign-in on the login page:
@@ -301,12 +324,12 @@ with an arrive-by time, and **Open route in navigation**.
 ## Known limitations
 
 - Traffic data is synthetic; there is no live traffic feed.
-- AI photo analysis needs an Anthropic API key and hasn't been tested against the live API here; without a key
-  it falls back to manual classification.
+- AI photo analysis needs an Anthropic API key; without one it falls back to manual classification.
 - Google Maps mode was checked only in Google's keyless development mode; Places search needs a real key.
 - Cycling and motorcycle routing are not implemented yet.
-- The PostgreSQL / Docker setup is provided but was not exercised during development (SQLite was used). The
-  schema is created from the SQLAlchemy models; there are no versioned migrations.
+- The Docker image was not built locally (no Docker daemon); its start-up command and single-service serving were
+  tested with the same settings outside Docker. The PostgreSQL path is untested (SQLite was used). The schema is
+  created from the SQLAlchemy models; there are no versioned migrations.
 - Uploaded photos are served to anyone with the URL, and report rate limiting is in-memory.
 
 ## Team
